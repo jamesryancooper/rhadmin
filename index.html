@@ -56,6 +56,7 @@
                                                         <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
                                                             
                                                         </ul>
+                                                        <input type="hidden" id="selectedProjectID" value="0"/>
 						</li>
 						<li></li>
 					</ul>
@@ -303,25 +304,25 @@
 									<div class="col-lg-9">
 										<ul class="rh-blueprint-types-menu">
 											<li class="rh-blueprint-arrow-first"><i class="ion ion-android-arrow-dropright"></i></li>
-											<li class="rh-blueprint-type-selected"><a href="#">Blogs</a></li>
+											<li class="rh-blueprint-type-selected"><a data-parent="#accordion" data-toggle="collapse" href="#collapseOne" onclick="setActiveHeading('One');">Blogs</a></li>
 											<li class="rh-blueprint-arrow-selected"><i class="ion ion-android-arrow-dropright"></i></li>
-											<li><a href="#">News</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" onclick="setActiveHeading('Two');">News</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Social</a></li>
+                                                                                        <li><a data-parent="#accordion" data-toggle="collapse" href="#collapseThree" onclick="setActiveHeading('Three');">Social</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Press Releases</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseFour" onclick="setActiveHeading('Four');">Press Releases</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Directories</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseFive" onclick="setActiveHeading('Five');">Directories</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Videos</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseSix" onclick="setActiveHeading('Six');">Videos</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Images</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseSeven" onclick="setActiveHeading('Seven');">Images</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Forum</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseEight" onclick="setActiveHeading('Eight');">Forum</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Wiki</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseNine" onclick="setActiveHeading('Nine');">Wiki</a></li>
 											<li><i class="ion ion-ios-arrow-right"></i></li>
-											<li><a href="#">Product</a></li>
+											<li><a data-parent="#accordion" data-toggle="collapse" href="#collapseTen" onclick="setActiveHeading('Ten');">Product</a></li>
 											<li class="rh-blueprint-arrow-last"><i class="ion ion-android-arrow-dropright"></i></li>
 										</ul>
 									</div>
@@ -342,7 +343,7 @@
 										<div class="panel-heading selected" role="tab" id="headingOne">
 											<span class="panel-title">
 												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count">4</span>Blogs
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="blogCount"></span>Blogs
 												</a>
 											</span>
 										</div>
@@ -415,7 +416,7 @@
 										<div class="panel-heading" role="tab" id="headingTwo">
 											<span class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count">9</span>News
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="newsCount"></span>News
 												</a>
 											</span>
 										</div>
@@ -488,7 +489,7 @@
 										<div class="panel-heading" role="tab" id="headingThree">
 											<span class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count">5</span>Social
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="socialCount"></span>Social
 												</a>
 											</span>
 										</div>
@@ -558,10 +559,10 @@
 										</div>
 									</div>
 									<div class="panel panel-default">
-										<div class="panel-heading" role="tab" id="headingThree">
+										<div class="panel-heading" role="tab" id="headingFour">
 											<span class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count">2</span>Press Releases
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="pressReleaseCount"></span>Press Releases
 												</a>
 											</span>
 										</div>
@@ -631,10 +632,10 @@
 										</div>
 									</div>
 									<div class="panel panel-default">
-										<div class="panel-heading" role="tab" id="headingThree">
+										<div class="panel-heading" role="tab" id="headingFive">
 											<span class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count">2</span>Directories
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="directoryCount"></span>Directories
 												</a>
 											</span>
 										</div>
@@ -704,14 +705,310 @@
 										</div>
 									</div>
 									<div class="panel panel-default">
-										<div class="panel-heading" role="tab" id="headingThree">
+										<div class="panel-heading" role="tab" id="headingSix">
 											<span class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count">2</span>Videos
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="videoCount"></span>Videos
 												</a>
 											</span>
 										</div>
 										<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled warning"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled warning"></i>In Progress</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+                                                                    
+                                                                        <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingSeven">
+											<span class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="imageCount"></span>Images
+												</a>
+											</span>
+										</div>
+										<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled warning"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled warning"></i>In Progress</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+                                                                    
+                                                                        <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingEight">
+											<span class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="forumCount"></span>Forum
+												</a>
+											</span>
+										</div>
+										<div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled warning"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled warning"></i>In Progress</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+                                                                    
+                                                                        <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingNine">
+											<span class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="wikiCount"></span>Wiki
+												</a>
+											</span>
+										</div>
+										<div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled warning"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled warning"></i>In Progress</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+												<ul class="rh-blueprint-type-table">
+													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline"></i></li>
+													<li class="narrow">Blog</li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>07/22/2015</li>
+													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
+													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
+													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
+													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+                                                                    
+                                                                        <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTen">
+											<span class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
+													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="productCount"></span>Product
+												</a>
+											</span>
+										</div>
+										<div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
