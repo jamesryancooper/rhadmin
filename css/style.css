@@ -2228,7 +2228,8 @@ span.badge.rh-bg-info {
 }
 .rh-blueprint-settings i {
   font-size: 3em;
-  color: #231F20;
+  /*color: #231F20;*/ 
+  color: #7e7e7e; /* For point #4 */
 }
 .rh-blueprint-info {
   height:78px;
@@ -2237,7 +2238,7 @@ span.badge.rh-bg-info {
 }
 .rh-blueprint-name {
   color: #1C75BC;
-  text-transform: lowercase;
+  /*text-transform: lowercase;*/
   font-weight: 700;
   font-size: 1.6em;
   line-height: 1em;
@@ -2251,6 +2252,7 @@ span.badge.rh-bg-info {
 .rh-blueprint-options li a {
   font-size: .95em;
   color: #808285;
+  text-transform:uppercase; /* For Point #5 */
 }
 .rh-column-heading {
   display: block;
@@ -2273,14 +2275,16 @@ span.badge.rh-bg-info {
 }
 .rh-blueprint-rank li {
   display: inline-block;
-  margin-right: 14px;
+ /* margin-right: 14px;*/
+ margin-right:3px; /* For Point #6 */
 }
 .rh-blueprint-rank li span {
   font-size: 1.6em;
   font-weight: 700;
 }
 .rh-blueprint-rank li i {
-  font-size: .8em;
+  /*font-size: .8em;*/
+   font-size: 1.4em; /* For Point #6*/
   color: #808285;
   margin-right: 3px;
 }
@@ -2360,7 +2364,8 @@ span.badge.rh-bg-info {
   color: #ED1C24;
 }
 .rh-blueprint-open {
-  background-color: #1C75BC;
+ /* background-color: #1C75BC;*/
+ background-color:#D1D2D4; /* For Point #8 */
   text-align: center;
   padding-top: 22px;
   padding-left: 26px;
@@ -2383,7 +2388,8 @@ span.badge.rh-bg-info {
 .rh-blueprint-open i {
   margin-left: 10px;
   font-weight: 300;
-  font-size: 1.8em;
+  /*font-size: 1.8em;*/
+  font-size: 1.5em; /* For point #8 */
 }
 /*Blueprint Types*/
 .rh-blueprint-types {
@@ -2556,6 +2562,8 @@ span.badge.rh-bg-info {
   font-size: 2em;
   margin-right: 10px;
 }
+
+
 .rh-blueprint-type-table .ion-ios-circle-filled,
 .rh-blueprint-type-table .ion-ios-eye-outline {
   position: relative;
@@ -2569,6 +2577,11 @@ span.badge.rh-bg-info {
 .rh-blueprint-type-table .ion-ios-circle-filled.success {
   color: #39B54A;
 }
+.rh-blueprint-type-table .fa fa-circle.success {
+  color: #39B54A;
+}
+
+
 .rh-blueprint-type-table .ion-ios-circle-filled.warning {
   color: #FFDE17;
 }
@@ -2584,3 +2597,115 @@ span.badge.rh-bg-info {
 .rh-blueprint-type-table .ion-ios-cart-outline.ordered {
   color: #D1D3D4;
 }
+.rh-blueprint-type-selected a /* Add CSS For Point #9 */
+{
+color:#f0f0f0;	
+}
+
+.text-upper /* Add CSS For Point #14 */
+{
+text-transform: uppercase;
+color:#ED1C24;
+}
+
+.text-bold /* Add CSS For Point #15 */
+{
+font-weight: bold;	
+}
+.text-light /* Add CSS For Point #15 */
+{
+color:#666666;	
+}
+
+/* Add CSS For Point #13 Start */
+.circle_success
+{
+color:#4CAF50;
+}
+
+.circle_warning
+{
+color: #FFDE17;
+}
+
+.circle_danger
+{
+color: #ED1C24;
+}
+/* Add CSS For Point #13 End */
+
+
+/* Add CSS For Point #16 Start */
+.blue_print
+{
+border:1px solid #c7c7c7;
+background-color: #F7F7F7;	
+}
+
+.blue_print .menu
+{
+text-align:center;
+width:89%;
+height: 78px;
+padding-top:19px;
+background-color:#eeeeee;	
+}
+.blue_print .menu i
+{
+    font-size: 3em;
+    color: #7e7e7e;	
+}
+.bp_form-control
+{
+border:none;
+height: 75px;
+color: #8A8B8B;
+font-size:34px;
+background: transparent;	
+}
+
+.bp_form-control:focus
+{
+border-bottom:none !important;
+box-shadow:none !important;	
+outline:none;
+}
+
+.create_bp
+{
+background-color: #BDBEC0;
+    text-align: center;
+   padding-top: 12px;
+   margin-top: 11px;
+   height: 54px;
+   width: 20%;
+   margin-left:10px;
+   border-radius:75px;
+    padding-left: 15px;
+}
+
+.create_bp a
+{
+color: #ffffff;
+text-decoration: none;
+font-size: 1.6em;
+font-weight: 700;
+}
+/* Add CSS For Point #16 End */
+
+
+/* Add CSS For Point #6 Start */
+
+.se_icons
+{
+    padding-bottom: 6px;
+    padding-right: 6px;
+}
+	
+/* Add CSS For Point #6 Start */
+
+.margin_top
+{
+margin-top: 5px;	
+}
+
