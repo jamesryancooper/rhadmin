@@ -1,7 +1,7 @@
 /** 1520 Consulting code BEGIN **/
 
-//var restURL = "http://fairmarketing.cloudapp.net/rest1.0/endpoint.jsp?";
-var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
+var restURL = "http://fairmarketing.cloudapp.net/rest1.0/endpoint.jsp?";
+//var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
 
 $(document).ready(function(){
     
