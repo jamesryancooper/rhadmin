@@ -123,12 +123,14 @@
   display: inline-block;
 }
 .piluku-dropdown .dropdown-toggle {
-  color: #707780;
+  /*color: #707780;*/
+  color: #1c75bc; /* For Point #1 & #2 */
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-size: 1em;
   letter-spacing: 0.25px;
-  text-decoration: none;
+  /*text-decoration: none;*/
+  text-decoration: underline; /* For Point #1 & #2 */
   line-height: 26px;
 }
 .piluku-dropdown .dropdown-toggle .drop-icon i {

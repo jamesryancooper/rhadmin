@@ -29,7 +29,7 @@
   </script>
 </head>
 <body>
-  <div class="piluku-preloader text-center">
+  	<div class="piluku-preloader text-center">
   <!-- <div class="progress">
       <div class="indeterminate"></div>
   </div> -->
@@ -187,20 +187,28 @@
 					</span>
 					of
 					<span class="piluku-dropdown dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">August 2015</a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">August</a>
 						<ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
-							<li><a href="#">March 2015</a></li>
-							<li><a href="#">April 2015</a></li>
-							<li><a href="#">May 2015</a></li>
-							<li><a href="#">June 2015</a></li>
-							<li><a href="#">July 2015</a></li>
-							<li><a href="#">August 2015</a></li>
-							<li><a href="#">September 2015</a></li>
-							<li><a href="#">October 2015</a></li>
-							<li><a href="#">November 2015</a></li>
-							<li><a href="#">December 2015</a></li>
-							<li><a href="#">January 2016</a></li>
-							<li><a href="#">February 2016</a></li>
+							<li><a href="#">March</a></li>
+							<li><a href="#">April</a></li>
+							<li><a href="#">May</a></li>
+							<li><a href="#">June</a></li>
+							<li><a href="#">July</a></li>
+							<li><a href="#">August</a></li>
+							<li><a href="#">September</a></li>
+							<li><a href="#">October</a></li>
+							<li><a href="#">November</a></li>
+							<li><a href="#">December</a></li>
+							<li><a href="#">January</a></li>
+							<li><a href="#">February</a></li>
+						</ul>
+					</span>
+                    
+                    <span class="piluku-dropdown dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">2015</a>
+						<ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+							<li><a href="#">2015</a></li>
+							<li><a href="#">2016</a></li>
 						</ul>
 					</span>
 					<span class="rh-bracket rh-bracket-left">]</span>
@@ -218,12 +226,16 @@
 			<div class="col-lg-5 col-md-offset-1 rh-blueprint-heading">content marketing <span class="rh-blue-highlight">blueprints</span></div>
 			<div class="col-lg-5 rh-actions-menu">
 				<ul>
-					<li class="rh-right-border"><a href="">Order</a></li>
-					<li class="rh-right-border"><a href="">Merge</a></li>
-					<li class="rh-right-border"><a href="">Refresh</a></li>
-					<li><a href="">Archive</a></li>
+               <!-- Change For Point #3 Start-->
+					<li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+							Order
+						</a></li>
+					<li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Merge</a></li>
+					<li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Refresh</a></li>
+					<li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Archive</a></li>
+                    <!-- Change For Point #3 End-->
 					<li><button class="btn btn-orange btn-round">
-						<i class="ion ion-android-add"></i>
+						<i class="ion ion-navicon"></i>
 						<span>Create New Blueprint</span>
 					</button></li>
 					<li><a href="#"><i class="ti-settings"></i></a></li>
@@ -246,7 +258,7 @@
 												<a href="#"><i class="ion ion-android-menu"></i></a>
 											</li>
 											<li  class="rh-blueprint-info">
-												<a href="#" class="rh-blueprint-name">houston plumbing specialist</a>
+												<a href="#" class="rh-blueprint-name">Houston plumbing specialist</a>
 												<ul class="rh-blueprint-options">
 													<li><a href="#" class="rh-blueprint-budget"><i class="ion ion-social-usd"></i>1200</a></li>
 													<li><a href="#" class="rh-blueprint-location"><i class="ion ion-ios-location"></i>Houston, Tx</a></li>
@@ -258,9 +270,14 @@
 									<div class="col-lg-2 rh-right-border rh-column rh-blueprint-rank">
 										<span class="rh-column-heading">Search Engine <span class="rh-alt-color">Rank</span></span>
 										<ul>
-											<li><i class="ion ion-social-google"></i><span>15</span></li>
-											<li><i class="ion ion-social-google"></i><span>17</span></li>
-											<li><i class="ion ion-social-yahoo"></i><span>24</span></li>
+                                     <!-- Changes For point #6 :Start-->
+										<li><!--<i class="ion ion-social-google"></i>-->
+                                        <img src="img/google_search.jpg" class="se_icons"><span>15</span></li>
+											<li><!--<i class="fa fa-hacker-news"></i>-->
+                                            <img src="img/yahoo_search.jpg" class="se_icons"><span>17</span></li>
+											<li><!--<i class="ion ion-social-yahoo"></i>-->
+                                            <img src="img/bing_search.jpg" class="se_icons"><span>24</span></li>
+                                            <!-- Changes For point #6 :End-->
 										</ul>
 									</div>
 									<div class="col-lg-2 rh-right-border rh-column rh-blueprint-chart">
@@ -281,11 +298,23 @@
 											<li class="rh-blueprint-incomplete"><span class="rh-blueprint-num">34</span> <span class="rh-blueprint-status">incomplete</span></li>
 										</ul>
 									</div>
-									<div class="col-lg-2 rh-right-border rh-column rh-blueprint-open">
+									<!--<div class="col-lg-2 rh-right-border rh-column rh-blueprint-open">
 										<a href="#" class="panel-minimize">
 											<ul>
 												<li>Open Blueprint</li>
-												<li><i class="ion ion-ios-arrow-right"></i></li>
+                                                changed to close comment as intial stage 
+                                                <li>Close Blueprint</li>
+												<li><i class="ion ion-ios-arrow-right"></i></li>-->
+                                                
+                                               <!-- <li><i class="icon ti-angle-up"></i></li>
+											</ul>
+										</a>
+									</div>-->
+                                    <div class="col-lg-2 rh-right-border rh-column rh-blueprint-open">
+										<a href="#" class="panel-minimize">
+											<ul>
+												<li>Open Blueprint</li>
+												<li class="margin_top"><i class="icon ti-angle-right"></i></li>
 											</ul>
 										</a>
 									</div>
@@ -305,7 +334,7 @@
 									</div>
 									<div class="col-lg-9">
 										<ul class="rh-blueprint-types-menu">
-											<li class="rh-blueprint-arrow-first"><i class="ion ion-android-arrow-dropright"></i></li>
+				<li class="rh-blueprint-arrow-first"><i class="ion ion-android-arrow-dropright"></i></li>
 											<li class="rh-blueprint-type-selected"><a href="#">Blogs</a></li>
 											<li class="rh-blueprint-arrow-selected"><i class="ion ion-android-arrow-dropright"></i></li>
 											<li><a href="#">News</a></li>
@@ -328,7 +357,8 @@
 											<li class="rh-blueprint-arrow-last"><i class="ion ion-android-arrow-dropright"></i></li>
 										</ul>
 									</div>
-									<div class="col-lg-2">other stuff</div>
+                                    <!--For Point #10 : Remove Other Stuff--> 
+									<!--<div class="col-lg-2">other stuff</div>-->
 								</div>
 								<ul class="rh-blueprint-type-headings">
 									<li class="xtra-narrow"><i class="ion-ios-cart-outline"></i></li>
@@ -354,62 +384,62 @@
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
 													<li class="narrow">Blog</li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="narrow"><i class="fa fa-circle circle_success"></i>07/22/2015</li>
 													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
 													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
-													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
-													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+													<li class="narrow"><i class="fa fa-circle circle_success"></i>07/23/2015</li>
+													<li class="wide"><span class="text-bold">Published:</span> <span class="text-lowercase text-light text-light">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="fa fa-circle circle_success"></i></li>
 												</ul>
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
 													<li class="narrow">Blog</li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="narrow"><i class="fa fa-circle circle_success"></i>07/22/2015</li>
 													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
 													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
-													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
-													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+													<li class="narrow"><i class="fa fa-circle circle_success"></i>07/23/2015</li>
+													<li class="wide"><span class="text-bold">Published:</span> <span class="text-lowercase text-light">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="fa fa-circle circle_success"></i></li>
 												</ul>
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
 													<li class="narrow">Blog</li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="narrow"><i class="fa fa-circle circle_success"></i>07/22/2015</li>
 													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
 													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/23/2015</li>
-													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
-													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled success"></i></li>
+													<li class="narrow"><i class="fa fa-circle circle_success"></i>07/23/2015</li>
+													<li class="wide"><span class="text-bold">Published:</span> <span class="text-lowercase text-light">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="fa fa-circle circle_success"></i></li>
 												</ul>
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
 													<li class="narrow">Blog</li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled success"></i>07/22/2015</li>
+													<li class="narrow"><i class="fa fa-circle circle_success"></i>07/22/2015</li>
 													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
 													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
-													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
-													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled warning"></i></li>
+													<li class="narrow text-upper"><i class="fa fa-circle circle_danger"></i>Publish Now</li>
+													<li class="wide"><span class="text-bold">Published:</span> <span class="text-lowercase text-light">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="fa fa-circle circle_warning"></i></li>
 												</ul>
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
 													<li class="narrow">Blog</li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled warning"></i>In Progress</li>
+													<li class="narrow"><i class="fa fa-circle circle_warning"></i>In Progress</li>
 													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
 													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
-													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
-													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+													<li class="narrow text-upper"><i class="fa fa-circle circle_danger"></i>Publish Now</li>
+													<li class="wide"><span class="text-bold">Published: </span><span class="text-lowercase text-light">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="fa fa-circle circle_danger"></i></li>
 												</ul>
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline"></i></li>
 													<li class="narrow">Blog</li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>07/22/2015</li>
+													<li class="narrow"><i class="fa fa-circle circle_danger"></i>07/22/2015</li>
 													<li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li>
 													<li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li>
-													<li class="narrow"><i class="ion ion-ios-circle-filled danger"></i>Publish Now</li>
-													<li class="wide">Published: <span class="text-lowercase">www.somewebsite.com</span></li>
-													<li class="xtra-narrow"><i class="ion ion-ios-circle-filled danger"></i></li>
+													<li class="narrow text-upper"><i class="fa fa-circle circle_danger"></i>Publish Now</li>
+													<li class="wide"><span class="text-bold">Published:</span> <span class="text-lowercase text-light">www.somewebsite.com</span></li>
+													<li class="xtra-narrow"><i class="fa fa-circle circle_danger"></i></li>
 												</ul>
 											</div>
 										</div>
@@ -782,9 +812,46 @@
 								</div>
 							</div>
 						</div>
+                        
+                        
+                        
 					</li>
-				</ul>
+                    <!--For add new row of Create Blueprint : Start--> 
+                    <li>
+                    <div class="row blue_print">
+                    
+                    <div class="col-lg-1 rh-column rh-blueprint">
+										<ul>
+											<li class="menu">
+												<a href="#"><i class="ion ion-android-menu"></i></a>
+											</li></ul></div>
+                                            
+									<div class="col-lg-5 rh-right-border rh-column rh-blueprint">
+										
+						<input type="text" class="bp_form-control" placeholder="Enter Keyword Phrase">
+												
+									</div>
+									
+									<div class="col-lg-3 rh-column rh-blueprint-chart">
+										
+									<input type="text" class="bp_form-control" placeholder="Enter Location">
+									</div>
+									
+									<div class="col-lg-3 rh-right-border rh-column create_bp">
+										<a href="#" class="panel-minimize">
+											
+												  + Create Blueprint
+										
+										</a>
+									</div>
+								</div></li>
+                    <!--For add new row of Create Blueprint : End-->
+				
+                </ul>
 			</div>
+            
+         
+            
 		</div>
 	</div>	
 </div>
@@ -976,6 +1043,7 @@
 
 <script src='js/jquery-ui-1.10.3.custom.min.js'></script>
 <script src='js/bootstrap.min.js'></script>
+<script src="js/tooltip-custom.js"></script> <!--For Point #3-->
 <script src='js/jquery.nicescroll.min.js'></script>
 <script src='js/wow.min.js'></script>
 <script src='js/jquery.loadmask.min.js'></script>
@@ -988,5 +1056,6 @@
 <script src='js/widgets.js'></script>
 <script src='js/core.js'></script>
 <script src="js/jquery.countTo.js"></script>
+
 </body>
 </html>
