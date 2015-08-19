@@ -1,6 +1,6 @@
 /** 1520 Consulting code BEGIN **/
 
-var restURL = "https://fairmarketing.cloudapp.net:8443/rest1.0/endpoint.jsp?";
+var restURL = "https://fairmarketing.cloudapp.net:8443/rest1.0/admin_endpoint.jsp?";
 //var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
 
 $(document).ready(function(){
@@ -60,7 +60,7 @@ function changeProject(projects, indexLoc)
 {
     var projectsArray = projects.split("|");
     //Change the project name on the page
-    $("#projectName").html("<span><i class=\"ti-arrow-circle-left\"></i></span> the <strong>asset</strong> <span class=\"rh-bracket rh-bracket-left\">[</span> "+projectsArray[indexLoc]+" <span class=\"rh-bracket rh-bracket-left\">]</span>");
+    $("#projectName").html("<span><i class=\"ti-arrow-circle-left\"></i></span> the <strong>asset</strong> <span class=\"rh-bracket rh-bracket-left\">[</span> "+projectsArray[(indexLoc*2)]+" <span class=\"rh-bracket rh-bracket-left\">]</span>");
     
     //Go get the new data
     var projectID = projectsArray[(indexLoc*2)+1];
