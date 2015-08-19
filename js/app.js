@@ -1,7 +1,7 @@
 /** 1520 Consulting code BEGIN **/
 
-var restURL = "https://fairmarketing.cloudapp.net:8443/rest1.0/admin_endpoint.jsp?";
-//var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
+//var restURL = "https://fairmarketing.cloudapp.net:8443/rest1.0/admin_endpoint.jsp?";
+var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
 
 $(document).ready(function(){
     
@@ -10,7 +10,6 @@ $(document).ready(function(){
 $(window).load(function(){
     
     //Fill in the dynamic data
-    console.log("going to get project data...");
     getProjectsList('admin',function(projectsList){
         changeProject(projectsList,0);
     });
@@ -26,7 +25,6 @@ function getProjectsList(userID,callback)
             {
                 //Fill in the projects list
                 projectsList = info.projects;
-                console.log(projectsList);
                 var projectsArray = projectsList.split("|");
                 var locCounter = 0;
                 for(var i=0; i<projectsArray.length; i=i+2)
@@ -83,6 +81,7 @@ function changeProject(projects, indexLoc)
 function setActiveHeading(selectedHeadingNum)
 {
     var headings = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
+    var headingsTwo = ["blog","news","social","pressRelease","directory","video","image","forum","wiki","product"];
     
     //Set all to inactive
     for(var i=0; i<headings.length; i++)

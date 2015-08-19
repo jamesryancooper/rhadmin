@@ -372,7 +372,7 @@
 									<div class="panel panel-default">
 										<div class="panel-heading selected" role="tab" id="headingOne">
 											<span class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="setActiveHeading('One');" aria-expanded="true" aria-controls="collapseOne">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="blogCount"></span>Blogs
 												</a>
 											</span>
@@ -445,7 +445,7 @@
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingTwo">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="setActiveHeading('Two');" aria-expanded="false" aria-controls="collapseTwo">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="newsCount"></span>News
 												</a>
 											</span>
@@ -518,7 +518,7 @@
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingThree">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" onclick="setActiveHeading('Three');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="socialCount"></span>Social
 												</a>
 											</span>
@@ -591,12 +591,12 @@
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingFour">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" onclick="setActiveHeading('Four');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="pressReleaseCount"></span>Press Releases
 												</a>
 											</span>
 										</div>
-										<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
@@ -664,12 +664,12 @@
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingFive">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" onclick="setActiveHeading('Five');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="directoryCount"></span>Directories
 												</a>
 											</span>
 										</div>
-										<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
@@ -737,12 +737,12 @@
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingSix">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" onclick="setActiveHeading('Six');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="videoCount"></span>Videos
 												</a>
 											</span>
 										</div>
-										<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
@@ -811,12 +811,12 @@
                                                                         <div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingSeven">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" onclick="setActiveHeading('Seven');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="imageCount"></span>Images
 												</a>
 											</span>
 										</div>
-										<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
@@ -885,12 +885,12 @@
                                                                         <div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingEight">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" onclick="setActiveHeading('Eight');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="forumCount"></span>Forum
 												</a>
 											</span>
 										</div>
-										<div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
@@ -959,12 +959,12 @@
                                                                         <div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingNine">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" onclick="setActiveHeading('Nine');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="wikiCount"></span>Wiki
 												</a>
 											</span>
 										</div>
-										<div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
@@ -1033,12 +1033,12 @@
                                                                         <div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingTen">
 											<span class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" onclick="setActiveHeading('Ten');" aria-expanded="false" aria-controls="collapseThree">
 													<i class="ion ion-android-arrow-dropright"></i><span class="rh-blueprint-type-count" id="productCount"></span>Product
 												</a>
 											</span>
 										</div>
-										<div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
 											<div class="panel-body">
 												<ul class="rh-blueprint-type-table">
 													<li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li>
