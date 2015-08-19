@@ -1,6 +1,6 @@
 /** 1520 Consulting code BEGIN **/
 
-var restURL = "http://fairmarketing.cloudapp.net/rest1.0/endpoint.jsp?";
+var restURL = "https://fairmarketing.cloudapp.net:8443/rest1.0/endpoint.jsp?";
 //var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
 
 $(document).ready(function(){
@@ -25,6 +25,7 @@ function getProjectsList(userID,callback)
             {
                 //Fill in the projects list
                 projectsList = info.projects;
+                alert(projectsList);
                 var projectsArray = projectsList.split("|");
                 var locCounter = 0;
                 for(var i=0; i<projectsArray.length; i=i+2)
