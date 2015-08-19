@@ -10,6 +10,7 @@ $(document).ready(function(){
 $(window).load(function(){
     
     //Fill in the dynamic data
+    console.log("going to get project data...");
     getProjectsList('admin',function(projectsList){
         changeProject(projectsList,0);
     });
@@ -25,7 +26,7 @@ function getProjectsList(userID,callback)
             {
                 //Fill in the projects list
                 projectsList = info.projects;
-                alert(projectsList);
+                console.log(projectsList);
                 var projectsArray = projectsList.split("|");
                 var locCounter = 0;
                 for(var i=0; i<projectsArray.length; i=i+2)
