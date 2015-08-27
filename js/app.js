@@ -89,9 +89,12 @@ function changeProject(projects, indexLoc)
     //Change the project name on the page
     $("#projectName").html("<span><i class=\"ti-arrow-circle-left\"></i></span> the <strong>asset</strong> <span class=\"rh-bracket rh-bracket-left\">[</span> "+projectsArray[(indexLoc*2)]+" <span class=\"rh-bracket rh-bracket-left\">]</span>");
     
-    //Go get the new data
     var projectID = projectsArray[(indexLoc*2)+1];
     
+    //Also set the hidden input value
+    document.getElementById('selectedProjectID').value = projectID;
+    
+    //Go get the new data
     getProjectContentTypeCounts(projectID,function(countData){
         
         //Parse the countData and apply the contents to the headings
@@ -104,6 +107,25 @@ function changeProject(projects, indexLoc)
         }
         
     });
+    
+    //Update the week, month and year dropdowns
+    var d = new Date();
+    var currentWeek = Math.ceil(d.getDate()/7);
+    var currentMonth = d.getMonth()+1;
+    var currentYear = d.getFullYear();
+        currentYear = currentYear - 2013;
+    
+    document.getElementById('weekSelection').value = currentWeek;
+    document.getElementById('monthSelection').value = currentMonth;
+    document.getElementById('yearSelection').value = currentYear;
+    
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    document.getElementById('weekSelection').value = currentWeek;
+    document.getElementById('weekSelectionText').innerHTML = "Week "+currentWeek;
+    document.getElementById('monthSelection').value = currentMonth;
+    document.getElementById('monthSelectionText').innerHTML = months[currentMonth-1];
+    document.getElementById('yearSelection').value = currentYear;
+    document.getElementById('yearSelectionText').innerHTML = 2013+currentYear;
     
     getProjectContentTableData(projectID,function(tableData){
         
@@ -696,6 +718,38 @@ function updateYearSelection(val)
     var projectID = document.getElementById('selectedProjectID').value;
     updateMissionPieceCount(projectID,function(){
     });
+}
+
+function validateBlueprint()
+{
+    var projectID = document.getElementById('selectedProjectID').value;
+    var keyword = document.getElementById('blueprintKeyword').value;
+    var location = document.getElementById('blueprintLocation').value;
+    
+    console.log("projectid = "+projectID);
+    console.log("keyword = "+keyword);
+    console.log("location = "+location);
+    
+    if(projectID == '' || projectID == '0' || keyword.trim() == '' || location.trim() == '')
+    {
+        alert("Error: You must enter a keyword phrase and location in order to create a new blueprint for this product.");
+        return false;
+    }
+    else
+    {
+        var returnData = "";
+    
+        $.ajax({url: restURL, data: {'command':'quickCreateBlueprint','projectid':projectID,'keywords':keyword,'georegion':location}, type: 'post', async: true, success: function postResponse(returnData){
+                var info = JSON.parse(returnData);
+
+                if(info.status == "success")
+                {
+                    //Not sure what to do yet; should we go ahead and request Cognitive data? Auto-classify all of the links?
+                }
+                callback(returnData);
+            }
+        });
+    }
 }
 
 /** 1520 Consulting code END **/
