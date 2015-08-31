@@ -660,8 +660,9 @@
 
         var options = {
           title: 'You vs. Them',
-          hAxis: {titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
+          hAxis: { textPosition: 'none' },
+          vAxis: {textPosition: 'none' },
+		   legend:'none'
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
