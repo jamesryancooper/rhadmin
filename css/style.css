@@ -2112,7 +2112,7 @@ body.boxed {
   text-align: center;
 }
 .info-logo-content .rh-cart.info-logo {
-  padding: 7px 6px 7px 26px;
+  padding:15px 6px 15px 26px;
 }
 .info-logo-content .rh-cart.info-logo i {
   font-size: 2.6em;
@@ -2155,7 +2155,9 @@ span.badge.rh-bg-info {
 }
 .rh-actions-menu ul li {
   display: inline-block;
-  padding: 0 6px;
+  float: left;
+  height: auto;
+  padding: 0 10px;
 }
 .rh-actions-menu ul li a {
   color: #333;
@@ -2165,7 +2167,7 @@ span.badge.rh-bg-info {
   padding: 0 12px;
   text-transform: none;
   margin-bottom: 0;
-  margin-top: -8px;
+  margin-top: -5px;
   height: 28px;
 }
 .rh-actions-menu .btn,
@@ -2381,19 +2383,23 @@ span.badge.rh-bg-info {
 }
 .rh-blueprint-open a {
   color: #ffffff;
+  float: left;
   font-size: 1.5em;
   font-weight: 700;
+  margin-top: 10px;
+  padding: 0;
   text-decoration: none;
 }
 .rh-blueprint-open a {
   line-height: 1em;
 }
 .rh-blueprint-open i {
+  float: right;
   font-size: 1.5em;
   font-weight: 300;
   margin-left: 10px;
   position: relative;
-  top: 6px;
+  top: -4px;
 }
 /*Blueprint Types*/
 .rh-blueprint-types {
@@ -2458,7 +2464,7 @@ span.badge.rh-bg-info {
 .rh-blueprint-arrow-first .ion-android-arrow-dropright {
   color: #C9E4EF;
 }
-.rh-blueprint-types-menu .rh-blueprint-type-selected {
+.rh-blueprint-types-menu .selected {
   background-color: #1c75bc;
   color: #c9e4ef;
 }
@@ -2563,32 +2569,29 @@ span.badge.rh-bg-info {
   margin-right: 10px;
   color:#1C75BC;
 }
-.selected .rh-blueprint-type-count  , .rh-blueprint-type-count  {
-  background-color: #1C75BC;
-  color: #fff;
-}
-.selected .collapsed .rh-blueprint-type-count ,  .collapsed .rh-blueprint-type-count {
+
+.rh-blueprint-type-count , .rh-blueprint-type-count {
   background-color: #fff;
   color: #1C75BC;
 }
 
-.selected .rh-blueprint-type-count ,  .rh-blueprint-type-count {
+.selected .rh-blueprint-type-count {
   background-color: #1C75BC;
   color: #fff;
 }
-.selected  .collapsed .col-open ,  .collapsed .col-open {
+.col-open , .col-open {
  display:none;
 }
-.selected  .col-open ,   .col-open {
+.selected  .col-open  {
 display:block;
 }
 
 .col-close {
-display:none;
+display:block;
 }
 
-.collapsed .col-close {
-display:block;
+.selected .col-close {
+display:none;
 }
 
 .rh-blueprint-type-data .ion-android-arrow-dropright {
@@ -2641,7 +2644,7 @@ display:block;
 .rh-blueprint-type-table .ion-ios-cart-outline.ordered {
   color: #D1D3D4;
 }
-.rh-blueprint-type-selected a /* Add CSS For Point #9 */
+.selected a /* Add CSS For Point #9 */
 {
 color:#f0f0f0;	
 }
@@ -2758,7 +2761,7 @@ margin-top: 5px;
 
 .blogprocess {
   float: right;
-  margin: 0;
+  margin:5px 0 0 0;
   padding: 0;
   width: 40px;
 }
@@ -2864,11 +2867,11 @@ margin-top: 5px;
 	border-left-color:#F5F5F6;
 }
 
-.rh-blueprint-types-menu li.rh-blueprint-type-selected:after {
+.rh-blueprint-types-menu li.selected:after {
 	border-left-color:#1C75BC;
 }
 
-.rh-blueprint-types-menu .rh-blueprint-type-selected:hover {
+.rh-blueprint-types-menu .selected:hover {
   background-color: #1c75bc;
   color: #c9e4ef;
 }
@@ -2882,10 +2885,10 @@ margin-top: 5px;
 }
 
 
-.selected .rh-blueprint-type-count, .rh-blueprint-type-count {
+/* .selected .rh-blueprint-type-count, .rh-blueprint-type-count {
   background-color: #1c75bc;
   color: #fff;
-}
+} */
 
 .accordion-outer .panel .panel-heading .panel-title a {
   color: #1c75bc;
@@ -2924,6 +2927,18 @@ margin-top: 5px;
   text-decoration: none;
   width: 100%;
 }
+
+.piluku-dropdown .blueprints_option-drop li:hover {
+  background-color: #fff;
+}
+
+/* .piluku-dropdown .blueprints_option-drop li:hover .headding-drop2 {
+  background-color: #e9ecf2;
+} */
+.piluku-dropdown .blueprints_option-drop li .headding-drop2 {
+  background-color: #e9ecf2;
+}
+
 
 .piluku-dropdown .blueprints_option-drop {
   left: 22px;
@@ -2966,4 +2981,145 @@ margin-top: 5px;
   top: -10px;
   width: 30px;
   z-index: 9;
+}
+
+.create-btn-b {
+  padding-left: 0 !important;
+  position: relative;
+}
+
+.create-btn-b i {
+  float: left;
+  font-size: 40px !important;
+  text-align: left;
+}
+
+
+.rh-blueprint-rank li .social-icon-count {
+  float: left;
+  height: 24px;
+  margin-right: 6px;
+  width: 24px;
+}
+
+.rh-blueprint-rank li .social-icon-count span {
+  font-size: 24px;
+}
+
+.rh-blueprint-options li i , .rh-blueprint-options li .icon-rh_budget , .rh-blueprint-options li .icon-rh_location {
+  float: left;
+  font-size: 22px;
+  margin:0;
+}
+
+
+.rh-blueprint-type-headings li.cart-icon-hd{
+  float: left;
+  height: 33px;
+  padding: 0;
+  text-align: center;
+}
+
+.rh-blueprint-type-headings .cart-icon-hd  i {
+  font-size: 32px !important;
+  font-weight: normal !important;
+}
+
+.blueprint-set-outer {
+  float: left;
+}
+
+.rh-nav-goals ul {
+  padding: 0;
+}
+.rh-nav-goals ul  p{
+  margin-bottom: 0;
+}
+
+.blueprint-set-outer {
+  width: 12%;
+}
+
+.cart-section {
+  float: right;
+  height: 30px;
+  margin: 2px 5px 0 0;
+  width: 30px;
+  cursor:pointer;
+}
+
+.cart-section span {
+  color: #1c75bc;
+  font-size: 26px;
+  font-weight: normal ;
+}
+
+.rh-blueprint-open i.icon-rh_close {
+  font-size: 40px;
+  margin: 0;
+  top: -9px;
+}
+
+
+.setting-block i {
+  font-size: 44px;
+  position: relative;
+  top: -13px;
+}
+
+.setting-block {
+  padding: 0 !important;
+}
+
+.setting-block a {text-decoration:none;}
+
+
+.rh-blueprint-close {
+  background-color: #b2b2b2;
+  padding:0 0 0 25px;
+  text-align: center;
+}
+
+.rh-blueprint-close a {
+  color: rgba(0, 0, 0, 0.6);
+  float: left;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 10px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.rh-blueprint-close i.icon-rh_close {
+  font-size: 40px;
+  margin: 0;
+  position: relative;
+  top: 10px;
+}
+
+.rh-blueprint-goals-head {
+  background: #1c75bc none repeat scroll 0 0;
+  color: #fff;
+  padding: 0;
+}
+
+.rh-blueprint-goals-head h2 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+  margin: 0;
+  padding: 30px 0 0;
+  text-align: center;
+}
+
+.rh-blueprint-goals.rh-nav-goals {
+  display: block;
+}
+
+.rh-blueprint-goals {
+  display: none;
+}
+
+.rh-blueprint-open {
+  display: none;
 }

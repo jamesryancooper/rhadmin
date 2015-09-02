@@ -26,7 +26,8 @@ $(window).load(function(){
     
     //Update the week, month and year dropdowns
     var d = new Date();
-    var currentWeek = Math.ceil(d.getDate()/7);
+   // var currentWeek = Math.ceil(d.getDate()/7);
+    var currentWeek = "All Weeks";
     var currentMonth = d.getMonth()+1;
     var currentYear = d.getFullYear();
         currentYear = currentYear - 2013;
@@ -37,7 +38,8 @@ $(window).load(function(){
     
     var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     document.getElementById('weekSelection').value = currentWeek;
-    document.getElementById('weekSelectionText').innerHTML = "Week "+currentWeek;
+   // document.getElementById('weekSelectionText').innerHTML = "Week "+currentWeek;
+    document.getElementById('weekSelectionText').innerHTML = currentWeek;
     document.getElementById('monthSelection').value = currentMonth;
     document.getElementById('monthSelectionText').innerHTML = months[currentMonth-1];
     document.getElementById('yearSelection').value = currentYear;
@@ -121,6 +123,7 @@ function changeProject(projects, indexLoc)
     
     var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     document.getElementById('weekSelection').value = currentWeek;
+	//if(currentWeek == "All"){document.getElementById('weekSelectionText').innerHTML = currentWeek;}else{ document.getElementById('weekSelectionText').innerHTML = "Week "+currentWeek;}
     document.getElementById('weekSelectionText').innerHTML = "Week "+currentWeek;
     document.getElementById('monthSelection').value = currentMonth;
     document.getElementById('monthSelectionText').innerHTML = months[currentMonth-1];
@@ -145,7 +148,14 @@ function changeProject(projects, indexLoc)
 function setActiveHeading(selectedHeadingNum)
 {
     var headings = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
-    var headingsTwo = ["blog","news","social","pressRelease","directory","video","image","forum","wiki","product"];
+   // var headingsTwo = ["blog","news","social","pressRelease","directory","video","image","forum","wiki","product"];
+
+    var currElementName1 = '#heading'+selectedHeadingNum;
+    var  set_selected = true;
+    
+    if($(currElementName1).hasClass('selected')){
+        set_selected = false;
+    }
     
     //Set all to inactive
     for(var i=0; i<headings.length; i++)
@@ -154,9 +164,14 @@ function setActiveHeading(selectedHeadingNum)
         $(elementName1).removeClass('selected');
     }
     
+    $('.rh-blueprint-types-menu li').removeClass('selected');
+    
+    
     //Set the current heading to active
-    var currElementName1 = '#heading'+selectedHeadingNum;
-    $(currElementName1).addClass('selected');
+    if(set_selected){
+        $(currElementName1).addClass('selected');
+        $('.rh-blueprint-types-menu li a[href=#collapse'+selectedHeadingNum+']').parent().addClass('selected');
+    }
 }
 
 function getNotifications(userID,callback)
@@ -688,8 +703,8 @@ function updateContentGoalStatus(projectID,callback)
 function updateWeekSelection(val)
 {
     document.getElementById('weekSelection').value = val;
-    document.getElementById('weekSelectionText').innerHTML = "Week "+val;
-    
+   // document.getElementById('weekSelectionText').innerHTML = "Week "+val;
+    if(val == "All"){document.getElementById('weekSelectionText').innerHTML = val+" Weeks";}else{ document.getElementById('weekSelectionText').innerHTML = "Week "+val;}
     //Update the mission piece counts
     var projectID = document.getElementById('selectedProjectID').value;
     updateMissionPieceCount(projectID,function(){
