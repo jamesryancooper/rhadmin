@@ -2252,9 +2252,10 @@ span.badge.rh-bg-info {
   margin-right: 3px;
 }
 .rh-blueprint-options li a {
-  font-size: .95em;
   color: #808285;
-  text-transform:uppercase; /* For Point #5 */
+  cursor: pointer;
+  font-size: 0.95em;
+  text-transform: uppercase;
 }
 .rh-column-heading {
   display: block;
@@ -2276,9 +2277,9 @@ span.badge.rh-bg-info {
   padding-top: 10px;
 }
 .rh-blueprint-rank li {
+  cursor: pointer;
   display: inline-block;
- /* margin-right: 14px;*/
- margin-right:3px; /* For Point #6 */
+  margin-right: 3px;
 }
 .rh-blueprint-rank li span {
   font-size: 1.6em;
@@ -2313,6 +2314,7 @@ span.badge.rh-bg-info {
   padding-top: 6px;
 }
 .rh-blueprint-goals li {
+  cursor: pointer;
   display: inline-block;
   width: 22%;
 }
@@ -2926,6 +2928,7 @@ margin-top: 5px;
   padding: 10px 15px !important;
   text-decoration: none;
   width: 100%;
+    cursor: pointer;
 }
 
 .piluku-dropdown .blueprints_option-drop li:hover {
@@ -3122,4 +3125,97 @@ margin-top: 5px;
 
 .rh-blueprint-open {
   display: none;
+}
+
+
+.rh-blueprint-goals {
+  position: relative;
+}
+
+.rh-blueprint-goals  .cart-section {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 22px;
+  width: 22px;
+}
+
+.rh-blueprint-goals .cart-section span {
+  font-size: 20px;
+}
+
+
+.rh-blueprint-chart h2 {
+  cursor: pointer;
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 10px 0 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+}
+
+.rh-blueprint-chart .rh-column-heading {
+  bottom: 3px;
+  font-size: 11px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.rh-blueprints {
+  overflow: visible;
+}
+
+.timeline-and-budget, .menu-content-boxs {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #b2b2b2;
+  display: none;
+  margin: 0 0 10px;
+  padding: 20px 15px;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.timeline-and-budget h2 , .menu-content-boxs h2 {
+  color: #000;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+
+.show-link-box {cursor: pointer;}
+
+
+.rh-blueprint-chart {
+  overflow: hidden;
+  padding: 0 5px !important;
+}
+
+
+#chart_div {
+    float: left;
+    height: 40px;
+  /*   left: -44px; */
+    margin-top: -3px;
+    position: relative;
+    width: 100%;
+}
+
+#chart_div svg {
+  left: -44px;
+  position: relative;
 }

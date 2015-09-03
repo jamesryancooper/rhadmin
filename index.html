@@ -27,15 +27,19 @@
 	jQuery(window).load(function () {
 	$('.piluku-preloader').addClass('hidden');
 	});
-</script>
-<script>
-/*	jQuery(window).load(function () {
-		jQuery( ".rh-blueprint-types-menu li" ).click(function() {
-		jQuery('.rh-blueprint-types-menu li.rh-blueprint-type-selected').removeClass('rh-blueprint-type-selected');
-		jQuery( this ).addClass( "rh-blueprint-type-selected" );
+	
+</script>	
+	
+<script>	
+		jQuery(window).load(function () {
+				jQuery('.show-link-box').click(function(){
+					  jQuery('.menu-content-boxs').hide();
+					  jQuery('#div'+$(this).attr('target')).show();
+				});
 		});
-	});*/
 </script>
+
+
 </head>
 <body>
 <div class="piluku-preloader text-center"> 
@@ -106,7 +110,6 @@
               <li><a href="#" onclick="updateMonthSelection('10');">October</a></li>
               <li><a href="#" onclick="updateMonthSelection('11');">November</a></li>
               <li><a href="#" onclick="updateMonthSelection('12');">December</a></li>
-              <li><a href="#" onclick="updateMonthSelection('13');">All</a></li>
             </ul>
             <input type="hidden" name="monthSelection" id="monthSelection" value="1"/>
             </span> <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="yearSelectionText">2014</a>
@@ -114,7 +117,6 @@
               <li><a href="#" onclick="updateYearSelection('1');">2014</a></li>
               <li><a href="#" onclick="updateYearSelection('2');">2015</a></li>
               <li><a href="#" onclick="updateYearSelection('3');">2016</a></li>
-              <li><a href="#" onclick="updateYearSelection('4');">All</a></li>
             </ul>
             <input type="hidden" name="yearSelection" id="yearSelection" value="1"/>
             </span> <span class="rh-bracket rh-bracket-left">]</span>
@@ -157,26 +159,26 @@
 								<ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop blueprints_option-drop" data-wow-duration="1500ms" role="menu">
 									<li>
 										<h2 class="headding-drop2">Edit Blueprint Strategy</h2>
-										<a href="#">Timeline and Budget</a>
-										<a href="#">Location and Competition</a>
-										<a href="#">Content Filters</a>
-										<a href="#">Price Template</a>
+										<a  class="show-link-box" target="1">Timeline and Budget</a>
+										<a  class="show-link-box" target="2" >Location and Competition</a>
+										<a  class="show-link-box" target="3">Content Filters</a>
+										<a class="show-link-box" target="4">Price Template</a>
 									</li>
 									<li>
 										<h2 class="headding-drop2">Run Report</h2>
-										<a href="#">Historical Rankings</a>
-										<a href="#">Published Content</a>
+										<a class="show-link-box" target="5">Historical Rankings</a>
+										<a class="show-link-box" target="6">Published Content</a>
 									</li>
 									<li>
-										<a href="#">Content Goal Status</a>
-										<a href="#">Download Blueprint</a>
+										<a class="show-link-box" target="7">Content Goal Status</a>
+										<a class="show-link-box" target="8">Download Blueprint</a>
 									</li>
 								</ul>
 						</li>
                         <li  class="rh-blueprint-info"> <a href="#" class="rh-blueprint-name">Houston plumbing specialist</a>
                           <ul class="rh-blueprint-options">
-                            <li><a href="#" class="rh-blueprint-budget"><i class="icon-rh_budget"></i>1200</a></li>
-                            <li><a href="#" class="rh-blueprint-location"><i class="icon-rh_location"></i>Houston, Tx</a></li>
+                            <li><a target="1" class="show-link-box rh-blueprint-budget"><i class="icon-rh_budget"></i>1200</a></li>
+                            <li><a target="2" class="show-link-box rh-blueprint-location"><i class="icon-rh_location"></i>Houston, Tx</a></li>
                             <!--li><a href="#" class="rh-blueprint-edit"><i class="ion ion-edit"></i></a></li-->
                           </ul>
                         </li>
@@ -185,15 +187,15 @@
                     <div class="col-lg-2 rh-right-border rh-column rh-blueprint-rank"> <span class="rh-column-heading">Search Engine <span class="rh-alt-color">Rank</span></span>
                       <ul>
                         <!-- Changes For point #6 :Start-->
-                        <li><!--<i class="ion ion-social-google"></i>--> 
+                        <li target="5" class="show-link-box"><!--<i class="ion ion-social-google"></i>--> 
                           <div class="icon-rh_google social-icon-count">
 				<span class="path1"></span><span class="path2"></span>
 				</div><span>15</span></li>
-                        <li><!--<i class="fa fa-hacker-news"></i>--> 
+                        <li target="5" class="show-link-box"><!--<i class="fa fa-hacker-news"></i>--> 
                           <div class="icon-rh_yahoo social-icon-count">
 				<span class="path1"></span><span class="path2"></span>
 				</div><span>17</span></li>
-                        <li><!--<i class="ion ion-social-yahoo"></i>--> 
+                        <li target="5" class="show-link-box"><!--<i class="ion ion-social-yahoo"></i>--> 
 						<div class="icon-rh_bing social-icon-count">
 							<span class="path1"></span><span class="path2"></span>
 						</div>
@@ -206,24 +208,25 @@
                         <div class="line"></div>
                         <svg id="chart2" class="sparkline"></svg> </div>
                     </div-->
-					<div class="col-lg-2 rh-right-border rh-column rh-blueprint-chart" data-toggle="modal" data-target="#myModal">
-										<span class="rh-column-heading"><span class="rh-alt-color">You</span> vs. Them</span>
-										<div id="chart_div" style="width: 190px; height: 45px;"></div>
-
+					<div class="col-lg-2 rh-right-border rh-column rh-blueprint-chart" >
+										<h2 data-toggle="modal" data-target="#myModal">PUBLISHED CONTENT</h2>
+										<div id="chart_div" target="6" class="show-link-box"></div>
+                                        <span class="rh-column-heading"><span class="rh-alt-color">You</span> vs. Them</span>
 
 					</div>
                     <div class="col-lg-2 rh-right-border rh-column rh-blueprint-goals show_on_expand"><span class="rh-column-heading">Content <span class="rh-alt-color">Goal</span> Status</span>
                       <ul>
-                        <li class="rh-blueprint-complete">
+                        <li target="7" class="show-link-box rh-blueprint-complete">
                           <p class="rh-blueprint-num" id="completeCount">42<span class="rh-blueprint-status">complete</span> </p>
                         </li>
                         <li class="rh-blueprint-goal-arrow"><i class="ion ion-ios-arrow-right"></i></li>
-                        <li class="rh-blueprint-goal"><span class="rh-blueprint-num" id="totalCount">76</span></li>
+                        <li target="7" class="show-link-box rh-blueprint-goal"><span class="rh-blueprint-num" id="totalCount">76</span></li>
                         <li class="rh-blueprint-goal-arrow"><i class="ion ion-ios-arrow-left"></i></li>
-                        <li class="rh-blueprint-incomplete">
+                        <li target="7" class="show-link-box rh-blueprint-incomplete">
                           <p class="rh-blueprint-num" id="incompleteCount">34 <span class="rh-blueprint-status">incomplete</span></p>
                         </li>
                       </ul>
+					  <div class="cart-section"><span class="icon-rh_cart"></span> </div>
                     </div>
 					
 					<div class="col-lg-2 rh-right-border rh-column rh-blueprint-goals-head show_on_collapse">
@@ -423,7 +426,43 @@
               </div>
             </li>
             <!--For add new row of Create Blueprint : Start-->
+			
             <li>
+			<div class="menu-content-boxs" id="div1"> 
+				<h2>Timeline and Budget</h2>
+			</div>
+			
+			<div class="menu-content-boxs" id="div2"> 
+				<h2>Location and Competition</h2>
+			</div>
+			
+			<div class="menu-content-boxs" id="div3"> 
+				<h2>Content Filters</h2>
+			</div>
+			
+			<div class="menu-content-boxs" id="div4"> 
+				<h2>Price Template</h2>
+			</div>
+			
+			<div class="menu-content-boxs" id="div5"> 
+				<h2>Historical Rankings</h2>
+			</div>
+			
+			<div class="menu-content-boxs" id="div6"> 
+				<h2>Published Content</h2>
+			</div>
+			
+			<div class="menu-content-boxs" id="div7"> 
+				<h2>Content Goal Status</h2>
+			</div>
+			
+			<div class="menu-content-boxs" id="div8"> 
+				<h2>Download Blueprint</h2>
+			</div>
+			
+			</li>	
+			
+			<li>
               <div class="row blue_print">
                 <div class="col-lg-1 rh-column rh-blueprint">
                   <ul>
@@ -655,10 +694,12 @@
           ['2013',  1000,      400],
           ['2014',  1170,      460],
           ['2015',  660,       1120],
-          ['2016',  1030,      540]
+          ['2016',  1030, 540]
         ]);
 
         var options = {
+            width: 340,
+            height: 45,
           hAxis: { textPosition: 'none'  },
           vAxis: {textPosition: 'none',baselineColor:'#ffffff', gridlines:{count:0} },
           legend:'none',
