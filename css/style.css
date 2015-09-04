@@ -3175,24 +3175,19 @@ margin-top: 5px;
   overflow: visible;
 }
 
-.timeline-and-budget, .menu-content-boxs {
+.menu-content-boxs {
   background: #fff none repeat scroll 0 0;
   border: 1px solid #b2b2b2;
-  display: none;
-  margin: 0 0 10px;
-  padding: 20px 15px;
-  text-align: center;
-  width: 100%;
-  
 }
 
-.timeline-and-budget h2 , .menu-content-boxs h2 {
+.menu-content-boxs h2{
+  margin:0;
+  
+  padding: 20px 15px;
   color: #000;
   font-size: 24px;
   font-weight: normal;
   line-height: normal;
-  margin: 0;
-  padding: 0;
   text-transform: uppercase;
 }
 
@@ -3216,6 +3211,29 @@ margin-top: 5px;
 }
 
 #chart_div svg {
-  left: -44px;
+  left: -64px;
   position: relative;
+}
+
+.menu-content-boxs h1 {
+  background-color: #c9e4ef;
+  color: #231f20;
+  font-family: "PT Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 15px;
+  text-align: left;
+}
+
+.menu-content-boxs p {
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
+  padding: 10px 15px;
+  text-align: left;
 }

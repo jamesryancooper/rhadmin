@@ -768,3 +768,6 @@ function validateBlueprint()
 }
 
 /** 1520 Consulting code END **/
+
+
+

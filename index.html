@@ -28,17 +28,7 @@
 	$('.piluku-preloader').addClass('hidden');
 	});
 	
-</script>	
-	
-<script>	
-		jQuery(window).load(function () {
-				jQuery('.show-link-box').click(function(){
-					  jQuery('.menu-content-boxs').hide();
-					  jQuery('#div'+$(this).attr('target')).show();
-				});
-		});
 </script>
-
 
 </head>
 <body>
@@ -133,7 +123,7 @@
             <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Merge</a></li>
             <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Refresh</a></li>
             <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Archive</a></li>
-			<li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Download</a></li>
+            <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Download</a></li>
             <!-- Change For Point #3 End-->
             <li>
               <button class="btn btn-orange btn-round create-btn-b"> <i class="icon-rh_add"></i> <span>Create New Blueprint</span> </button>
@@ -154,31 +144,34 @@
                   <div class="row">
                     <div class="col-lg-4 rh-right-border rh-column rh-blueprint">
                       <ul>
-						<li class="rh-blueprint-settings piluku-dropdown dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion ion-android-menu"></i></a>
-								<ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop blueprints_option-drop" data-wow-duration="1500ms" role="menu">
-									<li>
-										<h2 class="headding-drop2">Edit Blueprint Strategy</h2>
-										<a  class="show-link-box" target="1">Timeline and Budget</a>
-										<a  class="show-link-box" target="2" >Location and Competition</a>
-										<a  class="show-link-box" target="3">Content Filters</a>
-										<a class="show-link-box" target="4">Price Template</a>
-									</li>
-									<li>
-										<h2 class="headding-drop2">Run Report</h2>
-										<a class="show-link-box" target="5">Historical Rankings</a>
-										<a class="show-link-box" target="6">Published Content</a>
-									</li>
-									<li>
-										<a class="show-link-box" target="7">Content Goal Status</a>
-										<a class="show-link-box" target="8">Download Blueprint</a>
-									</li>
-								</ul>
-						</li>
+                        <li class="rh-blueprint-settings piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion ion-android-menu"></i></a>
+                          <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop blueprints_option-drop" data-wow-duration="1500ms" role="menu">
+                            <li>
+                              <h2 class="headding-drop2">Edit Blueprint Strategy</h2>
+                              <a  data-toggle="collapse" href="#menu-click1" aria-expanded="false" aria-controls="menu-click1" data-parent="#accordion-menus">Timeline and Budget</a> 
+							  <a  data-toggle="collapse" href="#menu-click2" aria-expanded="false" aria-controls="menu-click2" data-parent="#accordion-menus">Location and Competition</a> 
+							  <a  data-toggle="collapse" href="#menu-click3" aria-expanded="false" aria-controls="menu-click3" data-parent="#accordion-menus">Content Filters</a> 
+							  <a data-toggle="collapse" href="#menu-click4" aria-expanded="false" aria-controls="menu-click4" data-parent="#accordion-menus">Price Template</a> 
+							  </li>
+                            <li>
+                              <h2 class="headding-drop2">Content</h2>
+                              <a data-toggle="collapse" href="#menu-click5" aria-expanded="false" aria-controls="menu-click5" data-parent="#accordion-menus">Order Content</a>
+							  <a data-toggle="collapse" href="#menu-click6" aria-expanded="false" aria-controls="menu-click6" data-parent="#accordion-menus">Manage Content</a> 
+							  <a data-toggle="collapse" href="#menu-click7" aria-expanded="false" aria-controls="menu-click7" data-parent="#accordion-menus">Export Content Order</a> 
+							  </li>
+                            <li>
+                              <h2 class="headding-drop2">Run Report</h2>
+                              <a data-toggle="collapse" href="#menu-click8" aria-expanded="false" aria-controls="menu-click8" data-parent="#accordion-menus">Historical Rankings</a> 
+							  <a data-toggle="collapse" href="#menu-click9" aria-expanded="false" aria-controls="menu-click9" data-parent="#accordion-menus">Published Content</a> 
+							  <a data-toggle="collapse" href="#menu-click10" aria-expanded="false" aria-controls="menu-click10" data-parent="#accordion-menus">Content Goal Status</a> 
+							  <a data-toggle="collapse" href="#menu-click11" aria-expanded="false" aria-controls="menu-click11" data-parent="#accordion-menus">Download Blueprint</a>
+							  </li>
+                          </ul>
+                        </li>
                         <li  class="rh-blueprint-info"> <a href="#" class="rh-blueprint-name">Houston plumbing specialist</a>
                           <ul class="rh-blueprint-options">
-                            <li><a target="1" class="show-link-box rh-blueprint-budget"><i class="icon-rh_budget"></i>1200</a></li>
-                            <li><a target="2" class="show-link-box rh-blueprint-location"><i class="icon-rh_location"></i>Houston, Tx</a></li>
+                            <li><a data-toggle="collapse" href="#menu-click1" aria-expanded="false" aria-controls="menu-click1" data-parent="#accordion-menus" class="show-link-box rh-blueprint-budget"><i class="icon-rh_budget"></i>1200</a></li>
+                            <li><a data-toggle="collapse" href="#menu-click2" aria-expanded="false" aria-controls="menu-click2" data-parent="#accordion-menus" class="show-link-box rh-blueprint-location"><i class="icon-rh_location"></i>Houston, Tx</a></li>
                             <!--li><a href="#" class="rh-blueprint-edit"><i class="ion ion-edit"></i></a></li-->
                           </ul>
                         </li>
@@ -187,52 +180,40 @@
                     <div class="col-lg-2 rh-right-border rh-column rh-blueprint-rank"> <span class="rh-column-heading">Search Engine <span class="rh-alt-color">Rank</span></span>
                       <ul>
                         <!-- Changes For point #6 :Start-->
-                        <li target="5" class="show-link-box"><!--<i class="ion ion-social-google"></i>--> 
-                          <div class="icon-rh_google social-icon-count">
-				<span class="path1"></span><span class="path2"></span>
-				</div><span>15</span></li>
-                        <li target="5" class="show-link-box"><!--<i class="fa fa-hacker-news"></i>--> 
-                          <div class="icon-rh_yahoo social-icon-count">
-				<span class="path1"></span><span class="path2"></span>
-				</div><span>17</span></li>
-                        <li target="5" class="show-link-box"><!--<i class="ion ion-social-yahoo"></i>--> 
-						<div class="icon-rh_bing social-icon-count">
-							<span class="path1"></span><span class="path2"></span>
-						</div>
-							<span>24</span></li>
+                        <li data-parent="#accordion-menus" aria-controls="menu-click8" aria-expanded="false" href="#menu-click8" data-toggle="collapse" class="show-link-box">
+                          <div class="icon-rh_google social-icon-count"> <span class="path1"></span><span class="path2"></span> </div>
+                          <span>15</span></li>
+                        <li data-parent="#accordion-menus" aria-controls="menu-click8" aria-expanded="false" href="#menu-click8" data-toggle="collapse" class="show-link-box">
+                          <div class="icon-rh_yahoo social-icon-count"> <span class="path1"></span><span class="path2"></span> </div>
+                          <span>17</span></li>
+                        <li data-parent="#accordion-menus" aria-controls="menu-click8" aria-expanded="false" href="#menu-click8" data-toggle="collapse" class="show-link-box">
+                          <div class="icon-rh_bing social-icon-count"> <span class="path1"></span><span class="path2"></span> </div>
+                          <span>24</span></li>
                         <!-- Changes For point #6 :End-->
                       </ul>
                     </div>
-                    <!--div class="col-lg-2 rh-right-border rh-column rh-blueprint-chart"> <span class="rh-column-heading"><span class="rh-alt-color">You</span> vs. Them</span>
-                      <div class="svg-holder">
-                        <div class="line"></div>
-                        <svg id="chart2" class="sparkline"></svg> </div>
-                    </div-->
-					<div class="col-lg-2 rh-right-border rh-column rh-blueprint-chart" >
-										<h2 data-toggle="modal" data-target="#myModal">PUBLISHED CONTENT</h2>
-										<div id="chart_div" target="6" class="show-link-box"></div>
-                                        <span class="rh-column-heading"><span class="rh-alt-color">You</span> vs. Them</span>
-
-					</div>
+                    <div class="col-lg-2 rh-right-border rh-column rh-blueprint-chart" >
+                      <h2 data-toggle="modal" data-target="#myModal">PUBLISHED CONTENT</h2>
+                      <div id="chart_div" data-parent="#accordion-menus" aria-controls="menu-click9" aria-expanded="false" href="#menu-click9" data-toggle="collapse" class="show-link-box"></div>
+                      <span class="rh-column-heading"><span class="rh-alt-color">You</span> vs. Them</span> </div>
                     <div class="col-lg-2 rh-right-border rh-column rh-blueprint-goals show_on_expand"><span class="rh-column-heading">Content <span class="rh-alt-color">Goal</span> Status</span>
                       <ul>
-                        <li target="7" class="show-link-box rh-blueprint-complete">
+                        <li data-parent="#accordion-menus" aria-controls="menu-click10" aria-expanded="false" href="#menu-click10" data-toggle="collapse" class="show-link-box rh-blueprint-complete">
                           <p class="rh-blueprint-num" id="completeCount">42<span class="rh-blueprint-status">complete</span> </p>
                         </li>
                         <li class="rh-blueprint-goal-arrow"><i class="ion ion-ios-arrow-right"></i></li>
-                        <li target="7" class="show-link-box rh-blueprint-goal"><span class="rh-blueprint-num" id="totalCount">76</span></li>
+                        <li data-parent="#accordion-menus" aria-controls="menu-click10" aria-expanded="false" href="#menu-click10" data-toggle="collapse" class="show-link-box rh-blueprint-goal"><span class="rh-blueprint-num" id="totalCount">76</span></li>
                         <li class="rh-blueprint-goal-arrow"><i class="ion ion-ios-arrow-left"></i></li>
-                        <li target="7" class="show-link-box rh-blueprint-incomplete">
+                        <li data-parent="#accordion-menus" aria-controls="menu-click10" aria-expanded="false" href="#menu-click10" data-toggle="collapse" class="show-link-box rh-blueprint-incomplete">
                           <p class="rh-blueprint-num" id="incompleteCount">34 <span class="rh-blueprint-status">incomplete</span></p>
                         </li>
                       </ul>
-					  <div class="cart-section"><span class="icon-rh_cart"></span> </div>
+                      <div class="cart-section"><span class="icon-rh_cart"></span> </div>
                     </div>
-					
-					<div class="col-lg-2 rh-right-border rh-column rh-blueprint-goals-head show_on_collapse">
-					<h2 class="goal-headding">CONTENT GOAL STATUS </h2>
+                    <div class="col-lg-2 rh-right-border rh-column rh-blueprint-goals-head show_on_collapse">
+                      <h2 class="goal-headding">CONTENT GOAL STATUS </h2>
                     </div>
-					
+                    
                     <!--<div class="col-lg-2 rh-right-border rh-column rh-blueprint-open">
 										<a href="#" class="panel-minimize">
 											<ul>
@@ -245,13 +226,8 @@
 											</ul>
 										</a>
 									</div>-->
-                    <div class="col-lg-2 rh-right-border rh-column rh-blueprint-open show_on_expand"> <a href="#" class="panel-minimize"> 
-                      <!--<ul>
-												<li>Open Blueprint</li>
-												<li class="margin_top"><i class="icon ti-angle-right"></i></li>
-											</ul>-->Open Blueprint<i class="icon ti-angle-right "></i> </a> </div>
-											 <div class="col-lg-2 rh-right-border rh-column rh-blueprint-close show_on_collapse"> <a href="#" class="panel-minimize"> 
-                   Close Blueprint<i class="icon icon-rh_close"></i> </a> </div>
+                    <div class="col-lg-2 rh-right-border rh-column rh-blueprint-open show_on_expand"> <a href="#" class="panel-minimize"> Open Blueprint<i class="icon ti-angle-right "></i> </a> </div>
+                    <div class="col-lg-2 rh-right-border rh-column rh-blueprint-close show_on_collapse"> <a href="#" class="panel-minimize"> Close Blueprint<i class="icon icon-rh_close"></i> </a> </div>
                     <div class="blueprints-process">
                       <div class="progress progress-bar-mini">
                         <div style="width: 75%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar progress-bar-primary three-sec-ease-in-out" title="75%"> </div>
@@ -281,7 +257,7 @@
                         <li><a data-parent="#accordion" data-toggle="collapse" href="#collapseTen" onclick="setActiveHeading('Ten');">Product</a></li>
                       </ul>
                     </div>
-					<div class="col-lg-2  rh-blueprint-goals rh-nav-goals">
+                    <div class="col-lg-2  rh-blueprint-goals rh-nav-goals">
                       <ul>
                         <li class="rh-blueprint-complete">
                           <p class="rh-blueprint-num" id="completeCount">42<span class="rh-blueprint-status">complete</span> </p>
@@ -295,7 +271,7 @@
                       </ul>
                     </div>
                     <div class="cart-section"><span class="icon-rh_cart"></span> </div>
-				<!--For Point #10 : Remove Other Stuff--> 
+                    <!--For Point #10 : Remove Other Stuff--> 
                     <!--<div class="col-lg-2">other stuff</div>--> 
                   </div>
                   <ul class="rh-blueprint-type-headings">
@@ -313,9 +289,6 @@
                       <div class="panel-heading selected" role="tab" id="headingOne"> <span class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="setActiveHeading('One');" aria-expanded="true" aria-controls="collapseOne"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i> <span class="rh-blueprint-type-count" id="blogCount">0</span>Blogs </a> </span>
                         <div class="blogprocess">
                           <h2> 75%</h2>
-                          <!--div class="progress progress-bar-mini">
-                            <div style="width: 75%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar progress-bar-primary three-sec-ease-in-out"> </div>
-                          </div-->
                         </div>
                       </div>
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -326,7 +299,6 @@
                       <div class="panel-heading" role="tab" id="headingTwo"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="setActiveHeading('Two');" aria-expanded="false" aria-controls="collapseTwo"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="newsCount">0</span>News </a> </span>
                         <div class="blogprocess">
                           <h2> 40%</h2>
-                          
                         </div>
                       </div>
                       <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -337,7 +309,6 @@
                       <div class="panel-heading" role="tab" id="headingThree"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" onclick="setActiveHeading('Three');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="socialCount">0</span>Social </a> </span>
                         <div class="blogprocess">
                           <h2>25%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -348,7 +319,6 @@
                       <div class="panel-heading" role="tab" id="headingFour"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" onclick="setActiveHeading('Four');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="pressReleaseCount">0</span>Press Releases </a> </span>
                         <div class="blogprocess">
                           <h2> 55%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
@@ -359,7 +329,6 @@
                       <div class="panel-heading" role="tab" id="headingFive"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" onclick="setActiveHeading('Five');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="directoryCount">0</span>Directories </a> </span>
                         <div class="blogprocess">
                           <h2> 12%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
@@ -370,7 +339,6 @@
                       <div class="panel-heading" role="tab" id="headingSix"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" onclick="setActiveHeading('Six');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="videoCount">0</span>Videos </a> </span>
                         <div class="blogprocess">
                           <h2> 33%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
@@ -381,7 +349,6 @@
                       <div class="panel-heading" role="tab" id="headingSeven"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" onclick="setActiveHeading('Seven');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="imageCount">0</span>Images </a> </span>
                         <div class="blogprocess">
                           <h2> 94%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
@@ -392,7 +359,6 @@
                       <div class="panel-heading" role="tab" id="headingEight"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" onclick="setActiveHeading('Eight');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="forumCount">0</span>Forum </a> </span>
                         <div class="blogprocess">
                           <h2> 5%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
@@ -403,7 +369,6 @@
                       <div class="panel-heading" role="tab" id="headingNine"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" onclick="setActiveHeading('Nine');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="wikiCount">0</span>Wiki </a> </span>
                         <div class="blogprocess">
                           <h2> 75%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
@@ -414,7 +379,6 @@
                       <div class="panel-heading" role="tab" id="headingTen"> <span class="panel-title"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" onclick="setActiveHeading('Ten');" aria-expanded="false" aria-controls="collapseThree"> <i class="ion ion-android-arrow-dropright col-close"></i><i class="ion-android-arrow-dropdown col-open"></i><span class="rh-blueprint-type-count" id="productCount">0</span>Product </a> </span>
                         <div class="blogprocess">
                           <h2> 56%</h2>
-                         
                         </div>
                       </div>
                       <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
@@ -426,43 +390,89 @@
               </div>
             </li>
             <!--For add new row of Create Blueprint : Start-->
-			
-            <li>
-			<div class="menu-content-boxs" id="div1"> 
-				<h2>Timeline and Budget</h2>
-			</div>
-			
-			<div class="menu-content-boxs" id="div2"> 
-				<h2>Location and Competition</h2>
-			</div>
-			
-			<div class="menu-content-boxs" id="div3"> 
-				<h2>Content Filters</h2>
-			</div>
-			
-			<div class="menu-content-boxs" id="div4"> 
-				<h2>Price Template</h2>
-			</div>
-			
-			<div class="menu-content-boxs" id="div5"> 
-				<h2>Historical Rankings</h2>
-			</div>
-			
-			<div class="menu-content-boxs" id="div6"> 
-				<h2>Published Content</h2>
-			</div>
-			
-			<div class="menu-content-boxs" id="div7"> 
-				<h2>Content Goal Status</h2>
-			</div>
-			
-			<div class="menu-content-boxs" id="div8"> 
-				<h2>Download Blueprint</h2>
-			</div>
-			
-			</li>	
-			
+            
 			<li>
+				<div class="panel-group" id="accordion-menus" role="tablist" aria-multiselectable="true">			
+					<div class="panel panel-default">
+						<div id="menu-click1" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Timeline and Budget</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click2" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Location and Competition</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click3" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Content Filters</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click4" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Price Template</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click5" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Order Content</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click6" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Manage Content</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click7" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Export Content Order</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+				
+				
+				<div class="panel panel-default">
+						<div id="menu-click8" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Historical Rankings</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click9" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Published Content</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click10" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Content Goal Status</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div id="menu-click11" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
+						<h1>Download Blueprint</h1>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+						</div>
+					</div>
+              </div>
+			</li>
+            <li>
               <div class="row blue_print">
                 <div class="col-lg-1 rh-column rh-blueprint">
                   <ul>
@@ -654,21 +664,19 @@
 
 <!-- Modal -->
 <div class="modal-popup fade map-popup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-<h4 class="modal-title" id="myModalLabel"><span class="rh-alt-color">You</span> vs. Them</h4>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><span class="rh-alt-color">You</span> vs. Them</h4>
+      </div>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-</div>
-</div>
-</div>
-</div>
-
-
 <script src='js/jquery-ui-1.10.3.custom.min.js'></script> 
 <script src='js/bootstrap.min.js'></script> 
 <script src="js/tooltip-custom.js"></script> <!--For Point #3--> 
