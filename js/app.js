@@ -3,6 +3,8 @@
 var restURL = "https://fairmarketing.cloudapp.net:8443/rest1.0/admin_endpoint.jsp?";
 //var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
 
+var blueprintmenu = "<ul class='rh-blueprint-type-headings creation-side'><li class='xtra-narrow cart-icon-hd'><i class='icon-rh_addtocart'></i></li><li class='narrow'>What to Create</li><li class='xtra-wide'>How to Optimize It</li><li class='narrow'>When Created</li></ul><ul class='rh-blueprint-type-headings publication-side'><li class='wide'>Where to Publish</li><li class='wide'>Where Published</li><li class='narrow'>When Published</li><li class='xtra-narrow'>Status</li></ul>";
+
 $(document).ready(function(){
     
 });
@@ -245,6 +247,7 @@ function getProjectContentTableData(projectID,callback)
             var info = JSON.parse(returnData);
             
             var tableData = "";
+			
             
             if(info.status == "success")
             {
@@ -260,7 +263,12 @@ function getProjectContentTableData(projectID,callback)
                 var wikiCount = info.Wiki.length;
 
                 //Blog table
-                var tableHTML = "";
+				
+					
+				
+				
+                var tableHTML = "";	
+				
                 for(var i=0; i<blogCount; i++)
                 {
                     var entry = info.Blog[i];
@@ -293,9 +301,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
                 }
                 document.getElementById('blogTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu1').innerHTML = blueprintmenu;
                 
                 
                 //Directory table
@@ -332,9 +341,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
                 }
                 document.getElementById('directoryTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu5').innerHTML = blueprintmenu;
                 
                 
                 //Forum table
@@ -371,9 +381,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
                 }
                 document.getElementById('forumTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu8').innerHTML = blueprintmenu;
                 
                 
                 //Image table
@@ -410,9 +421,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
                 }
                 document.getElementById('imageTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu7').innerHTML = blueprintmenu;
                 
                 
                 //News table
@@ -449,9 +461,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
                 }
                 document.getElementById('newsTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu2').innerHTML = blueprintmenu;
                 
                 
                 //Press release table
@@ -488,9 +501,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
                 }
                 document.getElementById('pressReleaseTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu4').innerHTML = blueprintmenu;
                 
                 
                 //Product table
@@ -527,9 +541,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
                 }
                 document.getElementById('productTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu10').innerHTML = blueprintmenu;
                 
                 
                 //Social table
@@ -566,9 +581,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
                 }
                 document.getElementById('socialTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu3').innerHTML = blueprintmenu;
                 
                 
                 //Video table
@@ -605,9 +621,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
                 }
                 document.getElementById('videoTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu6').innerHTML = blueprintmenu;
                 
                 
                 //Wiki table
@@ -644,9 +661,10 @@ function getProjectContentTableData(projectID,callback)
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<ul class="rh-blueprint-type-table"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="wide">Outreach: <strong>22 options</strong> | DA: 55 <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
                 }
                 document.getElementById('wikiTable').innerHTML = tableHTML;
+				document.getElementById('TableMenu9').innerHTML = blueprintmenu;
                 
             }
             callback(tableData);

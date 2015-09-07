@@ -1,0 +1,44 @@
+element.style {
+    width: 80px;
+    height: 40px;
+}
+
+#selectamnttype {
+    float: left;
+    width: 50px !important;
+    margin-left: 2%;
+    padding: 0;
+    height: 40px;
+    text-align: center;
+}
+
+input#timed_amount {
+    width: 160px;
+    float: left;
+}
+
+#url_type {
+    float: left;
+    width: 25% !important;
+}
+
+#addonclick {
+    position: static;
+    float: right;
+    width: 72%;
+}
+
+#scroll_amount_in_pc {
+    width: 80px;
+    height: 40px;
+}
+
+
+.epcontainer .form-field input[type=email], .epcontainer .form-field input[type=number], .epcontainer .form-field input[type=password], .epcontainer .form-field input[type=search], .epcontainer .form-field input[type=tel], .epcontainer .form-field input[type=text], .epcontainer .form-field input[type=url], .epcontainer .form-field select {
+    height: 40px;
+    padding: 0 10px;
+}
+
+.epcontainer.active input[type='range'], .epcontainer.active input[type='number'], .epcontainer.active input[type='text'], .epcontainer.active select {
+    width: 117px;
+}

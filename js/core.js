@@ -64,8 +64,28 @@ $(document).ready(function () {
         }
         $target.slideToggle();
     });
-    
-    
+	
+	 $('.panel-minimize').on('click', function (e) 
+    {
+        e.preventDefault();
+        var $target = $('.blueprint-expand-outer');
+		//alert($target);
+        if ($target.is(':visible')) {
+            $('i', $(this)).removeClass('ti-angle-up').addClass('ti-angle-down');
+            $(this).parent().parent().parent().find('.show_on_expand').show();
+            $(this).parent().parent().parent().find('.show_on_collapse').hide();
+        } else {
+            $('i', $(this)).removeClass('ti-angle-down').addClass('ti-angle-up');
+            $(this).parent().parent().parent().find('.show_on_expand').hide();
+            $(this).parent().parent().parent().find('.show_on_collapse').show();
+        }
+        $target.slideToggle();
+		$(".menu-content-boxs").removeClass("in");
+    });
+	
+     
+		
+		
     $('.panel-refresh').on('click', function (e) 
     {
         e.preventDefault();
