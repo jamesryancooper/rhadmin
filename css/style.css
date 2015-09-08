@@ -2782,16 +2782,7 @@ margin-top: 5px;
   width: 40px;
 }
 
-.blogprocess h2 {
-  float: left;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-}
+
 .accordion-outer .panel-title {
   display: inline-block;
 }
@@ -3049,8 +3040,9 @@ margin-top: 5px;
 .rh-nav-goals ul {
   padding: 0;
 }
-.rh-nav-goals ul  p{
+.rh-nav-goals ul p {
   margin-bottom: 0;
+  padding: 0;
 }
 
 .blueprint-set-outer {
@@ -3342,3 +3334,99 @@ margin-top: 5px;
 .selected .blogprocess h2 {
   color: #e44f2d;
 }
+
+
+.creation-side .narrow.circle_warning i{
+  background-color: #ffde17;
+  border-radius: 100px 0 0 100px;
+  color: transparent;
+  height: 16px;
+  margin: 0 5px 0 2px;
+  padding: 0;
+  width: 8px;
+}
+
+
+.publication-side .narrow.circle_warning i{
+  background-color: #ed1c24;
+  border-radius: 0 100px 100px 0;
+  color: transparent;
+  height: 16px;
+  margin: 0 5px 0 10px;
+  padding: 0;
+  width: 8px;
+}
+
+.creation-side .circle_success i {
+  background-color: #4caf50;
+  border-radius: 100px 0 0 100px;
+  color: transparent;
+  height: 16px;
+  margin: 0 5px 0 2px;
+  padding: 0;
+  width: 8px;
+}
+
+
+.publication-side   .circle_success i{
+  background-color: #4caf50;
+  border-radius: 0 100px 100px 0;
+  color: transparent;
+  height: 16px;
+  margin: 0 5px 0 10px;
+  padding: 0;
+  width: 8px;
+}
+
+.creation-side .circle_danger i{
+  background-color: #ed1c24;
+  border-radius: 100px 0 0 100px;
+  color: transparent;
+  height: 16px;
+  margin: 0 5px 0 2px;
+  padding: 0;
+  width: 8px;
+}
+
+
+.publication-side  .circle_danger i{
+  background-color: #ed1c24;
+  border-radius: 0 100px 100px 0;
+  color: transparent;
+  height: 16px;
+  margin: 0 5px 0 10px;
+  padding: 0;
+  width: 8px;
+}
+
+.rh-blueprint-type-table.creation-side li:last-child {
+  text-align: left;
+}
+
+
+.first-status span {
+  left: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: 51.4%;
+}
+
+.first-status {
+  padding: 0;
+  position: relative;
+} 
+
+.menu-content-boxs .blogprocess h2 {
+  float: left;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.table-row-outer .circle_warning ,.table-row-outer .circle_success ,.table-row-outer .circle_danger {text-transform:uppercase;}

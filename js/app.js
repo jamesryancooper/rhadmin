@@ -245,7 +245,6 @@ function getProjectContentTableData(projectID,callback)
 {
     $.ajax({url: restURL, data: {'command':'getContentTables','projectid':projectID}, type: 'post', async: true, success: function postResponse(returnData){
             var info = JSON.parse(returnData);
-            
             var tableData = "";
 			
             
@@ -272,12 +271,13 @@ function getProjectContentTableData(projectID,callback)
                 for(var i=0; i<blogCount; i++)
                 {
                     var entry = info.Blog[i];
-
                     var what = "Blog";
                     var createDate = entry.create_date;
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+                    var j = Math.floor((Math.random() * blogCount));
+                    var status1 = info.Blog[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -286,22 +286,45 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
-                        publishDate = "Publish Now";
-                        publishString = "";
+                        //publishDate = "";
+                        publishString = "Create Now";
+                        createDate = "Create Now";
                     }
                     else
                     {
                         circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+                    
+                    /*if(status1 == 'In Progress')
+                    {
+                        createDate1 = "In Progress"
+                        circleStyle1 = "circle_warning";
+                        circleStyle1 = "circle_success";				
+                        publishDate1 = "Publish Now";
+                        publishString1 = "";
+                    }
+                    else */
+					if(status1 == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
+                        publishDate = "Publish Now";
+                        publishString = "";
+
+                    }
+                    else
+                    {
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul></div>';
                 }
                 document.getElementById('blogTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu1').innerHTML = blueprintmenu;
@@ -318,6 +341,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * directoryCount));
+                    var status1 = info.Directory[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -326,22 +351,42 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						 publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					/* if(status1 == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle1 = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else */ if(status1 == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul></div>';
                 }
                 document.getElementById('directoryTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu5').innerHTML = blueprintmenu;
@@ -358,6 +403,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * forumCount));
+                    var status1 = info.Forum[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -366,22 +413,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						 publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					
+					/* if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else  */if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul> </div>';
                 }
                 document.getElementById('forumTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu8').innerHTML = blueprintmenu;
@@ -398,6 +466,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * imageCount));
+                    var status1 = info.Image[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -406,22 +476,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						 publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					
+					/* if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else */ if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul> </div>';
                 }
                 document.getElementById('imageTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu7').innerHTML = blueprintmenu;
@@ -438,6 +529,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * newsCount));
+                    var status1 = info.News[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -446,22 +539,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					
+					/*  if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else */ if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul></div>';
                 }
                 document.getElementById('newsTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu2').innerHTML = blueprintmenu;
@@ -478,6 +592,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * pressReleaseCount));
+                    var status1 = info.PressRelease[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -486,22 +602,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					
+					/*  if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else */ if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul> </div>';
                 }
                 document.getElementById('pressReleaseTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu4').innerHTML = blueprintmenu;
@@ -518,6 +655,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * productCount));
+                    var status1 = info.Product[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -526,22 +665,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					
+					/* if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else */ if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul></div>';
                 }
                 document.getElementById('productTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu10').innerHTML = blueprintmenu;
@@ -558,6 +718,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * socialCount));
+                    var status1 = info.Social[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -566,22 +728,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					 
+                   /*  if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else */ if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul></div>';
                 }
                 document.getElementById('socialTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu3').innerHTML = blueprintmenu;
@@ -598,6 +781,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * videoCount));
+                    var status1 = info.Video[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -606,22 +791,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					
+					/*  if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else  */if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul></div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul></div>';
                 }
                 document.getElementById('videoTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu6').innerHTML = blueprintmenu;
@@ -638,6 +844,8 @@ function getProjectContentTableData(projectID,callback)
                     var publishDate = entry.publish_date;
                     var publishLocation = entry.publish_location;
                     var status = entry.status;
+					var j = Math.floor((Math.random() * wikiCount));
+                    var status1 = info.Wiki[j].status;
                     
                     var circleStyle = "";
                     var publishString = "";
@@ -646,22 +854,43 @@ function getProjectContentTableData(projectID,callback)
                     {
                         createDate = "In Progress"
                         circleStyle = "circle_warning";
-                        publishDate = "Publish Now";
+                        //publishDate = "Publish Now";
                         publishString = "";
                     }
                     else if(status == 'Incomplete')
                     {
                         circleStyle = "circle_danger";
+                        //publishDate = "Publish Now";
+                        publishString = "";
+						publishString = "Create Now";
+                        createDate = "Create Now";
+                    }
+                    else
+                    {
+                        circleStyle = "circle_success";
+                        //publishString = "Published: ";
+                    }
+					 
+                   /*  if(status == 'In Progress')
+                    {
+                        createDate = "In Progress"
+                        circleStyle = "circle_warning";
+                        publishDate = "Publish Now";
+                        publishString = "";
+                    }
+                    else */ if(status == 'Incomplete')
+                    {
+                        circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
                         publishString = "";
                     }
                     else
                     {
-                        circleStyle = "circle_success";
+                        circleStyle1 = "circle_success";
                         publishString = "Published: ";
                     }
 
-                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow"><i class="fa fa-circle '+circleStyle+'"></i>'+publishDate+'</li><li class="xtra-narrow"><i class="fa fa-circle '+circleStyle+'"></i></li></ul> </div>';
+                    tableHTML += '<div class="table-row-outer"><ul class="rh-blueprint-type-table creation-side"><li class="xtra-narrow"><i class="ion ion-ios-cart-outline ordered"></i></li><li class="narrow">'+what+'</li><li class="xtra-wide">Backlink: <strong>4</strong> | Anchor Type: 1 branded, 2 url, 1 generic</li><li class="narrow '+circleStyle+'"><i class="fa fa-circle "></i>'+createDate+'</li></ul><ul class="rh-blueprint-type-table publication-side"><li class="wide">Outreach: <strong>22 options</strong> | DA: <strong>55</strong> <a href="#"><i class="ion ion-ios-eye-outline"></i></a></li><li class="wide"><span class="text-bold">'+publishString+'</span> <span class="text-lowercase text-light text-light">'+publishLocation+'</span></li><li class="narrow '+circleStyle1+'"><i class="fa fa-circle "></i>'+publishDate+'</li><li class="xtra-narrow"><div class="fa fa-circle first-status '+circleStyle1+'"><span class="fa fa-circle '+circleStyle+'"></span></div></li></ul> </div>';
                 }
                 document.getElementById('wikiTable').innerHTML = tableHTML;
 				document.getElementById('TableMenu9').innerHTML = blueprintmenu;
