@@ -142,7 +142,7 @@ function changeProject(projects, indexLoc)
     });
     
     //Update the content goal counters
-    updateContentGoalStatus(projectID,function(missionPieceData){
+    updateContentGoalStatus(projectID,function(contentGoalData){
         
     });
 }
@@ -938,8 +938,8 @@ function updateContentGoalStatus(projectID,callback)
                 var total = parseInt(complete)+parseInt(incomplete);
                 
                 //Update the count in the heading
-                document.getElementById('completeCount').innerHTML = complete;
-                document.getElementById('incompleteCount').innerHTML = incomplete;
+                document.getElementById('completeCount').innerHTML = complete+"<span class=\"rh-blueprint-status\">complete</span>";                
+                document.getElementById('incompleteCount').innerHTML = incomplete+"<span class=\"rh-blueprint-status\">incomplete</span>";
                 document.getElementById('totalCount').innerHTML = total;
             }
             callback(returnData);
