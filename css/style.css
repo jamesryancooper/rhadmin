@@ -3181,9 +3181,17 @@ margin-top: 5px;
   overflow: visible;
 }
 
+.rh-blueprints .panel-heading {
+  border-bottom: none;
+}
+
 .menu-content-boxs {
   background: #fff none repeat scroll 0 0;
   border: 1px solid #b2b2b2;
+}
+
+.rh-blueprints .collection-item .rh-blueprint-settings-pane .row {
+  margin-bottom: 20px;
 }
 
 .menu-content-boxs h2{
@@ -3483,7 +3491,7 @@ html, body {
 }
 
 .content {
-  overflow-x: hidden;
+  overflow-x: visible;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
 }
@@ -3663,4 +3671,22 @@ html, body {
 }
 /*********************************/
 /***** End Wizard Styles *******/
+/*********************************/
+
+
+/*********************************/
+/***** Start Custom Material *****/
+/*********************************/
+[type="checkbox"]:checked + label:before {
+  border-right-color: #1c75bc;
+  border-bottom-color: #1c75bc;
+}
+.btn, .btn-large {
+  background-color: #f7941d;
+}
+.btn:hover, .btn-large:hover {
+  background-color: #f28809;
+}
+/*********************************/
+/***** End Custom Material *******/
 /*********************************/
