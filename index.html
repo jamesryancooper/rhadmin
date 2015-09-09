@@ -11,6 +11,9 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
 <!-- Bootstrap CSS -->
 
+
+
+
 <link rel='stylesheet' href='css/bootstrap.min.css'>
 <link rel='stylesheet' href='css/materialize.css'>
 <link rel='stylesheet' href='css/material.css'>
@@ -20,7 +23,9 @@
 <link rel='stylesheet' href='css/rotated-gallery.css'>
 <link rel='stylesheet' href='css/sweet-alerts/sweetalert.css'>
 <link rel='stylesheet' href='css/jtree.css'>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
 <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+<script src="js/modernizr.custom.js"></script>
 <script src='js/jquery.js'></script>
 <script src='js/app.js'></script>
 <script>
@@ -126,7 +131,10 @@
             <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Download</a></li>
             <!-- Change For Point #3 End-->
             <li>
-              <button class="btn btn-orange btn-round create-btn-b"> <i class="icon-rh_add"></i> <span>Create New Blueprint</span> </button>
+              <button id="create-new-blueprint" class="btn btn-orange btn-round">
+                <i class="icon-rh_add"></i>
+                <span>Create New Blueprint</span>
+              </button>
             </li>
             <li class="setting-block"><a href="#"><i class="icon-rh_settings"></i></a></li>
           </ul>
@@ -511,7 +519,169 @@
     </div>
   </div>
   <!---content -->
-  
+
+
+  <!-- start wizard -->
+  <div id="create-new-blueprint-overlay" class="settings-overlay settings-overlay-contentpush">
+    <button type="button" class="settings-overlay-close">
+      <i class="ti-close"></i>
+    </button>
+    <div id="create-blueprint-wizard" class="wizard">
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+          <h3>Create New Blueprint</h3>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="piluku-tabs piluku-noborder steps">
+              <li class="step">
+                <span class="step-number">1</span>
+                <a href="#tabs1" data-toggle="tab" class="step-desc tabs1">
+                  <b class="step-title">Keyword</b>
+                  <p>Define a target keyword</p>
+                </a>
+              </li>
+              <li class="step disabled">
+                <span class="step-number">2</span>
+                <a href="#tabs2" data-toggle="tab" class="step-desc tabs2">
+                  <b class="step-title">Location</b>
+                  <p>Set a target location</p>
+                </a>
+              </li>
+              <li class="step disabled">
+                <span class="step-number">3</span>
+                <a href="#tabs3" data-toggle="tab" class="step-desc tabs3">
+                  <b class="step-title">Competitors</b>
+                  <p>Set number of competitors</p>
+                </a>
+              </li>
+              <li class="step disabled">
+                <span class="step-number">4</span>
+                <a href="#tabs4" data-toggle="tab" class="step-desc tabs4">
+                  <b class="step-title">Filters</b>
+                  <p>Apply content filters</p>
+                </a>
+              </li>
+              <li class="step disabled">
+                <span class="step-number">5</span>
+                <a href="#tabs5" data-toggle="tab" class="step-desc tabs5">
+                  <b class="step-title">Costs</b>
+                  <p>Apply cost template</p>
+                </a>
+              </li>
+              <li class="step disabled">
+                <span class="step-number">6</span>
+                <a href="#tabs6" data-toggle="tab" class="step-desc tabs6">
+                  <b class="step-title">Timeline & Budget</b>
+                  <p>Set timeline and budget</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="tab-content piluku-tab-content col-lg-6 col-lg-offset-3">
+          <div class="tab-pane" id="tabs1">
+            <h4>Keyword</h4>
+            <p class="message">What keyword or topic would you like to target?</p>
+            <form class="form form-horizontal">
+              <!--Default Horizontal Form-->
+              <div class="form-group">
+                <input type="text" class="form-control" name="blueprint-wizard-keyword" id="blueprint-wizard-keyword" placeholder="Enter a keyword or topic" />
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane" id="tabs2">
+            <h4>Location</h4>
+            <p class="message"></p>
+            <form class="form form-horizonta">
+              <!--Default Horizontal Form-->
+              <div class="form-group">
+                <input type="text" class="form-control" name="blueprint-wizard-location" id="blueprint-wizard-location" placeholder="Enter a location" />
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane" id="tabs3">
+            <p class="message"></p>
+            <div class="form-group">
+              <input type="text" class="ten-spinner" name="blueprint-wizard-competitors" id="blueprint-wizard-competitors" data-plugin="asSpinner" value="10" />
+            </div>
+          </div>
+          <div class="tab-pane" id="tabs4">
+            <h4>Filters</h4>
+            <p class="message"></p>
+            <form class="form form-horizontal">
+              <div class="form-group">
+                <select class="name_search form-control" id="blueprint-wizard-filter">
+                  <option value="1"> Rank Hacker (default) </option>
+                  <option value="2"> SEO Moz </option>
+                  <option value="3"> Offsite Guest Blog </option>
+                  <option value="4"> Social Promotion </option>
+                  <option value="5"> The Whole Kitchen Sink </option>
+                  <option value="6"> Directories </option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane" id="tabs5">
+            <h4>Costs</h4>
+            <p class="message"></p>
+            <form class="form form-horizontal">
+              <div class="form-group">
+                <select class="name_search form-control" id="blueprint-wizard-costs">
+                  <option value="1"> Budget Minded (default) </option>
+                  <option value="2"> Authority </option>
+                  <option value="3"> Premium </option>
+                  <option value="4"> Ultra Premium </option>
+                  <option value="5"> Premium </option>
+                  <option value="7"> Ultra Premium </option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane" id="tabs6">
+            <h4>Timeline & Budget</h4>
+            <p class="message"></p>
+            <form class="form form-horizontal">
+              <div class="form-group">
+                <div id="timeline" class="col-md-5 slider-container">
+                  <h5>Timeline</h5>
+                  <p>Use the slider below to adjust the roadmap timeline. This will affect your budget.</p>
+                  <div class="timeline-slider"></div>
+                  <h6 class="text-center">MONTHS</h6>
+                  <div class="timeline-slider-result"></div>
+                </div>
+                <div class="col-md-2"></div>
+                <div id="budget" class="col-md-5 slider-container">
+                  <h5>Budget</h5>
+                  <p>Use the slider below to adjust the roadmap budget. This will affect your timeline.</p>
+                  <div class="budget-slider"></div>
+                  <h6 class="text-center">DOLLARS</h6>
+                  <div class="budget-slider-result"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <ul class="pager wizard">
+            <li class="previous first" style="display:none;"><a href="#">First</a>
+            </li>
+            <li class="previous"><a href="#">Previous</a>
+            </li>
+            <li class="next last" style="display:none;"><a href="#">Last</a>
+            </li>
+            <li class="next"><a href="#">Next</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end wizard -->
+
+  <!-- start sidebar -->
   <div class="side-bar right-bar">
     <div class="contacts">
       <div class="col col-md-12">
@@ -673,7 +843,8 @@
       <!-- content_holder --> 
     </div>
   </div>
-  <!-- /Right-bar --> 
+  <!-- end sidebar -->
+
 </div>
 <!-- wrapper --> 
 
@@ -692,6 +863,7 @@
     </div>
   </div>
 </div>
+
 <script src='js/jquery-ui-1.10.3.custom.min.js'></script> 
 <script src='js/bootstrap.min.js'></script> 
 <script src="js/tooltip-custom.js"></script> <!--For Point #3--> 
@@ -704,7 +876,18 @@
 <script src='js/build/d3.min.js'></script> 
 <script src='js/nvd3/nv.d3.js'></script> 
 <script src='js/sparkline.js'></script> 
-<script src='js/widgets.js'></script> 
+<script src='js/widgets.js'></script>
+<script src='js/jquery.bootstrap.wizard.js'></script>
+<script src='js/prettify.js'></script>
+<script src='js/sweet-alert/sweetalert.min.js'></script>
+<script src='js/form-wizard.js'></script>
+<!--
+<script src="js/jquery-ui-slider-pips.js"></script>
+
+ -->
+<script src='js/classie.js'></script>
+<script src='js/fullscreen-overlay.js'></script>
+
 <script src='js/core.js'></script> 
 <script src="js/jquery.countTo.js"></script> 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script> 

@@ -3430,3 +3430,228 @@ margin-top: 5px;
 }
 
 .table-row-outer .circle_warning ,.table-row-outer .circle_success ,.table-row-outer .circle_danger {text-transform:uppercase;}
+
+/*********************************/
+/***** Start Overlay Styles ******/
+/*********************************/
+.settings-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,1);
+}
+
+/* Overlay closing cross */
+.settings-overlay .settings-overlay-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  border: none;
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 100;
+}
+
+/* Menu style */
+.settings-overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Effects */
+html, body {
+  overflow-x: hidden;
+}
+
+.content {
+  overflow-x: hidden;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.content.overlay-open {
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.content::after {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.content.overlay-open::after {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.settings-overlay-contentpush {
+  background: rgba(255,255,255,1);
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+
+.settings-overlay-contentpush.open {
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+@media screen and (max-height: 30.5em) {
+  .settings-overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+}
+/*********************************/
+/***** End Overlay Styles ********/
+/*********************************/
+
+/*********************************/
+/***** Start Wizard Styles *******/
+/*********************************/
+.wizard .steps {
+  margin-bottom: 22px;
+}
+.wizard .steps li {
+  display: inline-block;
+  float: left;
+}
+.wizard .steps-sm .step {
+  font-size: 12px;
+}
+.wizard .step.error {
+  color: #fff;
+  background-color: #f96868;
+}
+.wizard .step.active {
+  color: #fff;
+  background-color: #1c75bc;
+}
+.wizard .step.active .step-number {
+  color: #1c75bc;
+  background-color: #fff;
+}
+.wizard .step.active .step-title {
+  color: #fff;
+}
+.wizard .step.active a.step-desc {
+  background-color: transparent;
+  color: #fff;
+}
+.wizard .step {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  color: #a3afb7;
+  font-size: inherit;
+  vertical-align: top;
+  background-color: #f3f7f9;
+  border-radius: 0;
+}
+.wizard .step.disabled {
+  color: #ccd5db;
+  pointer-events: none;
+  cursor: auto;
+}
+.wizard .step.disabled .step-number {
+  background-color: #ccd5db;
+}
+.wizard .step.disabled .step-title {
+  color: #ccd5db;
+}
+.wizard .step.error .step-number {
+  color: #f96868;
+  background-color: #fff;
+}
+.wizard .step.current .step-number {
+  color: #62a8ea;
+  background-color: #fff;
+}
+.wizard .steps-sm .step-number {
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  line-height: 30px;
+}
+.wizard .step-number {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  background: #e4eaec;
+  border-radius: 50%;
+}
+.wizard .steps-sm .step-number~.step-desc {
+  min-height: 30px;
+  margin-left: 40px;
+}
+.wizard .step-number~.step-desc {
+  min-height: 40px;
+  margin-left: 46px;
+}
+.wizard .step-desc {
+  text-align: left;
+  display: block;
+}
+.wizard .step-desc {
+  padding: 0;
+}
+
+.wizard .step.error .step-title {
+  color: #fff;
+}
+.wizard .step.current .step-title {
+  color: #fff;
+}
+.wizard .steps-sm .step-title {
+  font-size: 18px;
+}
+.wizard .step-title {
+  font-size: 1.1em;
+  color: #526069;
+  margin-bottom: 0;
+}
+.wizard .step-desc p {
+  margin-bottom: 0;
+  font-size: .7em;
+}
+/*********************************/
+/***** End Wizard Styles *******/
+/*********************************/
