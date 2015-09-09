@@ -2482,7 +2482,6 @@ span.badge.rh-bg-info {
 }
 .rh-blueprint-type-headings li {
   display: inline-block;
-  border-right: solid 1px #fff;
   padding: 6px 5px;
 }
 .rh-blueprint-type-headings.creation-side li:first-child,
@@ -2589,6 +2588,7 @@ span.badge.rh-bg-info {
 .rh-blueprint-type-count , .rh-blueprint-type-count {
   background-color: #fff;
   color: #1C75BC;
+  margin-top: 3px;
 }
 
 .selected .rh-blueprint-type-count {
@@ -2616,7 +2616,7 @@ display:none;
   font-size: 2em;
   margin-right: 10px;
   position: relative;
-  top: -2px;
+  top: 0px;
 }
 
 .rh-blueprint-type-data .ion-android-arrow-dropdown  {
@@ -3254,27 +3254,36 @@ margin-top: 5px;
   margin-top: 0;
 }
 
+.rh-blueprint-type-headings-title {
+  background-color: transparent;
+  color: #808285;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: 300;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1.6em;
+  padding: 6px 6px 3px;
+}
+
 .creation-side {
   float: left;
   border: medium none;
-  padding-right: 5px;
   width: 50%;
+  background-color: #c8d3dd;
+  border-right: 1px solid #fff;
 }
 
 .publication-side {
   border: medium none;
   float: right;
-  padding-left: 5px;
   width: 50%;
+  background-color: #c8d3dd;
+  border-left: 1px solid #fff;
 }
 
 .rh-blueprint-type-headings.creation-side li{ border-top: 1px solid #fff;}
 
 .rh-blueprint-type-headings.publication-side li{ border-top: 1px solid #fff;}
-
-.rh-blueprint-type-headings li {
-  float: left;
-}
 
 .piluku-accordion.accordion-outer .panel .panel-body {border:none !important;}
 
@@ -3289,6 +3298,7 @@ margin-top: 5px;
 .rh-blueprint-type-table li {
   float: left;
   min-height: 40px;
+  background-color: #fff;
 }
 
 .table-row-outer:last-child ul li {
@@ -3304,7 +3314,6 @@ margin-top: 5px;
 }
 
 .rh-blueprint-type-headings {
-  background-color: transparent;
   border-top: none;
 }
 
