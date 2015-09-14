@@ -1,4 +1,35 @@
 //Simple start
+
+		//custom prefix
+		$("#agression-content").ionRangeSlider({
+			grid: true,
+			min: 18,
+			max: 70,
+			from: 30,
+			prefix: "Age ",
+			max_postfix: "+"
+		});
+
+		//custom prefix
+		$("#agression-timeline").ionRangeSlider({
+			grid: true,
+			min: 18,
+			max: 70,
+			from: 30,
+			prefix: "Age ",
+			max_postfix: "+"
+		});
+
+		//custom prefix
+		$("#agression-budget").ionRangeSlider({
+			type: "double",
+			min: 0,
+			max: 48,
+			from: 30,
+			to: 70,
+			from_fixed: true
+		});
+
 		$("#range_01").ionRangeSlider();
 
 		//set min and max

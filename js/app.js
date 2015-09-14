@@ -3,7 +3,7 @@
 var restURL = "https://fairmarketing.cloudapp.net:8443/rest1.0/admin_endpoint.jsp?";
 //var restURL = "http://localhost:8084/rest1.0/admin_endpoint.jsp?";
 
-var blueprintmenu = "<div class='creation-side'><div class='rh-blueprint-type-headings-title'>Content Creation</div><ul class='rh-blueprint-type-headings'><li class='xtra-narrow cart-icon-hd'><i class='icon-rh_addtocart'></i></li><li class='narrow'>What to Create</li><li class='xtra-wide'>How to Optimize It</li><li class='narrow'>When Created</li></ul></div><div class='publication-side'><div class='rh-blueprint-type-headings-title'>Content Publication</div><ul class='rh-blueprint-type-headings'><li class='wide'>Where to Publish</li><li class='wide'>Where Published</li><li class='narrow'>When Published</li><li class='xtra-narrow'>Status</li></ul></div>";
+var blueprintmenu = "<div class='rh-blueprint-type-head creation-side'><div class='rh-blueprint-type-headings-title'>Content Creation</div><ul class='rh-blueprint-type-headings'><li class='xtra-narrow cart-icon-hd'><i class='icon-rh_addtocart'></i></li><li class='narrow'>What to Create</li><li class='xtra-wide'>How to Optimize It</li><li class='narrow'>When Created</li></ul></div><div class='rh-blueprint-type-head publication-side'><div class='rh-blueprint-type-headings-title'>Content Publication</div><ul class='rh-blueprint-type-headings'><li class='wide'>Where to Publish</li><li class='wide'>Where Published</li><li class='narrow'>When Published</li><li class='xtra-narrow'>Status</li></ul></div>";
 
 $(document).ready(function(){
     

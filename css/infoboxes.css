@@ -9,6 +9,12 @@
 .primary-info {
   color: #2196f3;
 }
+.white-info {
+  color: #fff;
+}
+.grey-info {
+  color: #d1d3d4;
+}
 .red-info {
   color: #fb5d5d;
 }
@@ -21,6 +27,12 @@
 .primarybg-info {
   background-color: #2196f3;
 }
+.whitebg-info {
+  background-color: #fff;
+}
+.greybg-info {
+  background-color: #d1d3d4;
+}
 .redbg-info {
   background-color: #fb5d5d;
 }
@@ -29,6 +41,24 @@
 }
 .greenbg-info {
   background-color: #6fd64b;
+}
+.primarybd-info {
+  border: solid 1px #2196f3;
+}
+.whitebd-info {
+  border: solid 1px #fff;
+}
+.greybd-info {
+  border: solid 1px #d1d3d4;
+}
+.redbd-info {
+  border: solid 1px #fb5d5d;
+}
+.orangebd-info {
+  border: solid 1px #f7941d;
+}
+.greenbd-info {
+  border: solid 1px #6fd64b;
 }
 .info-stats {
   background-color: #FFFFFF;
@@ -178,6 +208,12 @@
 .info-six .info-bottom.primary-bottom {
   border-bottom: 4px solid #2196f3;
 }
+.info-six .info-bottom.white-bottom {
+  border-bottom: 4px solid #fff;
+}
+.info-six .info-bottom.grey-bottom {
+  border-bottom: 4px solid #d1d3d4;
+}
 .info-six .info-bottom.red-bottom {
   border-bottom: 4px solid #fb5d5d;
 }
@@ -212,6 +248,12 @@
 .info-seven .logo-seven i.dark-info-green {
   color: #4aad27;
 }
+.info-seven .logo-seven i.dark-info-white {
+  color: #fff;
+}
+.info-seven .logo-seven i.dark-info-grey {
+  color: #d1d3d4;
+}
 .info-seven .logo-seven i.dark-info-red {
   color: #ec0606;
 }
@@ -225,4 +267,7 @@
   margin-bottom: 0px;
   font-size: 14px;
   font-weight: 300;
+}
+[class^="info-"] > p {
+  padding: 10px;
 }
