@@ -3679,12 +3679,14 @@ html, body {
   border-right-color: #1c75bc;
   border-bottom-color: #1c75bc;
 }
+/*
 .btn, .btn-large {
   background-color: #f7941d;
 }
 .btn:hover, .btn-large:hover {
   background-color: #f28809;
 }
+*/
 /*********************************/
 /***** End Custom Material *******/
 /*********************************/
@@ -3714,14 +3716,39 @@ html, body {
   padding-right:0;
 }
 .row-v-spacing {
-  margin: 0.82rem 0 0.656rem 0;
+  margin: 1.82rem 0 1.656rem 0;
 }
 .row-t-spacing {
-  margin-top: 0.82rem;
+  margin-top: 1.82rem;
 }
 .row-b-spacing {
-  margin-bottom: 0.656rem;
+  margin-bottom: 1.656rem;
 }
 /*********************************/
 /**** End Custom Bootstrap *******/
+/*********************************/
+
+/*********************************/
+/******** Custom Icons  **********/
+/*********************************/
+.iconc-default {
+  color: #777;
+}
+.iconc-primary {
+  color: #337ab7;
+}
+.iconc-success {
+  color: #5cb85c;
+}
+.iconc-info {
+  color: #5bc0de;
+}
+.iconc-warning {
+  color: #f0ad4e;
+}
+.iocnc-danger {
+  color: #d9534f;
+}
+/*********************************/
+/***** End Custom Icons  *********/
 /*********************************/
