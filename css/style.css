@@ -3752,3 +3752,53 @@ html, body {
 /*********************************/
 /***** End Custom Icons  *********/
 /*********************************/
+
+
+
+/*********************************/
+/*****  Custom (16-09-2015)  *********/
+/*********************************/
+
+.range-outer {
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+  width: 100%;
+}
+
+.range-outer li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 33.33%;
+}
+.range-txt {
+  color: #000;
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.range-txt span  , .range-txt a {
+  float: left;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 5px 0 0;
+  width: 100%;
+  color:#000;
+}
+
+.content-bg.slider-handle {background:#106fb2;}
+
+.budget-bg .slider-handle{background:#188f47;}
+
+.month-bg .slider-handle{background:#e34137;}
+
+
+.slider-tick:nth-child(4), .slider-tick:nth-child(6), .slider-tick:first-child , .slider-tick:last-child { display:none;}
