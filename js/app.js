@@ -311,8 +311,7 @@ function getProjectContentTableData(projectID,callback)
                         publishString1 = "";
                     }
                     else */
-                    var circleStyle1 = "";
-                    if(status1 == 'Incomplete')
+					if(status1 == 'Incomplete')
                     {
                         circleStyle1 = "circle_danger";
                         publishDate = "Publish Now";
