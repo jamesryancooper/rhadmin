@@ -4263,59 +4263,59 @@ strong {
 /*********************************/
 
 /*********************************/
- /******** Retail Template  *******/
- /*********************************/  
+/***** Retail Templates  *********/
+/*********************************/
 .rh-rt-heading {
-     color: #82838a;
-     text-transform: uppercase;
-     font-size: .75em;
-     font-weight: 700;
+    color: #82838a;
+    font-size: .75em;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
   .rh-rt-type {
-     color: #000000;
-     text-transform: uppercase;
-     font-size: 1.6em;
-     font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: 700;
 }
 
 .rh-rt-cost {
-     color: #58585a;
+    color: #58585a;
 }
 
   .rh-rt-markup {
-     color: #0f74ba;
-     font-weight: 900;
-     font-size: 3em;
-     margin-top: 5px;
+    color: #0f74ba;
+    font-weight: 700;
+    font-size: 3em;
+    margin-top: 5px;
 }
 
 .rh-rt-retail {
-     color: #0b9243;
+    color: #0b9243;
 }
 
 .rh-rt-cost,  .rh-rt-retail {
-     font-size: 1.5em;
-     font-weight: 900;
+    font-size: 1.5em;
+    font-weight: 900;
 }
 
    .rh-retail-template .rh-bracket {
-     color: #0f74ba;
-     font-weight: 300;
-     font-size: 3em;
+    color: #0f74ba;
+    font-weight: 300;
+    font-size: 3em;
 }
 
   .rh-retail-template .rh-bracket-left {
-     margin-right: 10px;
+    margin-right: 10px;
 }
 
   .rh-retail-template .rh-bracket-right {
-     margin-left: 10px;
+    margin-left: 10px;
 }
 
 .rh-retail-template .center-align a {
-     font-size: .75em;
-     letter-spacing: 0px;
+    font-size: .75em;
+    letter-spacing: 0;
 }
 /*********************************/
 /***** End Retail Template  ******/
