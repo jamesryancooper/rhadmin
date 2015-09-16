@@ -18,6 +18,7 @@
 <link rel='stylesheet' href='css/materialize.css'>
 <link rel='stylesheet' href='css/material.css'>
 <link rel='stylesheet' href='css/style.css'>
+<link rel='stylesheet' href='css/bootstrap-slider.css'>
 <link rel='stylesheet' href='css/icon-stylemain.css'>
 <link rel='stylesheet' href='css/animated-masonry-gallery.css'>
 <link rel='stylesheet' href='css/rotated-gallery.css'>
@@ -28,11 +29,36 @@
 <script src="js/modernizr.custom.js"></script>
 <script src='js/jquery.js'></script>
 <script src='js/app.js'></script>
+<script src='js/bootstrap-slider.js'></script>
 <script>
 	jQuery(window).load(function () {
 	$('.piluku-preloader').addClass('hidden');
 	});
 	
+</script>
+
+<script>
+jQuery(window).load(function () {
+		var slider_content = new Slider("#content-r ", {
+			reversed : true
+		});
+		
+		var slider_budget = new Slider("#budget-r", {
+			reversed : true
+		});
+		var slider_month = new Slider("#month-r", {
+			reversed : true
+		});
+		/*
+		$("#budget-r").slider({
+			reversed : true
+		});
+		$("#month-r").slider({
+			reversed : true
+		});
+		
+		*/
+});
 </script>
 
 </head>
@@ -255,7 +281,10 @@
 						  <div class="row">
                             <div class="col-md-6">
                               <h5>To publish <span class="label label-primary">36</span> content pieces per month, at a cost of <span class="label label-success">$3,200</span> per month, it will take you <span class="label label-danger">52</span> months to catch your competition.</h5>
-                              <p>!!!Sliders need to go here!!!!</p>
+                              <ul class="range-outer">
+							  <li class="content-bg"><input id="content-r" type="text" data-slider-min="5" data-slider-max="100" data-slider-step="1" data-slider-value="0" data-slider-orientation="vertical"  data-slider-ticks="[0,50,100]" data-slider-ticks-labels="['min', 'you', 'max']" data-slider-ticks-positions="[0,50,100]" data-slider-handle="square"  /> <h4 class="range-txt">CONTENT / MO. </h4></li>
+							  <li class="budget-bg"><input id="budget-r" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="-3" data-slider-orientation="vertical" data-slider-tooltip="hide" data-slider-handle="square" data-slider-ticks="[0,50,100]" data-slider-ticks-labels="['min', 'you', 'max']" data-slider-ticks-positions="[0,50,100]" /><h4 class="range-txt">BUDGET / MO. <span>EditCostTemplate</span> </h4> </li>
+							  <li class="month-bg"><input id="month-r" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="-3" data-slider-orientation="vertical" data-slider-tooltip="hide" data-slider-handle="square" data-slider-ticks="[0,50,100]" data-slider-ticks-labels="['min', 'you', 'max']" data-slider-ticks-positions="[0,50,100]"/> <h4 class="range-txt">MONTHS To CATCH </h4></li>
                             </div>
                             <div class="col-md-6">
                               <h5>Budget and Time to Catch Log</h5>
