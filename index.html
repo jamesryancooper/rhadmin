@@ -757,17 +757,8 @@ jQuery(window).load(function () {
                             <div class="col-md-12">
                               <div class="row alert alert bg-warning text-black">
                                 <div class="col-md-2">
-                                  <strong>Current Retail Price Template</strong>
-                                  <span class="piluku-dropdown dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailTemplateSelectionText">Average Markup</a>
-                                    <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                      <li><a href="#">25% Markup</a></li>
-                                      <li><a href="#">50% Markup</a></li>
-                                      <li><a href="#">100% Markup</a></li>
-                                      <li><a href="#">Authority Package Markup</a></li>
-                                      <li><a href="#">Average Markup</a></li>
-                                    </ul>
-                                  </span>
+                                  <strong>Current Retail Template</strong>
+                                  <p>Average Markup</p>
                                 </div>
                                 <div class="col-md-2">
                                   <strong>Blueprints Applied</strong>
@@ -785,7 +776,21 @@ jQuery(window).load(function () {
                           </div>
                           <div class="row row-v-spacing">
                             <div class="col-md-6">
-                              <p>Now Viewing <a href="#">Mid-High Markup</a> Template</p>
+                              <h5>
+                              <span>Now Viewing</span>
+                              <span class="piluku-dropdown dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailTemplateSelectionText">Mid-High Markup</a>
+                                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                  <li><a href="#">25% Markup</a></li>
+                                  <li><a href="#">50% Markup</a></li>
+                                  <li><a href="#">100% Markup</a></li>
+                                  <li><a href="#">Mid-High Markup</a></li>
+                                  <li><a href="#">Authority Package Markup</a></li>
+                                  <li><a href="#">Average Markup</a></li>
+                                </ul>
+                              </span>
+                              <span>Retail Template</span>
+                              </h5>
                             </div>
                             <div class="col-md-6 right-align">
                               <p>View Edit Log <i class="ion ion-ios-eye-outline icon-show fa-2x"></i></p>
@@ -804,9 +809,46 @@ jQuery(window).load(function () {
                                     <span class="piluku-dropdown dropdown rh-rt-vendor">
                                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">Rank Hacker</a>
                                       <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                        <li><a href="#">Internal</a></li>
-                                        <li><a href="#">Guest Blogs R Us</a></li>
                                         <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">Guest Blogs R Us</a></li>
+                                        <li><a href="#">Internal</a></li>
+                                      </ul>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$100</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">50%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
+                                  </div>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$150</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-one greybg-info greybd-info">
+                                <div class="row">
+                                  <div class="col-md-6 left-align">
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">NEWS</span>
+                                  </div>
+                                  <div class="col-md-6 right-align">
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">News Makers Inc.</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">News Makers Inc.</a></li>
+                                        <li><a href="#">Internal</a></li>
                                       </ul>
                                     </span>
                                   </div>
@@ -833,26 +875,73 @@ jQuery(window).load(function () {
                               <div class="info-one greybg-info greybd-info">
                                 <div class="row">
                                   <div class="col-md-6 left-align">
-                                    <span>OFFSITE</span><br />
-                                    <span>NEWS</span>
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">SOCIAL</span>
                                   </div>
                                   <div class="col-md-6 right-align">
-                                    <span>VENDOR</span><br />
-                                    <a href="#">Rank Hacker</a>
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">Internal</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">Internal</a></li>
+                                      </ul>
+                                    </span>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>$100</span><br />
-                                    <span>COST</span><br />
-                                    <a href="#">Edit Vendor Cost</a>
+                                </div>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$25</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>[</span>100%<span>]</span><br />
-                                    <span>MARGIN</span>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">300%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>$200</span><br />
-                                    <span>RETAIL</span><br />
-                                    <a href="#">Click $ to Edit Retail</a>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$75</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-v-spacing">
+                            <div class="col-md-4">
+                              <div class="info-one greybg-info greybd-info">
+                                <div class="row">
+                                  <div class="col-md-6 left-align">
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">PRESS RELEASE</span>
+                                  </div>
+                                  <div class="col-md-6 right-align">
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">PR Mavens</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">PR Mavens</a></li>
+                                        <li><a href="#">Internal</a></li>
+                                      </ul>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$250</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">100%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
+                                  </div>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$500</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
                                 </div>
                               </div>
@@ -861,410 +950,204 @@ jQuery(window).load(function () {
                               <div class="info-one greybg-info greybd-info">
                                 <div class="row">
                                   <div class="col-md-6 left-align">
-                                    <span>OFFSITE</span><br />
-                                    <span>SOCIAL</span>
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">DIRECTORY</span>
                                   </div>
                                   <div class="col-md-6 right-align">
-                                    <span>VENDOR</span><br />
-                                    <a href="#">Rank Hacker</a>
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">Local Listers</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">Local Listers</a></li>
+                                        <li><a href="#">Internal</a></li>
+                                      </ul>
+                                    </span>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>$25</span><br />
-                                    <span>COST</span><br />
-                                    <a href="#">Edit Vendor Cost</a>
+                                </div>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$10</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>[</span>100%<span>]</span><br />
-                                    <span>MARGIN</span>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">150%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>$50</span><br />
-                                    <span>RETAIL</span><br />
-                                    <a href="#">Click $ to Edit Retail</a>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$25</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-one greybg-info greybd-info">
+                                <div class="row">
+                                  <div class="col-md-6 left-align">
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">IMAGE</span>
+                                  </div>
+                                  <div class="col-md-6 right-align">
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">Infographica</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">Infographica</a></li>
+                                        <li><a href="#">Internal</a></li>
+                                      </ul>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$200</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">50%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
+                                  </div>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$300</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-
-
-
-                          <!--
-                          <form id="pricing" class="tab-pane rh-blueprint-settings-pane">
-                            <div id="blog-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Blog Posts</h5>
-                                  <p>Set pricing for each blog post or select a content provider for predefined pricing.</p>
+                          <div class="row row-v-spacing">
+                            <div class="col-md-4">
+                              <div class="info-one greybg-info greybd-info">
+                                <div class="row">
+                                  <div class="col-md-6 left-align">
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">FORUM</span>
+                                  </div>
+                                  <div class="col-md-6 right-align">
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">The Forum Guys</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Internal</a></li>
+                                        <li><a href="#">The Forum Guys</a></li>
+                                        <li><a href="#">Rank Hacker</a></li>
+                                      </ul>
+                                    </span>
+                                  </div>
                                 </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$25</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">200%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
+                                  </div>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$75</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
                                 </div>
                               </div>
-
-                              <div class="col-md-8">
-                                <div class="blog-slider"></div>
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>BLOG POST PRICE</h5>
-                                  <div class="blog-slider-result"></div>
-                                  <h6>per post</h6>
-                                </div>
-                              </div>
-
                             </div>
-
-                            <div id="news-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>News Articles</h5>
-                                  <p>Set pricing for each news article or select a content provider for predefined pricing.</p>
+                            <div class="col-md-4">
+                              <div class="info-one greybg-info greybd-info">
+                                <div class="row">
+                                  <div class="col-md-6 left-align">
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">WIKI</span>
+                                  </div>
+                                  <div class="col-md-6 right-align">
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">Wiki Writers</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">Wiki Writers</a></li>
+                                        <li><a href="#">Internal</a></li>
+                                      </ul>
+                                    </span>
+                                  </div>
                                 </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$200</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">100%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
+                                  </div>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$400</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
                                 </div>
                               </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="news-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>NEWS ARTICLE PRICE</h5>
-                                  <div class="news-slider-result"></div>
-                                  <h6>per article</h6>
-                                </div>
-                              </div>
                             </div>
-
-                            <div id="social-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Social Posts</h5>
-                                  <p>Set pricing for each social posts or select a content provider for predefined pricing.</p>
+                            <div class="col-md-4">
+                              <div class="info-one greybg-info greybd-info">
+                                <div class="row">
+                                  <div class="col-md-6 left-align">
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">ARTICLE</span>
+                                  </div>
+                                  <div class="col-md-6 right-align">
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">Writer's Access</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Rank Hacker</a></li>
+                                        <li><a href="#">Writer's Access</a></li>
+                                        <li><a href="#">Internal</a></li>
+                                      </ul>
+                                    </span>
+                                  </div>
                                 </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$50</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
+                                  </div>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">50%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
+                                  </div>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$75</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
                                 </div>
                               </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="social-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>SOCIAL POST PRICE</h5>
-                                  <div class="social-slider-result"></div>
-                                  <h6>per post</h6>
-                                </div>
-                              </div>
-
                             </div>
-
-                            <div id="press-release-pricing" class="row form-group slider-container">
-
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Press Release</h5>
-                                  <p>Set pricing for each press release or select a content provider for predefined pricing.</p>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="pressrelease-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>PRESS RELEASE PRICE</h5>
-                                  <div class="pressrelease-slider-result"></div>
-                                  <h6>per press release</h6>
-                                </div>
-                              </div>
-
+                          </div>
+                          <div class="row row-v-spacing">
+                            <div class="ol-md-12 center-align">
+                              <button class="btn btn-info">
+                                Apply 'Mid-High Markup' Retail Template
+                              </button>
+                              <button class="btn btn-orange">
+                                <span>Create New Retail Template</span>
+                              </button>
+                              <button class="btn btn-gray">
+                                Cancel
+                              </button>
                             </div>
-
-                            <div id="directory-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Directory</h5>
-                                  <p>Set pricing for each directory post or select a content provider for predefined pricing.</p>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="directory-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>DIRECTORY PRICE</h5>
-                                  <div class="directory-slider-result"></div>
-                                  <h6>per directory submission</h6>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div id="video-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Video</h5>
-                                  <p>Set pricing for each video or select a content provider for predefined pricing.</p>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="video-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>VIDEO PRICE</h5>
-                                  <div class="video-slider-result"></div>
-                                  <h6>per video</h6>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div id="image-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Image</h5>
-                                  <p>Set pricing for each image or select a content provider for predefined pricing.</p>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="image-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>IMAGE PRICE</h5>
-                                  <div class="image-slider-result"></div>
-                                  <h6>per image</h6>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div id="forum-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Forum</h5>
-                                  <p>Set pricing for each forum post or select a content provider for predefined pricing.</p>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="forum-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>FORUM PRICE</h5>
-                                  <div class="forum-slider-result"></div>
-                                  <h6>per forum post</h6>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div id="wiki-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Wiki</h5>
-                                  <p>Set pricing for each wiki post or select a content provider for predefined pricing.</p>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="wiki-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>WIKI PRICE</h5>
-                                  <div class="wiki-slider-result"></div>
-                                  <h6>per wiki post</h6>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div id="article-pricing" class="row form-group slider-container">
-
-                              <div class="row well well-sm">
-                                <div class="col-md-9">
-                                  <h5>Article</h5>
-                                  <p>Set pricing for each article or select a content provider for predefined pricing.</p>
-                                </div>
-                                <div class="col-md-3">
-                                  <div class="form-group heading-select">
-                                    <label class="control-label">Content Providers</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select a content provider...">
-                                      <option value="fair-marketing">RankHacker</option>
-                                      <option value="writers-access">Writers Access</option>
-                                      <option value="text-brokers">Text Brokers</option>
-                                      <option value="internal-team">Internal Team</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col-md-8">
-                                <br /><br /><br />
-                                <div class="article-slider"></div>
-                                <br />
-                                <h6 class="text-center">DOLLARS</h6>
-                              </div>
-
-                              <div class="col-md-3 col-md-push-1 text-center">
-                                <div class="tile-stats tile-white tile-white-primary">
-                                  <h5>ARTICLE PRICE</h5>
-                                  <div class="article-slider-result"></div>
-                                  <h6>per article</h6>
-                                </div>
-                              </div>
-
-                            </div>
-
-                          </form>
-                          -->
-
-
-
+                          </div>
+                          <div class="row row-v-spacing"></div>
 						</div>
 					</div>
                     <!-- End Pricing Templates -->
