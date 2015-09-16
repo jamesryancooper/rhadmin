@@ -713,7 +713,7 @@
 					</div>
 
                     <!-- Start Retail Pricing Templates -->
-					<div class="panel panel-default">
+					<div class="panel panel-default rh-retail-template">
 						<div id="menu-click4" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
                           <ol class="breadcrumb">
                             <li><a data-toggle="collapse" href="#menu-click12" aria-controls="menu-click12" data-parent="#accordion-menus">Blueprint Strategy</a></li>
@@ -724,25 +724,42 @@
                               <p>This screen allows you to modify the retail price per content piece by loading an existing retail price template or creating a new one. <i class="ion-ios-information-outline iconc-info"></i></p>
                             </div>
                           </div>
-                          <div class="row row-v-spacing">
+                          <div class="row row-v-spacing rh-alert">
                             <div class="col-md-12">
-                              <div class="row alert alert-warning">
+                              <div class="row alert alert bg-warning text-black">
                                 <div class="col-md-2">
-                                  <b>Current Retail Price Template</b>
-                                  <p>Average Markup</p>
+                                  <strong>Current Retail Price Template</strong>
+                                  <span class="piluku-dropdown dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailTemplateSelectionText">Average Markup</a>
+                                    <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                      <li><a href="#">25% Markup</a></li>
+                                      <li><a href="#">50% Markup</a></li>
+                                      <li><a href="#">100% Markup</a></li>
+                                      <li><a href="#">Authority Package Markup</a></li>
+                                      <li><a href="#">Average Markup</a></li>
+                                    </ul>
+                                  </span>
                                 </div>
                                 <div class="col-md-2">
-                                  <b>Blueprints Applied</b>
+                                  <strong>Blueprints Applied</strong>
                                   <p>12</p>
                                 </div>
                                 <div class="col-md-2">
-                                  <b>In This Project</b>
+                                  <strong>In This Project</strong>
                                   <p>4</p>
                                 </div>
                                 <div class="col-md-6 right-align">
-                                  <p><i class="ion-alert-circled iconc-info"></i> Changing your retail price template will affect all projects and blueprints in which it is currently applied.</p>
+                                  <p><i class="ion-alert-circled iconc-info"></i><strong>Changing your retail pricing template will affect all projects and blueprints in which it is currently applied.</strong></p>
                                 </div>
                               </div>
+                            </div>
+                          </div>
+                          <div class="row row-v-spacing">
+                            <div class="col-md-6">
+                              <p>Now Viewing <a href="#">Mid-High Markup</a> Template</p>
+                            </div>
+                            <div class="col-md-6 right-align">
+                              <p>View Edit Log <i class="ion ion-ios-eye-outline icon-show fa-2x"></i></p>
                             </div>
                           </div>
                           <div class="row row-v-spacing">
@@ -750,26 +767,35 @@
                               <div class="info-one greybg-info greybd-info">
                                 <div class="row">
                                   <div class="col-md-6 left-align">
-                                    <span>OFFSITE</span><br />
-                                    <span>BLOGS</span>
+                                    <span class="rh-rt-heading">OFFSITE</span><br />
+                                    <span class="rh-rt-type">BLOGS</span>
                                   </div>
                                   <div class="col-md-6 right-align">
-                                    <span>VENDOR</span><br />
-                                    <a href="#">Rank Hacker</a>
+                                    <span class="rh-rt-heading">VENDOR</span><br />
+                                    <span class="piluku-dropdown dropdown rh-rt-vendor">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailVendorSelectionText">Rank Hacker</a>
+                                      <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                        <li><a href="#">Internal</a></li>
+                                        <li><a href="#">Guest Blogs R Us</a></li>
+                                        <li><a href="#">Rank Hacker</a></li>
+                                      </ul>
+                                    </span>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>$50</span><br />
-                                    <span>COST</span><br />
-                                    <a href="#">Edit Vendor Cost</a>
+                                </div>
+                                <div class="row row-v-spacing">
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-cost">$50</span><br />
+                                    <span class="rh-rt-heading">COST</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>[</span>100%<span>]</span><br />
-                                    <span>MARGIN</span>
+                                  <div class="col-md-6 center-align no-gutter">
+                                    <span class="rh-bracket rh-bracket-left">[</span><span class="rh-rt-markup">100%</span><span class="rh-bracket rh-bracket-right">]</span><br />
+                                    <span class="rh-rt-heading">MARKUP</span>
                                   </div>
-                                  <div class="col-md-4 center-align">
-                                    <span>$100</span><br />
-                                    <span>RETAIL</span><br />
-                                    <a href="#">Click $ to Edit Retail</a>
+                                  <div class="col-md-3 center-align">
+                                    <span class="rh-rt-retail">$100</span><br />
+                                    <span class="rh-rt-heading">RETAIL</span><br />
+                                    <a href="#">Edit</a>
                                   </div>
                                 </div>
                               </div>

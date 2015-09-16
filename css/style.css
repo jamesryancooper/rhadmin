@@ -1594,7 +1594,7 @@ body.boxed {
   background-color: #a0d269;
 }
 .bg-warning {
-  background-color: #eac841;
+  background-color: #fbf7b7;
 }
 .bg-info {
   background-color: #6cadd1;
@@ -2666,6 +2666,10 @@ display:none;
 .rh-blueprint-type-table .ion-ios-cart-outline.ordered {
   color: #D1D3D4;
 }
+.rh-alert {
+  letter-spacing: 0px;
+  font-size: .9em;
+}
 .selected a /* Add CSS For Point #9 */
 {
 color:#f0f0f0;	
@@ -3679,6 +3683,9 @@ html, body {
   border-right-color: #1c75bc;
   border-bottom-color: #1c75bc;
 }
+strong {
+  font-weight: 700;
+}
 /*
 .btn, .btn-large {
   background-color: #f7941d;
@@ -3705,7 +3712,11 @@ html, body {
 /*********************************/
 /******* Custom Bootstrap ********/
 /*********************************/
-.no-gutter > [class*='col-'] {
+.no-gutters > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+.no-gutter {
   padding-right:0;
   padding-left:0;
 }
@@ -3752,3 +3763,62 @@ html, body {
 /*********************************/
 /***** End Custom Icons  *********/
 /*********************************/
+
+
+/*********************************/
+/******** Retail Template  *******/
+/*********************************/
+.rh-rt-heading {
+  color: #82838a;
+  text-transform: uppercase;
+  font-size: .75em;
+  font-weight: 700;
+}
+
+.rh-rt-type {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.rh-rt-cost {
+  color: #58585a;
+}
+
+.rh-rt-markup {
+  color: #0f74ba;
+  font-weight: 900;
+  font-size: 3em;
+  margin-top: 5px;
+}
+
+.rh-rt-retail {
+  color: #0b9243;
+}
+
+.rh-rt-cost,
+.rh-rt-retail {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+
+.rh-retail-template .rh-bracket {
+  color: #0f74ba;
+  font-weight: 300;
+  font-size: 3em;
+}
+
+.rh-retail-template .rh-bracket-left {
+  margin-right: 10px;
+}
+
+.rh-retail-template .rh-bracket-right {
+  margin-left: 10px;
+}
+
+.rh-retail-template .center-align a {
+  font-size: .75em;
+  letter-spacing: 0px;
+}
