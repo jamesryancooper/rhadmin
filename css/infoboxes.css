@@ -60,6 +60,18 @@
 .greenbd-info {
   border: solid 1px #6fd64b;
 }
+.info-tall {
+  min-height: 330px;
+}
+.info-short {
+  min-height: 220px;
+}
+.info-top {
+  padding: 1rem 0;
+}
+.info-top h5 {
+  margin: 0;
+}
 .info-stats {
   background-color: #FFFFFF;
   position: relative;

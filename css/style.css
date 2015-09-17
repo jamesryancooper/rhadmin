@@ -1880,6 +1880,9 @@ body.boxed {
 .bg-danger {
     background-color: #df6c6e;
 }
+.bg-dark-grey {
+    background-color: #D1D3D4;
+}
 
 .graph {
     width: 100%;
@@ -3139,7 +3142,7 @@ span.badge.rh-bg-info {
 
 .rh-alert {
     letter-spacing: 0px;
-    font-size: .9em;
+    font-size: 1.1em;
 }
 
 .selected a /* Add CSS For Point #9 */
@@ -4228,6 +4231,22 @@ strong {
 .row-b-spacing {
     margin-bottom: 1.656rem;
 }
+
+.btn {
+    padding: .5rem 2rem;
+    margin-right: 1.2rem;
+    height: auto;
+}
+
+.btn-info {
+    background-color: #0f74ba;
+    border-color: #D1D3D4;
+}
+
+.btn-info:hover {
+    background-color: #1C75BC;
+}
+
 /*********************************/
 /**** End Custom Bootstrap *******/
 /*********************************/
@@ -4263,11 +4282,22 @@ strong {
 /*********************************/
 
 /*********************************/
+/***** Filter Templates  *********/
+/*********************************/
+.rh-filter-template .icheck-list li {
+    margin-bottom: 1rem;
+}
+
+/*********************************/
+/***** End Filter Templates  *****/
+/*********************************/
+
+/*********************************/
 /***** Retail Templates  *********/
 /*********************************/
 .rh-rt-heading {
     color: #82838a;
-    font-size: .75em;
+    font-size: .85em;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -4275,8 +4305,12 @@ strong {
 .rh-rt-type {
     color: #000000;
     text-transform: uppercase;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 700;
+}
+
+.rh-rt-vendor {
+    font-size: 1.1em;
 }
 
 .rh-rt-cost {

@@ -468,278 +468,316 @@ jQuery(window).load(function () {
 						</div>
 					</div>
 
-					<div class="panel panel-default">
+
+                  <!-- Start Content Filters -->
+					<div class="panel panel-default rh-filter-template">
 						<div id="menu-click3" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
-                            <h1>Content Filters</h1>
-
-                            <!-- Filters -->
-                            <form id="filters" class="tab-pane rh-blueprint-settings-pane">
-
-                              <div class="row well well-sm ">
-                                <div class="col-md-12">
-                                  <h5>Filter Templates</h5>
-                                  <span>Load a previously saved filter template or save your current filter settings as a template.</span>
+                          <ol class="breadcrumb">
+                            <li><a data-toggle="collapse" href="#menu-click12" aria-controls="menu-click12" data-parent="#accordion-menus">Blueprint Strategy</a></li>
+                            <li class="active">Content & Backlink Template</li>
+                          </ol>
+                          <div class="row right-align">
+                            <div class="col-md-12">
+                              <p>This screen allows you to modify the content filters by loading an existing content & backlink filter template or creating a new one. <i class="ion-ios-information-outline iconc-info"></i></p>
+                            </div>
+                          </div>
+                          <div class="row row-v-spacing rh-alert">
+                            <div class="col-md-12">
+                              <div class="row alert alert bg-warning text-black">
+                                <div class="col-md-2">
+                                  <strong>Current Filter Template</strong>
+                                  <p>Holistic</p>
+                                </div>
+                                <div class="col-md-2">
+                                  <strong>Blueprints Applied</strong>
+                                  <p>4</p>
+                                </div>
+                                <div class="col-md-2">
+                                  <strong>In This Project</strong>
+                                  <p>1</p>
+                                </div>
+                                <div class="col-md-6 right-align">
+                                  <p><i class="ion-alert-circled iconc-info"></i><strong>Changing your filter template will affect all projects and blueprints in which it is currently applied.</strong></p>
                                 </div>
                               </div>
+                            </div>
+                          </div>
+                          <div class="row row-v-spacing">
+                            <div class="col-md-6">
+                              <h5>
+                                <span>Now Viewing</span>
+                              <span class="piluku-dropdown dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="retailTemplateSelectionText">Guest Blogger</a>
+                                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                  <li><a href="#">Guest Blogger</a></li>
+                                  <li><a href="#">Social Poster</a></li>
+                                  <li><a href="#">Holistic</a></li>
+                                  <li><a href="#">Local Only</a></li>
+                                  <li><a href="#">Ranking Factors</a></li>
+                                </ul>
+                              </span>
+                                <span>Content Filter Template</span>
+                              </h5>
+                            </div>
+                            <div class="col-md-6 right-align">
+                              <p>View Edit Log <i class="ion ion-ios-eye-outline icon-show fa-2x"></i></p>
+                            </div>
+                          </div>
 
-                              <div class="row form-group">
-                                <div class="col-md-3">
-                                  <div class="heading-select">
-                                    <label class="control-label">Load Filter Template</label>
-                                    <select name="test" class="selectboxit form-control" data-native="true" data-text="Select filter">
-                                      <option value="seo-moz-filter">SEO Moz Filter</option>
-                                      <option value="guest-blog-only-filter">Guest Blog Only Filter</option>
-                                      <option value="social-filter">Social Filter</option>
-                                      <option value="seo-moz-filter">Abacus Plumbing Filter</option>
-                                    </select>
+                          <form id="filters" class="tab-pane rh-blueprint-settings-pane">
+                            <div class="row row-v-spacing">
+                              <!-- Domain Filters -->
+                              <div class="col-md-6">
+                                <div class="info-one info-tall greybg-info greybd-info">
+                                  <div class="row bg-dark-grey info-top">
+                                    <div class="col-md-12">
+                                      <h5>Domain Filters</h5>
+                                      <span>You may restrict the backlinks withing your competitor's backlink profiles to only include backlinks originating from a designated list of domains. You may also exclude backlinks originating from a list of domains.</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="col-md-6 col-md-push-3">
-                                  <p>Save current settings as a new filter template</p>
-                                  <a href="javascript:;" onclick="jQuery('#filter-templates').modal('show', {backdrop: 'static'});"><button type="button" class="btn btn-info">Save</button></a>
-                                </div>
-                              </div>
-
-                              <div  class="row well well-sm">
-                                <div class="col-md-12">
-                                  <h5>Domain Filters</h5>
-                                  <span>You may restrict the backlinks withing your competitor's backlink profiles to only include backlinks originating from a designated list of domains. You may also exclude backlinks originating from a list of domains.</span>
-                                </div>
-                              </div>
-
-                              <div class="row form-group">
-                                <div class="col-md-6">
-                                  <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="backlinks-domain-include">
-                                  <label for="backlinks-domain-include"><div>Include</div></label>
-                                  <p>Only include backlinks originating from the following list of domains.</p>
-                                  <div>
-                                    <textarea class="form-control autogrow" id="keywords-list" placeholder="Enter one domain per line"></textarea>
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="backlinks-domain-exclude">
-                                  <label for="backlinks-domain-exclude"><div>Exclude</div></label>
-                                  <p>Exclude backlinks originating from the following list of domains.</p>
-                                  <div>
-                                    <textarea class="form-control autogrow" id="field-ta" placeholder="Enter one domain per line"></textarea>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div  class="row well well-sm">
-                                <div class="col-md-12">
-                                  <h5>Health Filters</h5>
-                                  <span>Include backlinks that are tagged with the following health parameters.</span>
-                                </div>
-                              </div>
-
-                              <div class="row form-group">
-                                <div class="col-md-2">
-                                  <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-natural" checked>
-                                  <label for="health-filter-natural">Natural</label>
-
-                                </div>
-                                <div class="col-md-2">
-                                  <input tabindex="6" type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-unnatural">
-                                  <label for="health-filter-unnatural">Unnatural</label>
-
-                                </div>
-                                <div class="col-md-2">
-                                  <input type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-suspicious">
-                                  <label for="health-filter-suspicious">Suspicious</label>
-                                </div>
-                                <div class="col-md-2">
-                                  <input type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-disavowed">
-                                  <label for="health-filter-disavowed" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Selecting the Disavowed filter will include a list of disavowed backlinks in this roadmap. Deselecting the Disavowed filter will exclude a list of disavowed links from this roadmap. Click the edit icon to modify the list of disavowed backlinks." data-original-title="Disavowed Filter">Disavowed<a href="javascript:;" onclick="jQuery('#health-filter-disavowed-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
-                                </div>
-                              </div>
-
-                              <div  class="row well well-sm">
-                                <div class="col-md-12">
-                                  <h5>Link Flow Filters</h5>
-                                  <span>Include backlinks that are tagged with the following link flow parameters.</span>
-                                </div>
-                              </div>
-
-                              <div class="row form-group">
-                                <div class="col-md-2">
-                                  <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="flow-filter-dofollow" checked>
-                                  <label for="flow-filter-dofollow">DoFollow</label>
-                                </div>
-                                <div class="col-md-2">
-                                  <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="flow-filter-nofollow">
-                                  <label for="flow-filter-nofollow">NoFollow</label>
-                                </div>
-                                <div class="col-md-2">
-                                  <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="flow-filter-sitewide">
-                                  <label for="flow-filter-sitewide">Sitewide</label>
-                                </div>
-                              </div>
-
-                              <div  class="row well well-sm">
-                                <div class="col-md-12">
-                                  <h5>Content Type Filters</h5>
-                                  <span>Include backlinks of the following content types.</span>
-                                </div>
-                              </div>
-
-                              <div class="row form-group">
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="content-filter-blog" checked>
-                                      <label for="content-filter-blog">Blog</label>
-                                    </li>
-                                    <li>
-                                      <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="content-filter-news" checked>
-                                      <label for="content-filter-news">News</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-social" checked>
-                                      <label for="content-filter-social">Social</label>
-                                    </li>
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-press-release" checked>
-                                      <label for="content-filter-press-release">Press Release</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-directory">
-                                      <label for="content-filter-directory">Directory</label>
-                                    </li>
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-video" checked>
-                                      <label for="content-filter-video">Video</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-image" checked>
-                                      <label for="content-filter-image">Image</label>
-                                    </li>
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-forum">
-                                      <label for="content-filter-forum">Forum</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-wiki">
-                                      <label for="content-filter-wiki">Wiki</label>
-                                    </li>
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-product">
-                                      <label for="content-filter-product">Product</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-article">
-                                      <label for="content-filter-article">Article</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                              <div  class="row well well-sm">
-                                <div class="col-md-12">
-                                  <h5>Anchor Type Filters</h5>
-                                  <span>Include backlinks of the following anchor types.</span>
-                                </div>
-                              </div>
-
-                              <div class="row form-group">
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-url" checked>
-                                      <label for="anchor-filter-url" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The URL filter will tag anchor text that has specific URLs in it. Click the edit icon to modify the list of URLs." data-original-title="URL Filter">URL<a href="javascript:;" onclick="jQuery('#anchor-filter-url-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
-                                    </li>
-                                    <li>
-                                      <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-exact" checked>
-                                      <label for="anchor-filter-exact" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Exact filter will tag anchor text that exactly matches certain phrases. Click the edit icon to modify the list of phrases." data-original-title="Exact Filter">Exact<a href="javascript:;" onclick="jQuery('#anchor-filter-exact-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-partial">
-                                      <label for="anchor-filter-partial" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Partial filter will tag anchor text that contains one or more keywords from a list of designated keywords. Click the edit icon to modify the list of keywords." data-original-title="Partial Filter">Partial<a href="javascript:;" onclick="jQuery('#anchor-filter-partial-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
-                                    </li>
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-brand" checked>
-                                      <label for="anchor-filter-brand" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Branded filter will tag anchor text that contains any of the designated brand terms. Click the edit icon to modify the list of brand terms." data-original-title="Branded Filter">Branded<a href="javascript:;" onclick="jQuery('#anchor-filter-brand-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-action" checked>
-                                      <label for="anchor-filter-action" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Action filter will tag anchor text that has specific action terms in it. Click the edit icon to modify the list URLs." data-original-title="Action Filter">Action<a href="javascript:;" onclick="jQuery('#anchor-filter-action-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
-                                    </li>
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-image" checked>
-                                      <label for="anchor-filter-image" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Image filter will tag images." data-original-title="Image Filter">Image</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-2">
-                                  <ul class="icheck-list">
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-local" checked>
-                                      <label for="anchor-filter-local" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Local filter will tag anchor text that has specific locations in it. Click the edit icon to modify the list of locations." data-original-title="Local Filter">Local<a href="javascript:;" onclick="jQuery('#anchor-filter-local-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
-                                    </li>
-                                    <li>
-                                      <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-other">
-                                      <label for="anchor-filter-other" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Other filter will tag anchor text that has not otherwise been classified." data-original-title="Other Filter">Other</label>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                              <!-- Authority Filters -->
-                              <div  class="row well well-sm">
-                                <div class="col-md-12">
-                                  <h5>Authority Filters</h5>
-                                  <span>Include only backlinks originating from sites with a Domain Authority score greater than.</span>
-                                </div>
-                              </div>
-
-                              <div class="row form-group slider-container">
-                                <div class="col-md-8">
-                                  <br /><br /><br />
-                                  <div class="authority-slider"></div>
-                                  <br />
-                                  <h6 class="text-center">SET DOMAIN AUTHORITY SCORE</h6>
-                                </div>
-                                <div class="col-md-3 col-md-push-1 text-center">
-                                  <div class="tile-stats tile-white tile-white-primary">
-                                    <h4>DOMAIN AUTHORITY</h4>
-                                    <div class="authority-slider-result"></div>
+                                  <div class="row form-group row-v-spacing form-group">
+                                    <div class="col-md-6">
+                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="backlinks-domain-include">
+                                      <label for="backlinks-domain-include"><div>Include</div></label>
+                                      <p>Only include backlinks originating from the following list of domains.</p>
+                                      <div>
+                                        <textarea class="form-control autogrow" id="keywords-list" placeholder="Enter one domain per line"></textarea>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="backlinks-domain-exclude">
+                                      <label for="backlinks-domain-exclude"><div>Exclude</div></label>
+                                      <p>Exclude backlinks originating from the following list of domains.</p>
+                                      <div>
+                                        <textarea class="form-control autogrow" id="field-ta" placeholder="Enter one domain per line"></textarea>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-
-                            </form>
-                            <!-- End Content Filters -->
-
+                              <!--  Content Type Filters -->
+                              <div class="col-md-6">
+                                <div class="info-one info-tall greybg-info greybd-info">
+                                  <div class="row bg-dark-grey info-top">
+                                    <div class="col-md-12">
+                                      <h5>Content Type Filters</h5>
+                                      <span>Include backlinks of the following content types.</span>
+                                    </div>
+                                  </div>
+                                  <div class="row row-v-spacing form-group">
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="content-filter-blog" checked>
+                                          <label for="content-filter-blog">Blog</label>
+                                        </li>
+                                        <li>
+                                          <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="content-filter-news" checked>
+                                          <label for="content-filter-news">News</label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-social" checked>
+                                          <label for="content-filter-social">Social</label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-press-release" checked>
+                                          <label for="content-filter-press-release">Press Release</label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-directory">
+                                          <label for="content-filter-directory">Directory</label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-video" checked>
+                                          <label for="content-filter-video">Video</label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-image" checked>
+                                          <label for="content-filter-image">Image</label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-forum">
+                                          <label for="content-filter-forum">Forum</label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-wiki">
+                                          <label for="content-filter-wiki">Wiki</label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-product">
+                                          <label for="content-filter-product">Product</label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-article">
+                                          <label for="content-filter-article">Article</label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-v-spacing form-group">
+                              <!-- Anchor Type Filters -->
+                              <div class="col-md-6">
+                                <div class="info-one info-short greybg-info greybd-info">
+                                  <div class="row bg-dark-grey info-top">
+                                    <div class="col-md-12">
+                                      <h5>Anchor Type Filters</h5>
+                                      <span>Include backlinks of the following anchor types.</span>
+                                    </div>
+                                  </div>
+                                  <div class="row row-v-spacing form-group">
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-url" checked>
+                                          <label for="anchor-filter-url" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The URL filter will tag anchor text that has specific URLs in it. Click the edit icon to modify the list of URLs." data-original-title="URL Filter">URL<a href="javascript:;" onclick="jQuery('#anchor-filter-url-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                        </li>
+                                        <li>
+                                          <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-exact" checked>
+                                          <label for="anchor-filter-exact" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Exact filter will tag anchor text that exactly matches certain phrases. Click the edit icon to modify the list of phrases." data-original-title="Exact Filter">Exact<a href="javascript:;" onclick="jQuery('#anchor-filter-exact-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-partial">
+                                          <label for="anchor-filter-partial" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Partial filter will tag anchor text that contains one or more keywords from a list of designated keywords. Click the edit icon to modify the list of keywords." data-original-title="Partial Filter">Partial<a href="javascript:;" onclick="jQuery('#anchor-filter-partial-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-brand" checked>
+                                          <label for="anchor-filter-brand" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Branded filter will tag anchor text that contains any of the designated brand terms. Click the edit icon to modify the list of brand terms." data-original-title="Branded Filter">Branded<a href="javascript:;" onclick="jQuery('#anchor-filter-brand-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-action" checked>
+                                          <label for="anchor-filter-action" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Action filter will tag anchor text that has specific action terms in it. Click the edit icon to modify the list URLs." data-original-title="Action Filter">Action<a href="javascript:;" onclick="jQuery('#anchor-filter-action-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-image" checked>
+                                          <label for="anchor-filter-image" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Image filter will tag images." data-original-title="Image Filter">Image</label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-local" checked>
+                                          <label for="anchor-filter-local" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Local filter will tag anchor text that has specific locations in it. Click the edit icon to modify the list of locations." data-original-title="Local Filter">Local<a href="javascript:;" onclick="jQuery('#anchor-filter-local-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-other">
+                                          <label for="anchor-filter-other" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Other filter will tag anchor text that has not otherwise been classified." data-original-title="Other Filter">Other</label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Link Flow Filters -->
+                              <div class="col-md-6">
+                                <div class="info-one info-short greybg-info greybd-info">
+                                  <div class="row bg-dark-grey info-top">
+                                    <div class="col-md-12">
+                                      <h5>Link Flow Filters</h5>
+                                      <span>Include backlinks that are tagged with the following link flow parameters.</span>
+                                    </div>
+                                  </div>
+                                  <div class="row row-v-spacing form-group">
+                                    <div class="col-md-3">
+                                      <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="flow-filter-dofollow" checked>
+                                      <label for="flow-filter-dofollow">DoFollow</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="flow-filter-nofollow">
+                                      <label for="flow-filter-nofollow">NoFollow</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="flow-filter-sitewide">
+                                      <label for="flow-filter-sitewide">Sitewide</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-v-spacing">
+                              <!--  Health Filters -->
+                              <div class="col-md-6">
+                                <div class="info-one info-short greybg-info greybd-info">
+                                  <div class="row bg-dark-grey info-top">
+                                    <div class="col-md-12">
+                                      <h5>Health Filters</h5>
+                                      <span>Include backlinks that are tagged with the following health parameters.</span>
+                                    </div>
+                                  </div>
+                                  <div class="row row-v-spacing form-group">
+                                    <div class="col-md-3">
+                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-natural" checked>
+                                      <label for="health-filter-natural">Natural</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <input tabindex="6" type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-unnatural">
+                                      <label for="health-filter-unnatural">Unnatural</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <input type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-suspicious">
+                                      <label for="health-filter-suspicious">Suspicious</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <input type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-disavowed">
+                                      <label for="health-filter-disavowed" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Selecting the Disavowed filter will include a list of disavowed backlinks in this roadmap. Deselecting the Disavowed filter will exclude a list of disavowed links from this roadmap. Click the edit icon to modify the list of disavowed backlinks." data-original-title="Disavowed Filter">Disavowed<a href="javascript:;" onclick="jQuery('#health-filter-disavowed-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  Authority -->
+                              <div class="col-md-6">
+                                <div class="info-one info-short greybg-info greybd-info">
+                                  <div class="row bg-dark-grey info-top">
+                                    <div class="col-md-12">
+                                      <h5>Authority Filters</h5>
+                                      <span>Include only backlinks originating from sites with a Domain Authority score greater than.</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-v-spacing">
+                              <div class="ol-md-12 center-align">
+                                <button class="btn btn-info">
+                                  Apply 'Guest Blogger' Content Filter Template
+                                </button>
+                                <button class="btn btn-orange">
+                                  <span>Create New Content Filter Template</span>
+                                </button>
+                                <button class="btn btn-gray">
+                                  Cancel
+                                </button>
+                              </div>
+                            </div>
+                            <div class="row row-v-spacing"></div>
+                          </form>
 						</div>
 					</div>
+                  <!-- End Content Filters -->
+
 
                     <!-- Start Retail Pricing Templates -->
 					<div class="panel panel-default rh-retail-template">
