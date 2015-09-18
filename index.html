@@ -40,25 +40,67 @@
 <script>
 jQuery(window).load(function () {
 		var slider_content = new Slider("#content-r ", {
-			reversed : true
+			reversed : true,
 		});
-		
-		var slider_budget = new Slider("#budget-r", {
-			reversed : true
+		slider_content.on("change", function(slideEvt) {
+			$("#slide_label").html(slideEvt.newValue);
+                        var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');                
+                        $("#slide_label_warpper").css('top',slide_label_top);
+                        
 		});
-		var slider_month = new Slider("#month-r", {
-			reversed : true
+                var tick_val_str = $('#content-r').attr('data-slider-ticks');
+                var slide_val = $('#content-r').attr('data-slider-value');
+                var tick_val_obj = $.parseJSON(tick_val_str);
+                var tick_val = 100-tick_val_obj[1];
+                $("#tick_label").html(tick_val);
+                $("#slide_label").html(slide_val);
+                    
+		var slider_content2 = new Slider("#budget-r ", {
+			reversed : true,
 		});
-		/*
-		$("#budget-r").slider({
-			reversed : true
+		slider_content2.on("change", function(slideEvt) {
+			$("#slide_label2").html('$ '+slideEvt.newValue);
+                        var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');                
+                        $("#slide_label_warpper2").css('top',slide_label_top2);
 		});
-		$("#month-r").slider({
-			reversed : true
+                var slide_val2 = $('#budget-r').attr('data-slider-value');
+                $("#slide_label2").html('$ '+ slide_val2);
+                
+		var slider_content3 = new Slider("#month-r", {
+			reversed : true,
 		});
-		
-		*/
+		slider_content3.on("change", function(slideEvt) {
+                    $("#slide_label3").html(slideEvt.newValue);
+                        
+                    var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');                
+                    $("#slide_label_warpper3").css('top',slide_label_top3);
+		});
+                var tick_val_str3 = $('#month-r').attr('data-slider-ticks');
+                var slide_val3 = $('#month-r').attr('data-slider-value');
+                var tick_val_obj3 = $.parseJSON(tick_val_str3);
+                var tick_val3 = 60-tick_val_obj3[1];
+
+                $("#tick_label3").html(tick_val3);
+                $("#slide_label3").html(slide_val3);
+                
+                setInterval(function(){ 
+                    var tick_label_top = $("#tick_label_warpper").parent().find('.slider-tick:visible').css('top');                
+                    $("#tick_label_warpper").css('top',tick_label_top);
+                        
+                    var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');                
+                    $("#slide_label_warpper").css('top',slide_label_top);
+                    
+                    var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');                
+                    $("#slide_label_warpper2").css('top',slide_label_top2);
+                    
+                    var tick_label_top3 = $("#tick_label_warpper3").parent().find('.slider-tick:visible').css('top');                
+                    $("#tick_label_warpper3").css('top',tick_label_top3);
+                        
+                    var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');                
+                    $("#slide_label_warpper3").css('top',slide_label_top3);
+                }, 1000);
 });
+
 </script>
 
 </head>
@@ -282,9 +324,15 @@ jQuery(window).load(function () {
                             <div class="col-md-6">
                               <h5>To publish <span class="label label-primary">36</span> content pieces per month, at a cost of <span class="label label-success">$3,200</span> per month, it will take you <span class="label label-danger">52</span> months to catch your competition.</h5>
                               <ul class="range-outer">
-							  <li class="content-bg"><input id="content-r" type="text" data-slider-min="5" data-slider-max="100" data-slider-step="1" data-slider-value="0" data-slider-orientation="vertical"  data-slider-ticks="[0,50,100]" data-slider-ticks-labels="['min', 'you', 'max']" data-slider-ticks-positions="[0,50,100]" data-slider-handle="square"  /> <h4 class="range-txt">CONTENT / MO. </h4></li>
-							  <li class="budget-bg"><input id="budget-r" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="-3" data-slider-orientation="vertical" data-slider-tooltip="hide" data-slider-handle="square" data-slider-ticks="[0,50,100]" data-slider-ticks-labels="['min', 'you', 'max']" data-slider-ticks-positions="[0,50,100]" /><h4 class="range-txt">BUDGET / MO. <span>EditCostTemplate</span> </h4> </li>
-							  <li class="month-bg"><input id="month-r" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="-3" data-slider-orientation="vertical" data-slider-tooltip="hide" data-slider-handle="square" data-slider-ticks="[0,50,100]" data-slider-ticks-labels="['min', 'you', 'max']" data-slider-ticks-positions="[0,50,100]"/> <h4 class="range-txt">MONTHS To CATCH </h4></li>
+							  <li class="content-bg">
+					  <div class="range-box">
+					  <input id="content-r" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="36" data-slider-orientation="vertical"  data-slider-ticks="[0,43,100]" data-slider-handle="square" data-slider-tooltip="hide" /><span id="tick_label_warpper">Them<span id="tick_label"> </span></span> <span id="slide_label_warpper">You<span id="slide_label"></span></span> </div><h4 class="range-txt">CONTENT / MO. </h4></li>
+							  <li class="budget-bg">
+							  <div class="range-box"><input id="budget-r" type="text" data-slider-min="2000" data-slider-max="5000" data-slider-step="100" data-slider-value="3200" data-slider-orientation="vertical"  data-slider-tooltip="hide" data-slider-handle="square"  /><span id="slide_label_warpper2">You<span id="slide_label2"></span></span></div><h4 class="range-txt">BUDGET / MO. <span>EditCostTemplate</span> </h4> </li>
+							  
+							  <li class="month-bg"><div class="range-box">
+							  <input id="month-r" type="text" data-slider-min="1" data-slider-max="60" data-slider-step="1" data-slider-value="53" data-slider-orientation="vertical"  data-slider-ticks="[1,48,60]" data-slider-tooltip="hide" data-slider-handle="square"/><span id="tick_label_warpper3">You are here <br> <label> month </label><span id="tick_label3"> </span></span> <span id="slide_label_warpper3"><span id="slide_label3"></span>Months <br> to catch them</span></div> <h4 class="range-txt">MONTHS To CATCH </h4></li>
+							  </ul>
                             </div>
                             <div class="col-md-6">
                               <h5>Budget and Time to Catch Log</h5>

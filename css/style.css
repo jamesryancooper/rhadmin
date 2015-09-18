@@ -4389,7 +4389,7 @@ a {
     font-size: 14px;
     font-weight: 600;
     line-height: normal;
-    margin: 10px 0 0;
+    margin: 25px 0 0;
     padding: 0;
     text-align: center;
     width: 100%;
@@ -4409,16 +4409,51 @@ a {
 }
 
 .budget-bg .slider-handle {
-    background: #188f47;
+background: #188f47;
 }
 
 .month-bg .slider-handle {
-    background: #e34137;
+background: #e34137;
 }
 
 .slider-tick:nth-child(4), .slider-tick:nth-child(6), .slider-tick:first-child, .slider-tick:last-child {
-    display: none;
+display: none;
 }
+
+.range-outer .slider-tick.in-selection  ,.range-outer .slider-tick {
+background: #a6a8ac none repeat scroll 0 0;
+border-radius: 100%;
+}
+
+.range-outer .slider-track-low,.range-outer .slider-track-high {
+background: #dadbdd none repeat scroll 0 0;
+}
+
+.range-outer .slider-selection.tick-slider-selection {
+background: #dadbdd none repeat scroll 0 0;
+}
+
+.range-outer .slider-selection {background: #dadbdd none repeat scroll 0 0;}
+
+.range-outer #slide_label_warpper, .range-outer #slide_label_warpper2, .range-outer #slide_label_warpper3 {color: #000;font-size: 13px;font-weight: 600;left: 30px;line-height: 15px;margin-top: -12px;position: absolute;text-align: left;text-transform: uppercase;}
+
+.range-outer #tick_label_warpper  , .range-outer #tick_label_warpper2 , .range-outer #tick_label_warpper3 {color: #a6a8ac;font-size: 13px;font-weight: 600;line-height: 15px;position: absolute;right: 30px;text-transform: uppercase;text-align:right;}
+
+.range-outer #tick_label_warpper span, .range-outer #tick_label_warpper2 span, .range-outer #slide_label_warpper span, .range-outer #slide_label_warpper2 span {float: left;margin: 0;padding: 0;white-space: nowrap;width: 100%;}
+
+.range-box {position: relative;display:inline-block;}
+
+.range-outer #slide_label_warpper3 ,  .range-box #tick_label_warpper3 {white-space: nowrap;}
+
+.range-outer #slide_label_warpper3 span {float: left;margin: 0 5px 0 0;}
+
+.range-outer #tick_label_warpper3 span{color: #df2526;margin: 0 0 0 5px;padding: 0;}
+
+.range-outer #tick_label_warpper3 label{color: #df2526;font-size: 13px;font-weight: 600;line-height: 15px;text-transform: uppercase;}
+
+ .range-box #tick_label_warpper3 {margin-top: -12px;} 
+
+
 /*********************************/
 /*** End Aggression Sliders  *****/
 /*********************************/
