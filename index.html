@@ -11,9 +11,6 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
 <!-- Bootstrap CSS -->
 
-
-
-
 <link rel='stylesheet' href='css/bootstrap.min.css'>
 <link rel='stylesheet' href='css/materialize.css'>
 <link rel='stylesheet' href='css/material.css'>
@@ -470,7 +467,7 @@ jQuery(window).load(function () {
 
 
                   <!-- Start Content Filters -->
-					<div class="panel panel-default rh-filter-template">
+					<div class="panel panel-default rh-filter-template panel-content">
 						<div id="menu-click3" class="panel-collapse collapse menu-content-boxs" role="tabpanel" >
                           <ol class="breadcrumb">
                             <li><a data-toggle="collapse" href="#menu-click12" aria-controls="menu-click12" data-parent="#accordion-menus">Blueprint Strategy</a></li>
@@ -588,27 +585,27 @@ jQuery(window).load(function () {
                                           <label for="content-filter-press-release">Press Release</label>
                                         </li>
                                         <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-directory">
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-directory" checked>
                                           <label for="content-filter-directory">Directory</label>
                                         </li>
                                         <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-video" checked>
-                                          <label for="content-filter-video">Video</label>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-image" checked>
+                                          <label for="content-filter-image">Image</label>
                                         </li>
                                       </ul>
                                     </div>
                                     <div class="col-md-3">
                                       <ul class="icheck-list">
                                         <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-image" checked>
-                                          <label for="content-filter-image">Image</label>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-article" checked>
+                                          <label for="content-filter-article">Article</label>
                                         </li>
                                         <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-forum">
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-forum" checked>
                                           <label for="content-filter-forum">Forum</label>
                                         </li>
                                         <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-wiki">
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-wiki" checked>
                                           <label for="content-filter-wiki">Wiki</label>
                                         </li>
                                       </ul>
@@ -618,10 +615,6 @@ jQuery(window).load(function () {
                                         <li>
                                           <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-product">
                                           <label for="content-filter-product">Product</label>
-                                        </li>
-                                        <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="content-filter-article">
-                                          <label for="content-filter-article">Article</label>
                                         </li>
                                       </ul>
                                     </div>
@@ -644,44 +637,40 @@ jQuery(window).load(function () {
                                       <ul class="icheck-list">
                                         <li>
                                           <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-url" checked>
-                                          <label for="anchor-filter-url" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The URL filter will tag anchor text that has specific URLs in it. Click the edit icon to modify the list of URLs." data-original-title="URL Filter">URL<a href="javascript:;" onclick="jQuery('#anchor-filter-url-settings').modal('show', {backdrop: 'static'});"><sup><i class="ti-pencil"></i></sup></a></label>
+                                          <label for="anchor-filter-url" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The URL filter will tag anchor text that has specific URLs in it. Click the edit icon to modify the list of URLs." data-original-title="URL Filter">URL</label><sup><i id="anchor-filter-url-settings-icon" class="ti-pencil"></i></sup>
                                         </li>
                                         <li>
                                           <input tabindex="6" type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-exact" checked>
-                                          <label for="anchor-filter-exact" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Exact filter will tag anchor text that exactly matches certain phrases. Click the edit icon to modify the list of phrases." data-original-title="Exact Filter">Exact<a href="javascript:;" onclick="jQuery('#anchor-filter-exact-settings').modal('show', {backdrop: 'static'});"><sup><i class="ti-pencil"></i></sup></a></label>
+                                          <label for="anchor-filter-exact" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Exact filter will tag anchor text that exactly matches certain phrases. Click the edit icon to modify the list of phrases." data-original-title="Exact Filter">Exact</label><sup><i id="anchor-filter-exact-settings-icon" class="ti-pencil"></i></sup>
                                         </li>
                                       </ul>
                                     </div>
                                     <div class="col-md-3">
                                       <ul class="icheck-list">
                                         <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-partial">
-                                          <label for="anchor-filter-partial" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Partial filter will tag anchor text that contains one or more keywords from a list of designated keywords. Click the edit icon to modify the list of keywords." data-original-title="Partial Filter">Partial<a href="javascript:;" onclick="jQuery('#anchor-filter-partial-settings').modal('show', {backdrop: 'static'});"><sup><i class="ti-pencil"></i></sup></a></label>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-partial" checked>
+                                          <label for="anchor-filter-partial" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Partial filter will tag anchor text that contains one or more keywords from a list of designated keywords. Click the edit icon to modify the list of keywords." data-original-title="Partial Filter">Partial</label><sup><i id="anchor-filter-partial-settings-icon" class="ti-pencil"></i></sup>
                                         </li>
-                                        <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-brand" checked>
-                                          <label for="anchor-filter-brand" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Branded filter will tag anchor text that contains any of the designated brand terms. Click the edit icon to modify the list of brand terms." data-original-title="Branded Filter">Branded<a href="javascript:;" onclick="jQuery('#anchor-filter-brand-settings').modal('show', {backdrop: 'static'});"><sup><i class="ti-pencil"></i></sup></a></label>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="col-md-3">
-                                      <ul class="icheck-list">
                                         <li>
                                           <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-action" checked>
-                                          <label for="anchor-filter-action" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Action filter will tag anchor text that has specific action terms in it. Click the edit icon to modify the list URLs." data-original-title="Action Filter">Action<a href="javascript:;" onclick="jQuery('#anchor-filter-action-settings').modal('show', {backdrop: 'static'});"><sup><i class="ti-pencil"></i></sup></a></label>
+                                          <label for="anchor-filter-action" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Action filter will tag anchor text that has specific action terms in it. Click the edit icon to modify the list URLs." data-original-title="Action Filter">Action</label><sup><i id="anchor-filter-action-settings-icon" class="ti-pencil"></i></sup>
                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <ul class="icheck-list">
                                         <li>
                                           <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-image" checked>
                                           <label for="anchor-filter-image" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Image filter will tag images." data-original-title="Image Filter">Image</label>
                                         </li>
+                                        <li>
+                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-local" checked>
+                                          <label for="anchor-filter-local" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Local filter will tag anchor text that has specific locations in it. Click the edit icon to modify the list of locations." data-original-title="Local Filter">Local</label>
+                                        </li>
                                       </ul>
                                     </div>
                                     <div class="col-md-3">
                                       <ul class="icheck-list">
-                                        <li>
-                                          <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-local" checked>
-                                          <label for="anchor-filter-local" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Local filter will tag anchor text that has specific locations in it. Click the edit icon to modify the list of locations." data-original-title="Local Filter">Local<a href="javascript:;" onclick="jQuery('#anchor-filter-local-settings').modal('show', {backdrop: 'static'});"><sup><i class="ti-pencil"></i></sup></a></label>
-                                        </li>
                                         <li>
                                           <input type="checkbox" class="icheckbox_square-yellow" id="anchor-filter-other">
                                           <label for="anchor-filter-other" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="The Other filter will tag anchor text that has not otherwise been classified." data-original-title="Other Filter">Other</label>
@@ -733,16 +722,12 @@ jQuery(window).load(function () {
                                       <label for="health-filter-natural">Natural</label>
                                     </div>
                                     <div class="col-md-3">
-                                      <input tabindex="6" type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-unnatural">
-                                      <label for="health-filter-unnatural">Unnatural</label>
-                                    </div>
-                                    <div class="col-md-3">
-                                      <input type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-suspicious">
+                                      <input type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-suspicious" checked>
                                       <label for="health-filter-suspicious">Suspicious</label>
                                     </div>
                                     <div class="col-md-3">
-                                      <input type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-disavowed">
-                                      <label for="health-filter-disavowed" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Selecting the Disavowed filter will include a list of disavowed backlinks in this roadmap. Deselecting the Disavowed filter will exclude a list of disavowed links from this roadmap. Click the edit icon to modify the list of disavowed backlinks." data-original-title="Disavowed Filter">Disavowed<a href="javascript:;" onclick="jQuery('#health-filter-disavowed-settings').modal('show', {backdrop: 'static'});"><sup><i class="entypo-pencil"></i></sup></a></label>
+                                      <input tabindex="6" type="checkbox" class="icheckbox_square-yellow inline-check" id="health-filter-unnatural">
+                                      <label for="health-filter-unnatural">Toxic</label>
                                     </div>
                                   </div>
                                 </div>
@@ -775,6 +760,406 @@ jQuery(window).load(function () {
                             <div class="row row-v-spacing"></div>
                           </form>
 						</div>
+
+                        <!-- URL Overlay Panel -->
+                        <div id="anchor-filter-url-settings" class="panel panel-default rh-filter-url settings-overlay settings-overlay-contentpush">
+                          <ol class="breadcrumb">
+                            <li><a data-toggle="collapse" href="#menu-click12" aria-controls="menu-click12" data-parent="#accordion-menus">Blueprint Strategy</a></li>
+                            <li><a href="#" class="settings-overlay-close">Content & Backlink Template</a></li>
+                            <li class="active">URL Filter Settings</li>
+                          </ol>
+                          <div class="row right-align">
+                            <div class="col-md-12">
+                              <p>The URL filter allows you to filter anchor text that is tagged as the URL type. You may include backlinks that have anchor text that contains specific URLs. You may also exclude backlinks that have anchor text that contains specific URLs. <i class="ion-ios-information-outline iconc-info"></i></p>
+                            </div>
+                          </div>
+                          <div class="row row-v-spacing form-group">
+                            <div class="col-md-4">
+                              <div class="info-one info-tall greybg-info greybd-info">
+                                <div class="row bg-dark-grey info-top">
+                                  <div class="col-md-12">
+                                    <label for="backlinks-keywords-include">
+                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include" checked>
+                                      <span class="h4">Current URLs</span>
+                                    </label>
+                                    <p>Include the current list of URLs set for this project.</p>
+                                  </div>
+                                </div>
+                                <div class="row row-v-spacing form-group">
+                                  <div class="scrollable col-md-12" data-height="80">
+                                    <ul>
+                                      <li>abacusplumbing.net</li>
+                                      <li>rotorooter.com</li>
+                                      <li>angieslist.com</li>
+                                      <li>wikipedia.org</li>
+                                      <li>villageplumbing.com</li>
+                                      <li>yellowpages.com</li>
+                                      <li>theplumbingsolution.net</li>
+                                      <li>happyplumber.com</li>
+                                      <li>localplumbing.com</li>
+                                      <li>houstonplumbing.com</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-one info-tall greybg-info greybd-info">
+                                <div class="row bg-dark-grey info-top">
+                                  <div class="col-md-12">
+                                    <label for="backlinks-keywords-include">
+                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include">
+                                      <span class="h4">Include Additional URLs</span>
+                                    </label>
+                                    <p>Include backlinks with the following URLs in the anchor text.</p>
+                                  </div>
+                                </div>
+                                <div class="row row-v-spacing form-group">
+                                  <div class="col-md-12">
+                                    <textarea class="form-control autogrow" id="keywords-list" placeholder="input one URL per line"></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-one info-tall greybg-info greybd-info">
+                                <div class="row bg-dark-grey info-top">
+                                  <div class="col-md-12">
+                                    <label for="backlinks-keywords-exclude">
+                                      <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-exclude">
+                                      <span class="h4">Exclude These URLs</span>
+                                    </label>
+                                    <p>Exclude backlinks with the following URLs in the anchor text.</p>
+                                  </div>
+                                </div>
+                                <div class="row row-v-spacing form-group">
+                                  <div class="col-md-12">
+                                    <textarea class="form-control autogrow" id="field-ta" placeholder="input one URL per line"></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-v-spacing">
+                            <div class="col-md-12 center-align">
+                              <button type="button" class="btn btn-default settings-overlay-close">Exit</button>
+                              <button type="button" class="btn btn-info">Save</button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End URL Overlay Panel -->
+
+                      <!-- Exact Match Overlay Panel -->
+                      <div id="exact-filter-url-settings" class="panel panel-default rh-filter-url settings-overlay settings-overlay-contentpush">
+                        <ol class="breadcrumb">
+                          <li><a data-toggle="collapse" href="#menu-click12" aria-controls="menu-click12" data-parent="#accordion-menus">Blueprint Strategy</a></li>
+                          <li><a href="#" class="settings-overlay-close">Content & Backlink Template</a></li>
+                          <li class="active">Exact Match Filter Settings</li>
+                        </ol>
+                        <div class="row right-align">
+                          <div class="col-md-12">
+                            <p>The Exact Match filter allows you to filter anchor text that is tagged as the Exact Match type. You may include backlinks that have anchor text that exactly matches certain phrases. You may also exclude backlinks that have anchor text that exactly matches certain phrases. <i class="ion-ios-information-outline iconc-info"></i></p>
+                          </div>
+                        </div>
+                        <div class="row row-v-spacing form-group">
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-include">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include" checked>
+                                    <span class="h4">Current Exact Match Phrases</span>
+                                  </label>
+                                  <p>Include the current list of of exact match phrases set for this project.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <div class="scrollable" data-height="80">
+                                    <ul>
+                                      <li>houston plumbing specialist</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-include">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include">
+                                    <span class="h4">Include Additional Exact Match Phrases</span>
+                                  </label>
+                                  <p>Include backlinks with the following exact phrases as anchor text.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <textarea class="form-control autogrow" id="keywords-list" placeholder="input one phrase per line"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-exclude">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-exclude">
+                                    <span class="h4">Exclude These Exact Match Phrases</span>
+                                  </label>
+                                  <p>Exclude backlinks with the following exact phrases as anchor text.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <textarea class="form-control autogrow" id="field-ta" placeholder="input one phrase per line"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row row-v-spacing">
+                          <div class="col-md-12 center-align">
+                            <button type="button" class="btn btn-default settings-overlay-close">Exit</button>
+                            <button type="button" class="btn btn-info">Save</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Exact Match Overlay Panel -->
+
+                      <!-- Partial Overlay Panel -->
+                      <div id="partial-filter-url-settings" class="panel panel-default rh-filter-url settings-overlay settings-overlay-contentpush">
+                        <ol class="breadcrumb">
+                          <li><a data-toggle="collapse" href="#menu-click12" aria-controls="menu-click12" data-parent="#accordion-menus">Blueprint Strategy</a></li>
+                          <li><a href="#" class="settings-overlay-close">Content & Backlink Template</a></li>
+                          <li class="active">Partial Match Filter Settings</li>
+                        </ol>
+                        <div class="row right-align">
+                          <div class="col-md-12">
+                            <p>The Partial Match filter allows you to filter anchor text that is tagged as the Partial Match type. You may include backlinks that have anchor text that contains certain keywords. You may also exclude backlinks that have anchor text that contains certain keywords.</p>
+                          </div>
+                        </div>
+                        <div class="row row-v-spacing form-group">
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-include">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include" checked>
+                                    <span class="h4">Current Partial Match Terms</span>
+                                  </label>
+                                  <p>Include the current list of partial match terms set for this project.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <div class="scrollable" data-height="80">
+                                    <ul>
+                                      <li>houston</li>
+                                      <li>plumbing</li>
+                                      <li>specialist</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-include">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include">
+                                    <span class="h4">Include Additional Partial Match Terms</span>
+                                  </label>
+                                  <p>Include backlinks with the following keywords within the anchor text.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <textarea class="form-control autogrow" id="keywords-list" placeholder="input one keyword per line"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-exclude">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-exclude">
+                                    <span class="h4">Exclude These Partial Match Terms</span>
+                                  </label>
+                                  <p>Exclude backlinks with the following keywords in the anchor text.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <textarea class="form-control autogrow" id="field-ta" placeholder="input one keyword per line"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row row-v-spacing">
+                          <div class="col-md-12 center-align">
+                            <button type="button" class="btn btn-default settings-overlay-close">Exit</button>
+                            <button type="button" class="btn btn-info">Save</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Partial Overlay Panel -->
+
+                      <!-- Action Overlay Panel -->
+                      <div id="action-filter-url-settings" class="panel panel-default rh-filter-url settings-overlay settings-overlay-contentpush">
+                        <ol class="breadcrumb">
+                          <li><a data-toggle="collapse" href="#menu-click12" aria-controls="menu-click12" data-parent="#accordion-menus">Blueprint Strategy</a></li>
+                          <li><a href="#" class="settings-overlay-close">Content & Backlink Template</a></li>
+                          <li class="active">Action Filter Settings</li>
+                        </ol>
+                        <div class="row right-align">
+                          <div class="col-md-12">
+                            <p>The Action filter allows you to filter anchor text that is tagged as the Action type. You may include backlinks that have anchor text that contains specific Action phrases. You may also exclude backlinks that have anchor text that contains specific Action phrases.</p>
+                          </div>
+                        </div>
+                        <div class="row row-v-spacing form-group">
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-include">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include" checked>
+                                    <span class="h4">Default Action Phrases</span>
+                                  </label>
+                                  <p>Include the default list of action phrases.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <div class="scrollable" data-height="150">
+                                    <ul>
+                                      <li>click here</li>
+                                      <li>read more</li>
+                                      <li>click</li>
+                                      <li>more</li>
+                                      <li>next</li>
+                                      <li>prev</li>
+                                      <li>previous</li>
+                                      <li>submit</li>
+                                      <li>learn more</li>
+                                      <li>more info</li>
+                                      <li>more information</li>
+                                      <li>visit website</li>
+                                      <li>find out more</li>
+                                      <li>visit my website</li>
+                                      <li>visit our website</li>
+                                      <li>home</li>
+                                      <li>home page</li>
+                                      <li>homepage</li>
+                                      <li>about us</li>
+                                      <li>contact</li>
+                                      <li>contact us</li>
+                                      <li>services</li>
+                                      <li>blog</li>
+                                      <li>continue</li>
+                                      <li>more</li>
+                                      <li>website</li>
+                                      <li>visit</li>
+                                      <li>our website</li>
+                                      <li>my website</li>
+                                      <li>call</li>
+                                      <li>call today</li>
+                                      <li>services</li>
+                                      <li>sitemap</li>
+                                      <li>site map</li>
+                                      <li>terms of use</li>
+                                      <li>policies</li>
+                                      <li>call</li>
+                                      <li>call today</li>
+                                      <li>contact</li>
+                                      <li>privacy policy</li>
+                                      <li>privacy policies</li>
+                                      <li>terms</li>
+                                      <li>photos</li>
+                                      <li>galleries</li>
+                                      <li>photo gallery</li>
+                                      <li>photo galleries</li>
+                                      <li>visit</li>
+                                      <li>visit site</li>
+                                      <li>industry links</li>
+                                      <li>links</li>
+                                      <li>resources</li>
+                                      <li>legal notice</li>
+                                      <li>faq</li>
+                                      <li>faqs</li>
+                                      <li>view website</li>
+                                      <li>view</li>
+                                      <li>view site</li>
+                                      <li>visit link</li>
+                                      <li>visit this link</li>
+                                      <li>visit</li>
+                                      <li>view web site</li>
+                                      <li>visit website</li>
+                                      <li>visit web site</li>
+                                      <li>here</li>
+                                      <li>this</li>
+                                      <li>contact page</li>
+                                    </ul>
+                                  </div>
+                                  <a href="action-terms.html">edit this list</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-include">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-include">
+                                    <span class="h4">Include Additional Action Phrases</span>
+                                  </label>
+                                  <p>Include a list of additional action phrases. Anchor text that contains any of the action phrases you add to this list will be tagged with the Action tag.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <textarea class="form-control autogrow" id="field-ta" placeholder="input one action phrase per line"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-one info-tall greybg-info greybd-info">
+                              <div class="row bg-dark-grey info-top">
+                                <div class="col-md-12">
+                                  <label for="backlinks-keywords-exclude">
+                                    <input tabindex="5" type="checkbox" class="icheckbox_square-yellow inline-check" id="backlinks-keywords-exclude">
+                                    <span class="h4">Exclude These Action Phrases</span>
+                                  </label>
+                                  <p>Exclude backlinks with the following action phrases in the anchor text.</p>
+                                </div>
+                              </div>
+                              <div class="row row-v-spacing form-group">
+                                <div class="col-md-12">
+                                  <textarea class="form-control autogrow" id="field-ta" placeholder="input one action phrase per line"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row row-v-spacing">
+                          <div class="col-md-12 center-align">
+                            <button type="button" class="btn btn-default settings-overlay-close">Exit</button>
+                            <button type="button" class="btn btn-info">Save</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Action Overlay Panel -->
+
 					</div>
                   <!-- End Content Filters -->
 
