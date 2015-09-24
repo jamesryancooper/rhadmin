@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>RankHacker Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/materialize.css'>
+    <link rel='stylesheet' href='css/material.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/bootstrap-slider.css'>
+    <link rel='stylesheet' href='css/icon-stylemain.css'>
+    <link rel='stylesheet' href='css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='css/rotated-gallery.css'>
+    <link rel='stylesheet' href='css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='css/jtree.css'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <script src="js/modernizr.custom.js"></script>
+    <script src='js/jquery.js'></script>
+    <script src='js/app.js'></script>
+    <script src='js/bootstrap-slider.js'></script>
+    <script>
+        jQuery(window).load(function () {
+            $('.piluku-preloader').addClass('hidden');
+        });
+    </script>
+
+    <script>
+        jQuery(window).load(function () {
+            var slider_content = new Slider("#content-r ", {
+                reversed : true,
+            });
+            slider_content.on("change", function(slideEvt) {
+                $("#slide_label").html(slideEvt.newValue);
+                var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper").css('top',slide_label_top);
+
+            });
+            var tick_val_str = $('#content-r').attr('data-slider-ticks');
+            var slide_val = $('#content-r').attr('data-slider-value');
+            var tick_val_obj = $.parseJSON(tick_val_str);
+            var tick_val = 100-tick_val_obj[1];
+            $("#tick_label").html(tick_val);
+            $("#slide_label").html(slide_val);
+
+            var slider_content2 = new Slider("#budget-r ", {
+                reversed : true,
+            });
+            slider_content2.on("change", function(slideEvt) {
+                $("#slide_label2").html('$ '+slideEvt.newValue);
+                var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper2").css('top',slide_label_top2);
+            });
+            var slide_val2 = $('#budget-r').attr('data-slider-value');
+            $("#slide_label2").html('$ '+ slide_val2);
+
+            var slider_content3 = new Slider("#month-r", {
+                reversed : true,
+            });
+            slider_content3.on("change", function(slideEvt) {
+                $("#slide_label3").html(slideEvt.newValue);
+
+                var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper3").css('top',slide_label_top3);
+            });
+            var tick_val_str3 = $('#month-r').attr('data-slider-ticks');
+            var slide_val3 = $('#month-r').attr('data-slider-value');
+            var tick_val_obj3 = $.parseJSON(tick_val_str3);
+            var tick_val3 = 60-tick_val_obj3[1];
+
+            $("#tick_label3").html(tick_val3);
+            $("#slide_label3").html(slide_val3);
+
+            setInterval(function(){
+                var tick_label_top = $("#tick_label_warpper").parent().find('.slider-tick:visible').css('top');
+                $("#tick_label_warpper").css('top',tick_label_top);
+
+                var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper").css('top',slide_label_top);
+
+                var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper2").css('top',slide_label_top2);
+
+                var tick_label_top3 = $("#tick_label_warpper3").parent().find('.slider-tick:visible').css('top');
+                $("#tick_label_warpper3").css('top',tick_label_top3);
+
+                var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper3").css('top',slide_label_top3);
+            }, 1000);
+        });
+
+    </script>
+
+</head>
+<body>
+<div class="piluku-preloader text-center">
+    <!-- <div class="progress">
+        <div class="indeterminate"></div>
+    </div> -->
+    <div class="loader">Loading...</div>
+</div>
+<div class="wrapper hide-left-bar">
+    <div class="content" id="content">
+        <div class="overlay"></div>
+        <div class="top-bar">
+            <nav class="navbar navbar-default top-bar">
+                <div class="navbar-header"> <a class="navbar-brand" href="blueprints.html">RankHacker</a> </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
+                        <li class="dropdown piluku-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                            <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
+                            </ul>
+                            <input type="hidden" id="selectedProjectID" value="0"/>
+                        </li>
+                        <li></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right top-elements">
+                        <li class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
+                            </ul>
+                        </li>
+                        <li class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-box-outline icon-notification"></i><span class="badge info-number bell" id="commentsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow message_drop neat_drop" data-wow-duration="1500ms" role="menu" id="commentsList">
+                            </ul>
+                        </li>
+                        <li class="chat_btn"> <a href="#" class="right-bar-toggle flatRed"> <i class="ti-settings"></i> </a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- /top-bar -->
+
+        <div class="main-content">
+
+        </div>
+    </div>
+    <!---content -->
+
+    <!-- start sidebar -->
+    <div class="side-bar right-bar">
+        <div class="contacts">
+            <div class="col col-md-12">
+                <ul class="tabs">
+                    <li class="tab col-md-3"><a href="#test1" class="active">Settings</a></li>
+                    <li class="tab col-md-3"><a href="#test2">Budgets</a></li>
+                    <li class="tab col-md-3"><a href="#test3">Filters</a></li>
+                </ul>
+            </div>
+            <div class="content-holder">
+                <div id="test1" class="col-md-12 no_padding"> <br>
+                    <div class="form-group">
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Reminders</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Auto Refresh</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch1"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Rank Tracking</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch2"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Filters</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch3"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Notifications</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch4"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="test2" class="col-md-12 no_padding"> <br>
+                    <div class="form-group">
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Enable</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch1"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch2"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch3"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch4"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="test3" class="col-md-12 no_padding"> <br>
+                    <div class="form-group">
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Enable</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch1"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch2"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch3"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+                                <div class="toggle">
+                                    <label for="toggle-switch4"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content_holder -->
+        </div>
+    </div>
+    <!-- end sidebar -->
+
+</div>
+<!-- wrapper -->
+
+<script src='js/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src="js/tooltip-custom.js"></script> <!--For Point #3-->
+<script src='js/jquery.nicescroll.min.js'></script>
+<script src='js/wow.min.js'></script>
+<script src='js/jquery.loadmask.min.js'></script>
+<script src='js/jquery.accordion.js'></script>
+<script src='js/materialize.js'></script>
+<script src='js/bic_calendar.js'></script>
+<script src='js/build/d3.min.js'></script>
+<script src='js/nvd3/nv.d3.js'></script>
+<script src='js/sparkline.js'></script>
+<script src='js/widgets.js'></script>
+<script src='js/jquery.bootstrap.wizard.js'></script>
+<script src='js/prettify.js'></script>
+<script src='js/sweet-alert/sweetalert.min.js'></script>
+<script src='js/form-wizard.js'></script>
+<script src='js/classie.js'></script>
+<script src='js/fullscreen-overlay.js'></script>
+<script src='js/core.js'></script>
+<script src="js/jquery.countTo.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</body>
+</html>
