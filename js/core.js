@@ -54,11 +54,11 @@ $(document).ready(function () {
         e.preventDefault();
         var $target = $(this).parent().parent().parent().next('.panel-body');
         if ($target.is(':visible')) {
-            $('i', $(this)).removeClass('ti-angle-up').addClass('ti-angle-down');
+            $('i', $(this)).removeClass('ion-android-arrow-dropright').addClass('ion-android-arrow-dropdown');
             $(this).parent().parent().parent().find('.show_on_expand').show();
             $(this).parent().parent().parent().find('.show_on_collapse').hide();
         } else {
-            $('i', $(this)).removeClass('ti-angle-down').addClass('ti-angle-up');
+            $('i', $(this)).removeClass('ion-android-arrow-dropdown').addClass('ion-android-arrow-dropright');
             $(this).parent().parent().parent().find('.show_on_expand').hide();
             $(this).parent().parent().parent().find('.show_on_collapse').show();
         }
@@ -71,11 +71,11 @@ $(document).ready(function () {
         var $target = $('.blueprint-expand-outer');
 		//alert($target);
         if ($target.is(':visible')) {
-            $('i', $(this)).removeClass('ti-angle-up').addClass('ti-angle-down');
+            $('i', $(this)).removeClass('ion-android-arrow-dropright').addClass('ion-android-arrow-dropdown');
             $(this).parent().parent().parent().find('.show_on_expand').show();
             $(this).parent().parent().parent().find('.show_on_collapse').hide();
         } else {
-            $('i', $(this)).removeClass('ti-angle-down').addClass('ti-angle-up');
+            $('i', $(this)).removeClass('ion-android-arrow-dropdown').addClass('ion-android-arrow-dropright');
             $(this).parent().parent().parent().find('.show_on_expand').hide();
             $(this).parent().parent().parent().find('.show_on_collapse').show();
         }
