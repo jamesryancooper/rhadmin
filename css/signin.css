@@ -202,73 +202,79 @@ textarea.materialize-textarea {
   overflow-y: auto;
   overflow-x: hidden;
 }
-.signin_wrapper .right_block .signup-heading {
+.signin_wrapper .center_block {
+  max-width: 600px;
+  margin: 10% auto auto;
+  background: rgba(0, 9, 22, 0.8);
+  padding: 0px 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.signin_wrapper .signup-heading {
   font-size: 20px;
   font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 50%;
-  margin-bottom: 50px;
-  text-align: center;
+  margin-bottom: 20px;
 }
-.signin_wrapper .right_block.password_block {
+.signin_wrapper .password_block {
   width: 100%;
 }
-.signin_wrapper .right_block .bottom_info {
+.signin_wrapper .bottom_info {
   margin-top: 50px;
 }
-.signin_wrapper .right_block a {
+.signin_wrapper a {
   color: #ffffff;
   text-decoration: none;
   outline: none;
 }
-.signin_wrapper .right_block .input-field label {
+.signin_wrapper .input-field label {
   color: #ffffff;
   backface-visibility: hidden;
 }
-.signin_wrapper .right_block .input-field input {
+.signin_wrapper .input-field input {
   color: #ffffff;
 }
-.signin_wrapper .right_block i.prefix {
+.signin_wrapper i.prefix {
   color: #ffffff;
   backface-visibility: hidden;
   font-size: 30px;
   text-align: center;
   padding-right: 20px;
 }
-.signin_wrapper .right_block i.prefix.active {
+.signin_wrapper i.prefix.active {
   color: #2196f3 !important;
 }
-.signin_wrapper .right_block .input-field label {
+.signin_wrapper .input-field label {
   color: #ffffff;
 }
-.signin_wrapper .right_block .input-field input[type=text]:focus + label,
-.signin_wrapper .right_block .input-field input[type=password]:focus + label,
-.signin_wrapper .right_block .input-field input[type=email]:focus + label {
+.signin_wrapper .input-field input[type=text]:focus + label,
+.signin_wrapper .input-field input[type=password]:focus + label,
+.signin_wrapper .input-field input[type=email]:focus + label {
   color: #ffffff;
 }
-.signin_wrapper .right_block .input-field input[type=text]:focus,
-.signin_wrapper .right_block .input-field input[type=password]:focus,
-.signin_wrapper .right_block .input-field input[type=email]:focus {
+.signin_wrapper .input-field input[type=text]:focus,
+.signin_wrapper .input-field input[type=password]:focus,
+.signin_wrapper .input-field input[type=email]:focus {
   border-bottom: 1px solid #2196f3;
   box-shadow: 0 1px 0 0 #2196f3;
 }
-.signin_wrapper .right_block .input-field input[type=text].valid,
-.signin_wrapper .right_block .input-field input[type=password].valid,
-.signin_wrapper .right_block .input-field input[type=email].valid {
+.signin_wrapper .input-field input[type=text].valid,
+.signin_wrapper .input-field input[type=password].valid,
+.signin_wrapper .input-field input[type=email].valid {
   border-bottom: 1px solid #6fd64b;
   box-shadow: 0 1px 0 0 #6fd64b;
 }
-.signin_wrapper .right_block .input-field input[type=text].invalid,
-.signin_wrapper .right_block .input-field input[type=password].invalid,
-.signin_wrapper .right_block .input-field input[type=email].invalid {
+.signin_wrapper .input-field input[type=text].invalid,
+.signin_wrapper .input-field input[type=password].invalid,
+.signin_wrapper .input-field input[type=email].invalid {
   border-bottom: 1px solid #fb5d5d;
   box-shadow: 0 1px 0 0 #fb5d5d;
 }
-.signin_wrapper .right_block .input-field .prefix.active {
+.signin_wrapper .input-field .prefix.active {
   color: #000;
 }
-.signin_wrapper .right_block .btn-primary {
+.signin_wrapper .btn-primary {
   margin-top: 30px;
   line-height: 30px;
   font-size: 16px;
@@ -289,4 +295,33 @@ textarea.materialize-textarea {
 .modal .btn {
   margin-top: 0;
   border-radius: 3px;
+}
+
+/*********************************/
+/********** Branding  ************/
+/*********************************/
+.logo-cont {
+  margin: 50px 0;
+}
+.brand {
+  opacity: .8;
+  padding: 16px 0 0;
+  margin-bottom: 0;
+  font-family: Montserrat,sans-serif;
+  font-size: 46px;
+  color: #3D3D3C;
+  stroke: 1px #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 3px 3px 0 #3D3D3C,-1px -1px 0 #3D3D3C,1px -1px 0 #3D3D3C,-1px 1px 0 #3D3D3C,1px 1px 0 #3D3D3C;
+}
+.brand:hover {
+  opacity: 1;
+}
+.brand span {
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 3px 3px 0 #3D3D3C,-1px -1px 0 #3D3D3C,1px -1px 0 #3D3D3C,-1px 1px 0 #3D3D3C,1px 1px 0 #3D3D3C;
+  font-family: Cutive,serif;
+  font-size: 39px;
+  margin-left: 3px;
 }

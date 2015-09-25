@@ -326,78 +326,85 @@ form p:last-child {
   overflow-y: auto;
   overflow-x: hidden;
 }
-.signup_wrapper .right_block .signup-heading {
+.signup_wrapper .center_block {
+  max-width: 600px;
+  margin: 10% auto auto;
+  background: rgba(0, 9, 22, 0.8);
+  padding: 0px 40px;
+  max-height: 50%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.signup_wrapper .signup-heading {
   font-size: 20px;
   font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 20%;
-  margin-bottom: 50px;
-  text-align: center;
+  margin-bottom: 20px;
 }
-.signup_wrapper .right_block a {
+.signup_wrapper a {
   color: #ffffff;
   text-decoration: none;
 }
-.signup_wrapper .right_block .input-field label {
+.signup_wrapper .input-field label {
   color: #ffffff;
   backface-visibility: hidden;
 }
-.signup_wrapper .right_block .input-field input {
+.signup_wrapper .input-field input {
   color: #ffffff;
 }
-.signup_wrapper .right_block i.prefix {
+.signup_wrapper i.prefix {
   color: #ffffff;
   backface-visibility: hidden;
   font-size: 30px;
   text-align: center;
   padding-right: 20px;
 }
-.signup_wrapper .right_block i.prefix.active {
+.signup_wrapper i.prefix.active {
   color: #2196f3 !important;
 }
-.signup_wrapper .right_block .input-field label {
+.signup_wrapper .input-field label {
   color: #ffffff;
 }
-.signup_wrapper .right_block .input-field input[type=text]:focus + label,
-.signup_wrapper .right_block .input-field input[type=password]:focus + label,
-.signup_wrapper .right_block .input-field input[type=email]:focus + label {
+.signup_wrapper .input-field input[type=text]:focus + label,
+.signup_wrapper .input-field input[type=password]:focus + label,
+.signup_wrapper .input-field input[type=email]:focus + label {
   color: #ffffff;
 }
-.signup_wrapper .right_block .input-field input[type=text]:focus,
-.signup_wrapper .right_block .input-field input[type=password]:focus,
-.signup_wrapper .right_block .input-field input[type=email]:focus {
+.signup_wrapper .input-field input[type=text]:focus,
+.signup_wrapper .input-field input[type=password]:focus,
+.signup_wrapper .input-field input[type=email]:focus {
   border-bottom: 1px solid #2196f3;
   box-shadow: 0 1px 0 0 #2196f3;
 }
-.signup_wrapper .right_block .input-field input[type=text].valid,
-.signup_wrapper .right_block .input-field input[type=password].valid,
-.signup_wrapper .right_block .input-field input[type=email].valid {
+.signup_wrapper .input-field input[type=text].valid,
+.signup_wrapper .input-field input[type=password].valid,
+.signup_wrapper .input-field input[type=email].valid {
   border-bottom: 1px solid #6fd64b;
   box-shadow: 0 1px 0 0 #6fd64b;
 }
-.signup_wrapper .right_block .input-field input[type=text].invalid,
-.signup_wrapper .right_block .input-field input[type=password].invalid,
-.signup_wrapper .right_block .input-field input[type=email].invalid {
+.signup_wrapper .input-field input[type=text].invalid,
+.signup_wrapper .input-field input[type=password].invalid,
+.signup_wrapper .input-field input[type=email].invalid {
   border-bottom: 1px solid #fb5d5d;
   box-shadow: 0 1px 0 0 #fb5d5d;
 }
-.signup_wrapper .right_block .input-field .prefix.active {
+.signup_wrapper .input-field .prefix.active {
   color: #000;
 }
-.signup_wrapper .right_block .btn-primary {
+.signup_wrapper .btn-primary {
   margin-top: 50px;
   line-height: 30px;
   font-size: 16px;
   margin-bottom: 20px;
 }
-.signup_wrapper .right_block input[type="checkbox"] + label span {
+.signup_wrapper input[type="checkbox"] + label span {
   display: inline;
 }
-.signup_wrapper .right_block .piluku-check {
+.signup_wrapper .piluku-check {
   margin-top: 30px;
 }
-.signup_wrapper .right_block .piluku-check label {
+.signup_wrapper .piluku-check label {
   color: #ffffff;
 }
 @media (max-width: 530px) {
@@ -407,4 +414,33 @@ form p:last-child {
   .signin_wrapper #clockbox {
     margin-top: 10px !important;
   }
+}
+
+/*********************************/
+/********** Branding  ************/
+/*********************************/
+.logo-cont {
+  margin: 50px 0;
+}
+.brand {
+  opacity: .8;
+  padding: 16px 0 0;
+  margin-bottom: 0;
+  font-family: Montserrat,sans-serif;
+  font-size: 46px;
+  color: #3D3D3C;
+  stroke: 1px #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 3px 3px 0 #3D3D3C,-1px -1px 0 #3D3D3C,1px -1px 0 #3D3D3C,-1px 1px 0 #3D3D3C,1px 1px 0 #3D3D3C;
+}
+.brand:hover {
+  opacity: 1;
+}
+.brand span {
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 3px 3px 0 #3D3D3C,-1px -1px 0 #3D3D3C,1px -1px 0 #3D3D3C,-1px 1px 0 #3D3D3C,1px 1px 0 #3D3D3C;
+  font-family: Cutive,serif;
+  font-size: 39px;
+  margin-left: 3px;
 }

@@ -31,7 +31,7 @@
   background-color: #fff;
 }
 .greybg-info {
-  background-color: #f2f4f7;
+  background-color: #f3f3f5;
 }
 .redbg-info {
   background-color: #fb5d5d;
@@ -59,6 +59,18 @@
 }
 .greenbd-info {
   border: solid 1px #6fd64b;
+}
+.info-tall {
+  min-height: 330px;
+}
+.info-short {
+  min-height: 220px;
+}
+.info-top {
+  padding: 1rem 0;
+}
+.info-top h5 {
+  margin: 0;
 }
 .info-stats {
   background-color: #FFFFFF;
