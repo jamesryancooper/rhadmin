@@ -4442,7 +4442,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     color: #333;
     background-color: transparent;
   }
-  . ult .navbar-nav .open .dropdown-menu > .active > a,
+  .ult .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
