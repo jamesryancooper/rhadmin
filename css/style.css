@@ -2627,6 +2627,7 @@ span.badge.rh-bg-info {
     display: inline-block;
 }
 
+.rh-blueprint-select,
 .rh-blueprint-settings {
     background-color: #F7F7F7;
 }
@@ -2640,15 +2641,18 @@ span.badge.rh-bg-info {
 
 .rh-blueprint-settings i {
     font-size: 3em;
-    /*color: #231F20;*/
-    color: #7e7e7e; /* For point #4 */
+    color: #7e7e7e;
 }
 
 .rh-blueprint-info {
-    padding-top: 1.3em;
+    padding-top: 1.1em;
 }
 
 .rh-blueprint-name {
+    display: block;
+    height: 1em !important;
+    padding-left: .25em;
+    margin-bottom: .25em;
     color: #1C75BC;
     text-transform: lowercase;
     font-weight: 700;
@@ -2686,6 +2690,8 @@ span.badge.rh-bg-info {
 }
 
 .rh-column-sub-heading {
+    position: absolute;
+    bottom: .75em;
     font-size: .7em;
     line-height: 1em;
 }
@@ -2746,7 +2752,6 @@ span.badge.rh-bg-info {
 
 .rh-blueprint-goals ul {
     text-align: center;
-    padding-top: 6px;
 }
 
 .rh-blueprint-goals li {
@@ -2823,6 +2828,10 @@ span.badge.rh-bg-info {
 .rh-blueprint-backlinks .rh-blueprint-backlink {
     font-weight: 900;
     font-size: 1.4em;
+}
+
+.rh-blueprint-backlinks .rh-blueprint-backlink .rh-blueprint-num {
+    margin: 0 .75em;
 }
 /*********************************/
 /********** Open & Close *********/
@@ -3483,7 +3492,7 @@ span.badge.rh-bg-info {
 }
 
 .rh-blueprint-rank li .social-icon-count span {
-    font-size: 24px;
+    font-size: 14px;
 }
 
 .rh-blueprint-options li {
@@ -4507,5 +4516,60 @@ background: #dadbdd none repeat scroll 0 0;
 /********** End Widths ***********/
 /*********************************/
 
+/*********************************/
+/************* Forms *************/
+/*********************************/
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    height: auto;
+    margin-top: 1.8em;
+    margin-left: 1.3em;
+}
+[type="checkbox"]:not(:checked) + label:before {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #D1D3D4;
+    background: #fff;
+}
+[type="checkbox"]:checked + label:before {
+    left: -10px;
+    top: -12px;
+    width: 18px;
+    height: 36px;
+    border-right: 4px solid #1c75bc;
+    border-bottom: 4px solid #1c75bc;
+}
+/*********************************/
+/********* End Forms *************/
+/*********************************/
 
-/****/
+/*********************************/
+/********** RH Effects ***********/
+/*********************************/
+.rh-hover-effect {
+    transition: all .2s ease-in-out;
+    height: 100%;
+    position: relative;
+}
+.rh-hover-effect:hover {
+    transform: scale(1.05);
+}
+.rh-hover-effect a,
+.rh-hover-effect:hover a,
+.rh-hover-effect:hover a:hover,
+.rh-hover-effect:focus a,
+.rh-hover-effect:focus a:focus,
+.rh-hover-effect:visited a,
+.rh-hover-effect:visited a:visited,
+a.rh-hover-effect,
+a.rh-hover-effect:hover,
+a.rh-hover-effect:focus,
+a.rh-hover-effect:visited {
+    text-decoration: none;
+}
+.rh-hover-effect:hover .rh-hover-effect:hover {
+    transform: scale(1.2);
+}
+/*********************************/
+/****** End RH Effects ***********/
+/*********************************/
