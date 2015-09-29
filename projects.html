@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <!--320-->
+
+    <title>RankHacker Admin</title>
+
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <!-- Bootstrap CSS -->
+
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/materialize.css'>
+    <link rel='stylesheet' href='css/material.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/bootstrap-slider.css'>
+    <link rel='stylesheet' href='css/icon-stylemain.css'>
+    <link rel='stylesheet' href='css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='css/rotated-gallery.css'>
+    <link rel='stylesheet' href='css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='css/jtree.css'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <script src="js/modernizr.custom.js"></script>
+    <script src='js/jquery.js'></script>
+    <script src='js/app.js'></script>
+    <script src='js/bootstrap-slider.js'></script>
+    <script>
+        jQuery(window).load(function () {
+            $('.piluku-preloader').addClass('hidden');
+        });
+
+    </script>
+
+    <script>
+        jQuery(window).load(function () {
+            var slider_content = new Slider("#content-r ", {
+                reversed: true,
+            });
+            slider_content.on("change", function (slideEvt) {
+                $("#slide_label").html(slideEvt.newValue);
+                var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper").css('top', slide_label_top);
+
+            });
+            var tick_val_str = $('#content-r').attr('data-slider-ticks');
+            var slide_val = $('#content-r').attr('data-slider-value');
+            var tick_val_obj = $.parseJSON(tick_val_str);
+            var tick_val = 100 - tick_val_obj[1];
+            $("#tick_label").html(tick_val);
+            $("#slide_label").html(slide_val);
+
+            var slider_content2 = new Slider("#budget-r ", {
+                reversed: true,
+            });
+            slider_content2.on("change", function (slideEvt) {
+                $("#slide_label2").html('$ ' + slideEvt.newValue);
+                var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper2").css('top', slide_label_top2);
+            });
+            var slide_val2 = $('#budget-r').attr('data-slider-value');
+            $("#slide_label2").html('$ ' + slide_val2);
+
+            var slider_content3 = new Slider("#month-r", {
+                reversed: true,
+            });
+            slider_content3.on("change", function (slideEvt) {
+                $("#slide_label3").html(slideEvt.newValue);
+
+                var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper3").css('top', slide_label_top3);
+            });
+            var tick_val_str3 = $('#month-r').attr('data-slider-ticks');
+            var slide_val3 = $('#month-r').attr('data-slider-value');
+            var tick_val_obj3 = $.parseJSON(tick_val_str3);
+            var tick_val3 = 60 - tick_val_obj3[1];
+
+            $("#tick_label3").html(tick_val3);
+            $("#slide_label3").html(slide_val3);
+
+            setInterval(function () {
+                var tick_label_top = $("#tick_label_warpper").parent().find('.slider-tick:visible').css('top');
+                $("#tick_label_warpper").css('top', tick_label_top);
+
+                var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper").css('top', slide_label_top);
+
+                var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper2").css('top', slide_label_top2);
+
+                var tick_label_top3 = $("#tick_label_warpper3").parent().find('.slider-tick:visible').css('top');
+                $("#tick_label_warpper3").css('top', tick_label_top3);
+
+                var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');
+                $("#slide_label_warpper3").css('top', slide_label_top3);
+            }, 1000);
+        });
+
+    </script>
+
+</head>
+<body>
+<div class="piluku-preloader text-center">
+    <!-- <div class="progress">
+        <div class="indeterminate"></div>
+    </div> -->
+    <div class="loader">Loading...</div>
+</div>
+<div class="wrapper hide-left-bar">
+    <div class="content" id="content">
+        <div class="overlay"></div>
+        <div class="top-bar">
+            <nav class="navbar navbar-default top-bar">
+                <div class="navbar-header"><a class="navbar-brand" href="blueprints.html">RankHacker</a></div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
+                        <li class="dropdown piluku-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                            <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
+                            </ul>
+                            <input type="hidden" id="selectedProjectID" value="0"/>
+                        </li>
+                        <li></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right top-elements">
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
+                            </ul>
+                        </li>
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-box-outline icon-notification"></i><span class="badge info-number bell" id="commentsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow message_drop neat_drop" data-wow-duration="1500ms" role="menu" id="commentsList">
+                            </ul>
+                        </li>
+                        <li class="chat_btn"><a href="#" class="right-bar-toggle flatRed"> <i class="ti-settings"></i> </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- /top-bar -->
+
+        <div class="main-content">
+            <div class="row row-v-spacing"></div>
+            <div class="row">
+                <div class="col-lg-10 col-md-offset-1">
+                    <div class="info-logo-content rh-mission z-depth-1">
+                        <span class="rh-bracket rh-bracket-left">[</span> complete <span class="rh-content-pieces" id="contentTarget">22</span>
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="blueprintSelectionText">blueprints</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li><a href="#">houston plumbing</a></li>
+                                <li><a href="#">houston plumbing services</a></li>
+                                <li><a href="#">plumbing services</a></li>
+                                <li><a href="#">clogged drain</a></li>
+                            </ul>
+                            <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
+                        </span>
+                        for
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="projectSelectionText">All Projects</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li><a href="#">MyPlumbingWebsite.com</a></li>
+                                <li><a href="#">FairMarketing.com</a></li>
+                                <li><a href="#">Fountains.com</a></li>
+                                <li><a href="#">CertifiedBusinessValuations.com</a></li>
+                            </ul>
+                            <input type="hidden" name="projectSelection" id="projectSelection" value="1"/>
+                        </span>
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="weekSelectionText">All Weeks</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li><a href="#" onclick="updateWeekSelection('1');">Week 1</a></li>
+                                <li><a href="#" onclick="updateWeekSelection('2');">Week 2</a></li>
+                                <li><a href="#" onclick="updateWeekSelection('3');">Week 3</a></li>
+                                <li><a href="#" onclick="updateWeekSelection('4');">Week 4</a></li>
+                                <li><a href="#" onclick="updateWeekSelection('All');">All Weeks</a></li>
+                            </ul>
+                            <input type="hidden" name="weekSelection" id="weekSelection" value="1"/>
+                        </span>
+                        of
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="monthSelectionText">August</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li><a href="#" onclick="updateMonthSelection('1');">January</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('2');">February</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('3');">March</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('4');">April</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('5');">May</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('6');">June</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('7');">July</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('8');">August</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('9');">September</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('10');">October</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('11');">November</a></li>
+                                <li><a href="#" onclick="updateMonthSelection('12');">December</a></li>
+                            </ul>
+                            <input type="hidden" name="monthSelection" id="monthSelection" value="1"/>
+                        </span>
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="yearSelectionText">2015</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li><a href="#" onclick="updateYearSelection('1');">2014</a></li>
+                                <li><a href="#" onclick="updateYearSelection('2');">2015</a></li>
+                                <li><a href="#" onclick="updateYearSelection('3');">2016</a></li>
+                            </ul>
+                            <input type="hidden" name="yearSelection" id="yearSelection" value="1"/>
+                        </span>
+                        <span class="rh-bracket rh-bracket-left">]</span>
+                        <div class="rh-cart info-logo primarybg-info">
+                            <span><i class="icon-rh_cartcontent"></i></span>
+                            <span class="badge info-number rh-bg-info">12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-offset-1 rh-project-heading">your <span class="rh-grey-highlight">projects</span></div>
+                <div class="col-lg-5 rh-actions-menu">
+                    <ul>
+                        <!-- Change For Point #3 Start-->
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title=""> Order </a></li>
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Merge</a></li>
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Refresh</a></li>
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Archive</a></li>
+                        <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Download</a></li>
+                        <!-- Change For Point #3 End-->
+                        <li>
+                            <button id="create-new-blueprint" class="btn btn-orange btn-round">
+                                <i class="icon-rh_add"></i>
+                                <span>Create New Project</span>
+                            </button>
+                        </li>
+                        <li class="setting-block"><a href="#"><i class="icon-rh_settings"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-md-offset-1 rh-bottom-border"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-md-offset-1">
+                    <ul class="collection rh-blueprints">
+                        <!-- Item 1 -->
+                        <li class="collection-item">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-12">
+                                            <ul>
+                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                    <div class="rh-hover-effect">
+                                                        <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-myplumbingwebsite">
+                                                        <label for="chk-myplumbingwebsite"></label>
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-30">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-15">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-10">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="blueprints-process">
+                                            <div class="progress progress-bar-mini">
+                                                <div style="width: 75%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar progress-bar-primary three-sec-ease-in-out" title="75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Item 2 -->
+                        <li class="collection-item">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-12">
+                                            <ul>
+                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                    <div class="rh-hover-effect">
+                                                        <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-fairmarketing">
+                                                        <label for="chk-fairmarketing"></label>
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-30">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-15">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-10">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="blueprints-process">
+                                            <div class="progress progress-bar-mini">
+                                                <div style="width: 5%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="5" role="progressbar" class="progress-bar progress-bar-primary three-sec-ease-in-out" title="5%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Item 3 -->
+                        <li class="collection-item">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-12">
+                                            <ul>
+                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                    <div class="rh-hover-effect">
+                                                        <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-fountains">
+                                                        <label for="chk-fountains"></label>
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-30">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-15">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-10">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="blueprints-process">
+                                            <div class="progress progress-bar-mini">
+                                                <div style="width: 25%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" role="progressbar" class="progress-bar progress-bar-primary three-sec-ease-in-out" title="25%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Item 4 -->
+                        <li class="collection-item">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-12">
+                                            <ul>
+                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                    <div class="rh-hover-effect">
+                                                        <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-certifiedbusinessvaluations">
+                                                        <label for="chk-certifiedbusinessvaluations"></label>
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-30">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-right-border rh-column width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-20">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-15">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+
+                                                <li class="rh-column rh-right-border width-10">
+                                                    <div class="rh-hover-effect">
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="blueprints-process">
+                                            <div class="progress progress-bar-mini">
+                                                <div style="width: 55%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="55" role="progressbar" class="progress-bar progress-bar-primary three-sec-ease-in-out" title="55%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---content -->
+
+    <!-- start sidebar -->
+    <div class="side-bar right-bar">
+        <div class="contacts">
+            <div class="col col-md-12">
+                <ul class="tabs">
+                    <li class="tab col-md-3"><a href="#test1" class="active">Settings</a></li>
+                    <li class="tab col-md-3"><a href="#test2">Budgets</a></li>
+                    <li class="tab col-md-3"><a href="#test3">Filters</a></li>
+                </ul>
+            </div>
+            <div class="content-holder">
+                <div id="test1" class="col-md-12 no_padding"><br>
+
+                    <div class="form-group">
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Reminders</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Auto Refresh</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch1"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Rank Tracking</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch2"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Filters</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch3"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Notifications</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch4"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="test2" class="col-md-12 no_padding"><br>
+
+                    <div class="form-group">
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Enable</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch1"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch2"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch3"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch4"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="test3" class="col-md-12 no_padding"><br>
+
+                    <div class="form-group">
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Enable</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch1"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch2"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch3"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="col-sm-8 control-label">Option</label>
+
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+
+                                <div class="toggle">
+                                    <label for="toggle-switch4"><i></i> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content_holder -->
+        </div>
+    </div>
+    <!-- end sidebar -->
+
+</div>
+<!-- wrapper -->
+
+<script src='js/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src="js/tooltip-custom.js"></script>
+<script src='js/jquery.nicescroll.min.js'></script>
+<script src='js/wow.min.js'></script>
+<script src='js/jquery.loadmask.min.js'></script>
+<script src='js/jquery.accordion.js'></script>
+<script src='js/materialize.js'></script>
+<script src='js/widgets.js'></script>
+<script src='js/jquery.bootstrap.wizard.js'></script>
+<script src='js/prettify.js'></script>
+<script src='js/sweet-alert/sweetalert.min.js'></script>
+<script src='js/form-wizard.js'></script>
+<script src='js/classie.js'></script>
+<script src='js/fullscreen-overlay.js'></script>
+<script src='js/core.js'></script>
+<script src="js/jquery.countTo.js"></script>
+</body>
+</html>

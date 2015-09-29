@@ -2524,9 +2524,14 @@ span.badge.rh-bg-info {
     border-bottom: 1px solid #333;
 }
 
-.rh-blueprint-heading {
+.rh-blueprint-heading,
+.rh-project-heading {
     font-size: 1.8em;
     padding-left: 40px;
+}
+
+.rh-project-heading {
+    text-transform: uppercase;
 }
 
 .rh-blue-highlight {
@@ -2536,6 +2541,15 @@ span.badge.rh-bg-info {
     font-weight: 700;
     text-transform: uppercase;
 }
+
+.rh-grey-highlight {
+    background-color: #cfd0d2;
+    color: #242021;
+    padding: 0 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 
 .rh-actions-menu {
     padding-right: 40px;
