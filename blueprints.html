@@ -22,6 +22,7 @@
     <link rel='stylesheet' href='css/sweet-alerts/sweetalert.css'>
     <link rel='stylesheet' href='css/jtree.css'>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
     <script src="js/modernizr.custom.js"></script>
     <script src='js/jquery.js'></script>
@@ -141,73 +142,186 @@
         </div>
         <!-- /top-bar -->
 
-        <div class="main-content">
+        <div class="main-content blueprints">
             <div class="row">
-                <div id="projectName" class="col-lg-10 col-md-offset-1 rh-asset"><span><i class="ti-arrow-circle-left"></i></span> the <strong>asset</strong> <span class="rh-bracket rh-bracket-left">[</span> plumbinghouston.com <span class="rh-bracket rh-bracket-left">]</span></div>
+                <div id="projectName" class="col-lg-10 col-md-offset-1 rh-asset"><i class="ti-arrow-circle-left"></i><strong>project</strong> <span class="rh-bracket rh-bracket-left">[</span> plumbinghouston.com <span class="rh-bracket rh-bracket-left">]</span></div>
             </div>
             <div class="row">
                 <div class="col-lg-10 col-md-offset-1">
-                    <div class="info-logo-content rh-mission z-depth-1"> the <strong>mission</strong> <span class="rh-bracket rh-bracket-left">[</span> build <span class="rh-content-pieces" id="contentTarget">0</span> total pieces of content for <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="weekSelectionText">All Weeks</a>
-                        <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                            <li><a href="#" onclick="updateWeekSelection('1');">Week 1</a></li>
-                            <li><a href="#" onclick="updateWeekSelection('2');">Week 2</a></li>
-                            <li><a href="#" onclick="updateWeekSelection('3');">Week 3</a></li>
-                            <li><a href="#" onclick="updateWeekSelection('4');">Week 4</a></li>
-                            <li><a href="#" onclick="updateWeekSelection('All');">All Weeks</a></li>
-                        </ul>
-                        <input type="hidden" name="weekSelection" id="weekSelection" value="1"/>
-                        </span> of <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="monthSelectionText">August</a>
-                        <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                            <li><a href="#" onclick="updateMonthSelection('1');">January</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('2');">February</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('3');">March</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('4');">April</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('5');">May</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('6');">June</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('7');">July</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('8');">August</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('9');">September</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('10');">October</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('11');">November</a></li>
-                            <li><a href="#" onclick="updateMonthSelection('12');">December</a></li>
-                        </ul>
-                        <input type="hidden" name="monthSelection" id="monthSelection" value="1"/>
-                        </span> <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="yearSelectionText">2014</a>
-                        <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow language-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                            <li><a href="#" onclick="updateYearSelection('1');">2014</a></li>
-                            <li><a href="#" onclick="updateYearSelection('2');">2015</a></li>
-                            <li><a href="#" onclick="updateYearSelection('3');">2016</a></li>
-                        </ul>
-                        <input type="hidden" name="yearSelection" id="yearSelection" value="1"/>
-                        </span> <span class="rh-bracket rh-bracket-left">]</span>
-
-                        <div class="rh-cart info-logo primarybg-info"><span><i class="icon-rh_cartcontent"></i></span> <span class="badge info-number rh-bg-info">12</span></div>
+                    <div class="info-logo-content rh-mission z-depth-1"> the <strong>mission</strong> <span class="rh-bracket rh-bracket-left">[</span> build <span class="rh-content-pieces" id="contentTarget">0</span> total pieces of content for
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="weekSelectionText">All Weeks</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow weeks-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li>
+                                    <a href="#" onclick="updateWeekSelection('All');">
+                                        <input tabindex="5" type="checkbox" id="chk-all-weeks" checked>
+                                        <label for="chk-all-weeks" class="rh-menu-checkbox">All Weeks</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateWeekSelection('1');">
+                                        <input tabindex="5" type="checkbox" id="chk-week-1">
+                                        <label for="chk-week-1" class="rh-menu-checkbox">Week 1</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateWeekSelection('2');">
+                                        <input tabindex="5" type="checkbox" id="chk-week-2">
+                                        <label for="chk-week-2" class="rh-menu-checkbox">Week 2</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateWeekSelection('3');">
+                                        <input tabindex="5" type="checkbox" id="chk-week-3">
+                                        <label for="chk-week-3" class="rh-menu-checkbox">Week 3</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateWeekSelection('4');">
+                                        <input tabindex="5" type="checkbox" id="chk-week-4">
+                                        <label for="chk-week-4" class="rh-menu-checkbox">Week 4</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="weekSelection" id="weekSelection" value="1"/>
+                        </span>
+                        of
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="monthSelectionText">August</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow months-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('All');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-all">
+                                        <label for="chk-month-all" class="rh-menu-checkbox">All Months</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('1');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-january">
+                                        <label for="chk-month-january" class="rh-menu-checkbox">January</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('2');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-february">
+                                        <label for="chk-month-february" class="rh-menu-checkbox">February</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('3');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-march">
+                                        <label for="chk-month-march" class="rh-menu-checkbox">March</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('4');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-april">
+                                        <label for="chk-month-april" class="rh-menu-checkbox">April</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('5');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-may">
+                                        <label for="chk-month-may" class="rh-menu-checkbox">May</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('6');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-june">
+                                        <label for="chk-month-june" class="rh-menu-checkbox">June</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('7');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-july">
+                                        <label for="chk-month-july" class="rh-menu-checkbox">July</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('8');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-august" checked>
+                                        <label for="chk-month-august" class="rh-menu-checkbox">August</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('9');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-september">
+                                        <label for="chk-month-september" class="rh-menu-checkbox">September</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('10');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-october">
+                                        <label for="chk-month-october" class="rh-menu-checkbox">October</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('11');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-november">
+                                        <label for="chk-month-november" class="rh-menu-checkbox">November</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateMonthSelection('12');">
+                                        <input tabindex="5" type="checkbox" id="chk-month-december">
+                                        <label for="chk-month-december" class="rh-menu-checkbox">December</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="monthSelection" id="monthSelection" value="1"/>
+                        </span>
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="yearSelectionText">2015</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow years-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li>
+                                    <a href="#" onclick="updateYearSelection('1');">
+                                        <input tabindex="5" type="checkbox" id="chk-2014">
+                                        <label for="chk-2014" class="rh-menu-checkbox">2014</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateYearSelection('2');">
+                                        <input tabindex="5" type="checkbox" id="chk-2015" checked>
+                                        <label for="chk-2015" class="rh-menu-checkbox">2015</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="updateYearSelection('3');">
+                                        <input tabindex="5" type="checkbox" id="chk-2016">
+                                        <label for="chk-2016" class="rh-menu-checkbox">2016</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="yearSelection" id="yearSelection" value="1"/>
+                        </span>
+                        <span class="rh-bracket rh-bracket-left">]</span>
+                        <span class="rh-cart info-logo primarybg-info show-link-box">
+                            <div class="rh-hover-effect">
+                                <i class="icon-rh_cartcontent"></i>
+                                <span class="badge info-number rh-bg-info">12</span>
+                            </div>
+                        </span>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5 col-md-offset-1 rh-blueprint-heading">content marketing <span class="rh-blue-highlight">blueprints</span></div>
+                <div class="col-lg-5 col-md-offset-1 rh-blueprint-heading"><em>content marketing</em> <span class="rh-blue-highlight">blueprints</span></div>
                 <div class="col-lg-5 rh-actions-menu">
                     <ul>
-                        <!-- Change For Point #3 Start-->
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title=""> Order </a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Merge</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Refresh</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Archive</a></li>
-                        <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Download</a></li>
-                        <!-- Change For Point #3 End-->
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Order content for selected blueprints" data-original-title="" title="">Order</a></li>
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Merge selected blueprints" data-original-title="" title="">Merge</a></li>
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Refresh selected blueprints" data-original-title="" title="">Refresh</a></li>
+                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Archive selected blueprints" data-original-title="" title="">Archive</a></li>
+                        <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Download selected blueprints" data-original-title="" title="">Download</a></li>
                         <li>
                             <button id="create-new-blueprint" class="btn btn-orange btn-round">
                                 <i class="icon-rh_add"></i>
                                 <span>Create New Blueprint</span>
                             </button>
                         </li>
-                        <li class="setting-block"><a href="#"><i class="icon-rh_settings"></i></a></li>
+                        <li class="setting-block rh-hover-effect"><a href="#"><i class="icon-rh_settings"></i></a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 col-md-offset-1 rh-bottom-border"></div>
             </div>
             <div class="row">
                 <div class="col-lg-10 col-md-offset-1">
