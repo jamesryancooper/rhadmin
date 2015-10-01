@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
-    
+    /*
     //Fill in the dynamic project
     getProjectsList('admin',function(projectsList){
         changeProject(projectsList,0);
@@ -46,7 +46,7 @@ $(window).load(function(){
     document.getElementById('monthSelectionText').innerHTML = months[currentMonth-1];
     document.getElementById('yearSelection').value = currentYear;
     document.getElementById('yearSelectionText').innerHTML = 2013+currentYear;
-    
+    */
 });
 
 function getProjectsList(userID,callback)
@@ -2046,6 +2046,111 @@ function getBlueprintQuickCreateHTML()
 "            </li>";
     
     return output;
+}
+
+
+$('#createAccountButton').click(registerUser);
+
+$('#loginButton').click(loginUser);
+
+$('#recoverButton').click(remindPassword);
+
+function loginUser()
+{
+    console.log('got here');
+    var username = document.getElementById('icon_prefix-2').value;
+    var password = document.getElementById('icon_prefix-3').value;
+    
+    if(username == '' || password == '')
+    {
+        alert("Please complete all required fields.");
+        return false;
+    }
+    else
+    {
+        $.ajax({url: restURL, data: {'command':'loginUser','username':username,'password':password}, type: 'post', async: true, success: function postResponse(returnData){
+                var info = JSON.parse(returnData);
+
+                if(info.status == "success")
+                {
+                    //Not sure what to do yet; what is the app landing page?
+                    document.cookie="username="+username;
+                    document.location='projects.html';
+                }
+                else
+                {
+                    alert("Error: Invalid username and/or password.");
+                }
+            }
+        });
+    }
+}
+
+function registerUser()
+{
+    var firstname = document.getElementById('icon_prefix').value;
+    var lastname = document.getElementById('icon_prefix-1').value;
+    var username = document.getElementById('icon_prefix-2').value;
+    var password = document.getElementById('icon_prefix-3').value;
+    var email = document.getElementById('icon_prefix-4').value;
+    
+    if(username == '' || password == '')
+    {
+        alert("Please complete all required fields.");
+        return false;
+    }
+    else
+    {
+        $.ajax({url: restURL, data: {'command':'registerUser','firstname':firstname,'lastname':lastname,'username':username,'password':password,'email':email}, type: 'post', async: true, success: function postResponse(returnData){
+                var info = JSON.parse(returnData);
+
+                if(info.status == "success")
+                {
+                    document.location='signin.html';
+                }
+                else
+                {
+                    alert("Error: Username already exists in the system.");
+                }
+            }
+        });
+    }
+}
+
+function remindPassword()
+{
+    var email = document.getElementById('remind-email').value;
+    
+    var targetURL = restURL + "command=remindPassword&username="+email+"&z=" + Math.random();
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState===4 && xmlhttp.status===200)
+        {
+            var response = xmlhttp.responseText;
+            var responseData = JSON.parse(response);
+            if(responseData.status == "success")
+            {
+                alert("Please check your email for a message from SSD Fair Marketing containing a new password for your account.");
+                document.getElementById("forgot").style.display = "none";
+            }
+            else
+            {
+                alert("Error: We were unable to find an account under that email address.");
+            }
+        }
+    }
+    
+    xmlhttp.open("POST",targetURL,true);
+    xmlhttp.send();
 }
 
 /** 1520 Consulting code END **/

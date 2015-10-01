@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="css/signin.css">
     <!-- custom scrollbar stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src='js/jquery.js'></script>
+    <script src='js/app.js'></script>
 
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -61,7 +63,7 @@
                         <a href="signup.html" class="pull-left">Register new account</a>
                     </div>
                     <div class="clearfix"></div>
-                    <a href="index.html" class="btn btn-primary btn-block">Sign in</a>
+                    <button type="button" class="btn btn-primary btn-block" id="loginButton" onclick="loginUser();">Sign in</button>
                 </form>
             </div>
         </div>
@@ -80,13 +82,13 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-sm-12">
-                        <input type="text" class="form-control" placeholder="Enter Email here">
+                        <input type="text" class="form-control" placeholder="Enter Email here" id="remind-email">
                         <h6 class="note"><i class="ion-android-mail"></i> password will be sent to your email</h6>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send</button>
+                    <button type="button" class="btn btn-primary" id="recoverButton" onclick="remindPassword();">Send</button>
                 </div>
             </div>
         </div>
