@@ -2522,7 +2522,7 @@ body.boxed {
 }
 
 .info-logo-content .rh-cart.info-logo {
-    padding: .5em .5em .5em .75em;
+    padding: 15px 15px 15px 17px;
 }
 
 .info-logo-content .rh-cart.info-logo i {
@@ -4698,3 +4698,134 @@ em {
 /*********************************/
 /****** End Custom Structure *****/
 /*********************************/
+
+
+
+/******************************************/
+/****** projects.html Css code start *****/
+/****************************************/
+
+.projects-heading-outer .row {margin: 0 -15px;}
+
+.projects-heading-outer ul li {float: left;padding-left: 20px;text-transform: uppercase;color:#333;}
+
+.projects-heading-outer ul li a , a.project-sort-btn  , a.status-sort-btn{color:#333;text-decoration:none;}
+
+a.project-sort-btn  {font-weight:600;}
+
+.projects-heading-outer {border-top: 1px solid #d9d9dc;padding: 0;}
+
+.projects-heading-outer ul {border-top: 1px solid #fff;float: left;margin: 0;padding: 10px 0 5px;width: 100%;}
+
+.project-heading {float: left;font-size: 26px;font-weight: bold;line-height: normal;margin: 0;padding: 0;width: 100%;}
+
+.project-heading span{float: left;font-size: 18px;line-height: normal;margin: 0;padding: 0;color:#898b8e;width: 100%;font-weight: normal;}
+
+.vertical-middle-outer {display: table;}
+
+.vertical-middle {display: table-cell;vertical-align:middle;}
+
+.retail-ammount {float: left;font-size: 26px;font-weight: bold;line-height: normal;margin: 0;padding: 0;width: 100%;text-align: center;}
+
+.status-btn {float: left;font-size: 26px;font-weight: bold;line-height: normal;margin: 0;padding: 0;width: 100%;text-align: center;color:#1b5eab;text-decoration:underline;}
+
+.summary-outer ul {float: left;text-align: center;width: 100%;}
+
+.summary-outer .rh-blueprint-complete {color: #39b54a;}
+
+.summary-outer li {cursor: pointer;display: inline-block;max-width: 25%;width: auto;}
+
+.summary-outer li.rh-blueprint-goal-arrow {text-align: center;width: 10%;}
+
+.summary-outer li.rh-blueprint-goal {font-size: 32px;font-weight: 700;line-height: 36px;position: relative;text-align: center;top: -3px;}
+
+.summary-outer .rh-blueprint-incomplete {color: #ed1c24;}
+
+.summary-outer  .rh-blueprint-num span {color: #333;float: left;font-size: 10px;margin: 0;padding: 0;width: 100%;}
+
+.summary-outer .rh-blueprint-goal-arrow i {font-size:40px;}
+
+.summary-outer  p.rh-blueprint-num {float: left;margin: 0;position: relative;top: 5px;width: 100%;font-size: 20px;font-weight: 700;line-height: normal;}
+
+.summary-outer .rh-blueprint-inprocess {color:#1C75BC;}
+
+.open-project-link {color: #fff;display: none;font-size: 22px;font-weight: bold;text-align: center;text-decoration: none;}
+
+.open-project-link:hover {color: #fff;text-decoration: none;}
+
+.project-info-outer{cursor:pointer;}
+
+.project-info-outer:hover {background-color:#31a1d4;}
+
+.project-info-outer:hover .open-project-link {display:block;}
+
+.project-info-outer:hover .project-heading {display:none;}
+
+.inactive-process  , .inactive-process .summary-outer .rh-blueprint-num span ,.inactive-process  .summary-outer .rh-blueprint-complete ,.inactive-process  .summary-outer .rh-blueprint-inprocess , .inactive-process  .summary-outer .rh-blueprint-incomplete , .inactive-process  .project-heading span{color:#d0d1d4;}
+
+.inactive-process .blueprints-process .progress-bar-primary , .inactive-process .progress {background-color: #d0d1d4;box-shadow: none;}
+
+.inactive-process .project-info-outer:hover { background-color:transparent;}
+
+.inactive-process .project-info-outer  , .inactive-process a , .inactive-process ,.inactive-process .summary-outer li{cursor: not-allowed;}
+
+.inactive-process .status-info-outer , .inactive-process .status-info-outer a {cursor:pointer;}
+
+.inactive-process .project-info-outer:hover  .open-project-link{display: none;}
+
+.inactive-process .project-info-outer:hover  .project-heading{display: block;}
+
+
+/******************************************/
+/************ cart drop down css *********/
+/****************************************/
+
+.cart-drop-box {cursor: initial;height: auto;left: auto !important;letter-spacing: normal;max-height: none !important;right: -15px !important;top: 120px;width: 320px !important;}
+
+.cart-item-outer {float: left;max-height: 325px;overflow-y: auto;width: 100%;}
+
+.cart-drop-box .cart-box-head {border-bottom: 3px solid #e8ebf1;display: table;float: left;margin: 0;padding: 0 20px;width: 100%;}
+
+.cart-box-head h1 {color: #22a7de;display: table-cell;font-size: 38px;font-weight: bold;margin: 0;max-width: 30%;padding: 0;vertical-align: middle;width: auto;}
+
+.cart-box-head p {display: table-cell;font-size: 14px;max-width: 60%;text-align: right;vertical-align: middle;width: auto;}
+
+.cart-drop-box .cart-items {background-color: #fff;float: left;height: 65px !important;margin: 0;overflow: hidden;padding: 10px 20px;width: 100%;}
+
+.cart-drop-box .cart-items:nth-child(2n+1) {background-color: #e6e7e9;}
+
+.project-name-cart {color: #7f8082;float: left;font-size: 14px;height: 20px;line-height: normal;margin: 0;overflow: hidden;padding: 0;width: 100%;}
+
+.project-info span {color: #000;float: left;font-size: 16px;font-weight: 300;}
+
+.project-info .bp-number {width: 25%;}
+
+.project-info .pcs-number {width: 35%;}
+
+.project-info .project-price {float: right;font-weight: bold;text-align: right;width: 35%;}
+
+.project-info {float: left;margin: 2px 0 0;width: 100%;}
+
+.piluku-dropdown .dropdown-piluku-menu.cart-drop-box::after {left: auto;right: 25px;}
+
+.sub-total-outer, .tax-outer, .grand-total-outer {float: left;height: 40px;overflow: hidden;padding: 10px 20px;width: 100%;}
+
+.left-block {float: left;max-width: 40%;}
+
+.right-block {float: right;max-width: 60%;}
+
+.sub-total-outer {background-color: #c9e4ef;font-weight: bold;}
+
+.tax-outer {color: #828a90;}
+
+.grand-total-outer {border-top: 1px solid #b9babc;font-weight: bold;}
+
+.grand-total-outer {border-top: 1px solid #b9babc;font-weight: bold;height: 70px;padding-bottom: 15px;padding-top: 15px;}
+
+.grand-total-outer .right-block {font-size: 36px;line-height: 38px;}
+
+.piluku-dropdown .cart-drop-box .proceed-checkout-btn , .cart-drop-box .proceed-checkout-btn {background-color: #38b349;color: #fff;float: left;font-size: 18px;font-weight: 600;height: auto;letter-spacing: normal;padding: 20px 10px;text-align: center;width: 100%;}
+
+.piluku-dropdown .cart-drop-box .proceed-checkout-btn:hover, .piluku-dropdown .cart-drop-box .proceed-checkout-btn:active, .piluku-dropdown .cart-drop-box .proceed-checkout-btn:focus {background-color: #1c75bc;color: #fff !important;text-decoration: none;}
+
+
