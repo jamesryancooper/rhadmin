@@ -2225,7 +2225,7 @@ body.boxed {
 /* Presentation
 -------------------------------------------------------------------------------------------------------- */
 .page_header {
-    background-color: #FAFCFF;
+    background-color: #cae6f2;
     min-height: 150px;
     padding: 20px 30px;
     display: table;
@@ -2233,32 +2233,25 @@ body.boxed {
 }
 
 .page_header .page_header_icon {
-    font-size: 40px;
-    border: 1px solid #82c4f8;
+    font-size: 8em;
     display: inline-block;
     position: relative;
-    height: 75px;
-    line-height: 75px;
-    width: 75px;
+    line-height: 1em;
     text-align: center;
-    border-radius: 5px;
-    background-color: #FFFFFF;
     color: #2196f3;
 }
 
 .page_header .main-text {
-    font-size: 35px;
-    margin-left: 10px;
-    color: #707780;
+    font-size: 3.2em;
+    color: rgb(51, 51, 51);
+    text-transform: lowercase;
 }
 
 .page_header p.text {
     clear: both;
-    font-size: 15px;
-    max-width: 600px;
-    margin-top: 10px;
-    color: #858b94;
-    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: rgb(151, 151, 151);
+    text-transform: lowercase;
 }
 
 .page_header .right_bar {
@@ -2494,9 +2487,18 @@ body.boxed {
 }
 
 .rh-mission {
+    position: relative;
     padding: .5em;
-    font-size: 3.2em;
-    letter-spacing: -.06em;
+    font-size: 2.4em;
+    letter-spacing: -.01em;
+}
+
+.rh-mission-info {
+    position: absolute;
+    top: 1em;
+    font-size: .35em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .rh-mission .rh-content-pieces {
@@ -2551,7 +2553,6 @@ span.badge.rh-bg-info {
     border-bottom: 1px solid #333;
 }
 
-.rh-blueprint-heading,
 .rh-project-heading {
     font-size: 1.9em;
     position: relative;
@@ -2580,23 +2581,45 @@ span.badge.rh-bg-info {
     color: #242021;
 }
 
+.rh-views-menu,
 .rh-actions-menu {
     padding: 1.2em 0 0;
 }
 
+.rh-views-menu ul {
+    float: left;
+}
+
 .rh-actions-menu ul {
     float: right;
+}
+
+.rh-views-menu ul,
+.rh-actions-menu ul {
     height: 1.6rem;
     margin-bottom: 0;
 }
 
+.rh-views-menu ul li,
 .rh-actions-menu ul li {
     display: inline-block;
     float: left;
     padding: 0 10px;
 }
 
+.rh-views-menu ul li a,
 .rh-actions-menu ul li a {
+    color: #bbb;
+}
+
+.rh-views-menu ul li a {
+    text-transform: uppercase;
+}
+
+.rh-views-menu ul li a .active,
+.rh-actions-menu ul li a .active,
+.rh-views-menu ul li a:hover,
+.rh-actions-menu ul li a:hover {
     color: #333;
 }
 
@@ -2681,6 +2704,9 @@ span.badge.rh-bg-info {
     background-color: #F7F7F7;
 }
 
+.rh-blueprint-select  div {
+    text-align: center;
+}
 
 .rh-blueprint-settings-menu {
     width: 100%;
@@ -4049,7 +4075,7 @@ html, body {
 }
 
 .settings-overlay-contentpush {
-    background: rgba(255, 255, 255, 1);
+    background: #F1F2F5;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -4275,11 +4301,17 @@ strong {
 .piluku-dropdown .dropdown-piluku-menu li:hover {
     background-color: transparent;
 }
+.piluku-dropdown .user-drop {
+    width: 250%;
+}
+.piluku-dropdown .status-drop {
+    width: 100%;
+}
 .piluku-dropdown .blueprints-drop{
-    width: 175%;
+    width: 200%;
 }
 .piluku-dropdown .projects-drop {
-    width: 250%;
+    width: 350%;
 }
 .piluku-dropdown .weeks-drop {
     width: 150%;
@@ -4290,6 +4322,7 @@ strong {
 .piluku-dropdown .years-drop {
     width: 100%;
 }
+
  /*********************************/
 /****** End Custom Piluku ********/
 /*********************************/
@@ -4606,15 +4639,19 @@ background: #dadbdd none repeat scroll 0 0;
 /*********************************/
 /************* Forms *************/
 /*********************************/
-[type="checkbox"]:not(:checked) + label,
-[type="checkbox"]:checked + label {
-    height: auto;
+
+.rh-blueprint-select [type="checkbox"]:not(:checked) + label,
+.rh-blueprint-select [type="checkbox"]:checked + label {
     margin-top: 1.8em;
-    margin-left: 1.3em;
+    padding-left: 0;
+    width: 25px;
+    height: 27px;
+}
+.rh-blueprint-select [type="checkbox"]:not(:checked) + label:before {
+    width: 23px;
+    height: 23px;
 }
 [type="checkbox"]:not(:checked) + label:before {
-    width: 22px;
-    height: 22px;
     border: 1px solid #D1D3D4;
     background: #fff;
 }

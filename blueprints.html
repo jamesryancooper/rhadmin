@@ -15,7 +15,6 @@
     <link rel='stylesheet' href='css/materialize.css'>
     <link rel='stylesheet' href='css/material.css'>
     <link rel='stylesheet' href='css/style.css'>
-    <link rel='stylesheet' href='css/bootstrap-slider.css'>
     <link rel='stylesheet' href='css/icon-stylemain.css'>
     <link rel='stylesheet' href='css/animated-masonry-gallery.css'>
     <link rel='stylesheet' href='css/rotated-gallery.css'>
@@ -27,80 +26,11 @@
     <script src="js/modernizr.custom.js"></script>
     <script src='js/jquery.js'></script>
     <script src='js/app.js'></script>
-    <script src='js/bootstrap-slider.js'></script>
     <script>
         jQuery(window).load(function () {
             $('.piluku-preloader').addClass('hidden');
         });
-
     </script>
-
-    <script>
-        jQuery(window).load(function () {
-            var slider_content = new Slider("#content-r ", {
-                reversed: true,
-            });
-            slider_content.on("change", function (slideEvt) {
-                $("#slide_label").html(slideEvt.newValue);
-                var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');
-                $("#slide_label_warpper").css('top', slide_label_top);
-
-            });
-            var tick_val_str = $('#content-r').attr('data-slider-ticks');
-            var slide_val = $('#content-r').attr('data-slider-value');
-            var tick_val_obj = $.parseJSON(tick_val_str);
-            var tick_val = 100 - tick_val_obj[1];
-            $("#tick_label").html(tick_val);
-            $("#slide_label").html(slide_val);
-
-            var slider_content2 = new Slider("#budget-r ", {
-                reversed: true,
-            });
-            slider_content2.on("change", function (slideEvt) {
-                $("#slide_label2").html('$ ' + slideEvt.newValue);
-                var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');
-                $("#slide_label_warpper2").css('top', slide_label_top2);
-            });
-            var slide_val2 = $('#budget-r').attr('data-slider-value');
-            $("#slide_label2").html('$ ' + slide_val2);
-
-            var slider_content3 = new Slider("#month-r", {
-                reversed: true,
-            });
-            slider_content3.on("change", function (slideEvt) {
-                $("#slide_label3").html(slideEvt.newValue);
-
-                var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');
-                $("#slide_label_warpper3").css('top', slide_label_top3);
-            });
-            var tick_val_str3 = $('#month-r').attr('data-slider-ticks');
-            var slide_val3 = $('#month-r').attr('data-slider-value');
-            var tick_val_obj3 = $.parseJSON(tick_val_str3);
-            var tick_val3 = 60 - tick_val_obj3[1];
-
-            $("#tick_label3").html(tick_val3);
-            $("#slide_label3").html(slide_val3);
-
-            setInterval(function () {
-                var tick_label_top = $("#tick_label_warpper").parent().find('.slider-tick:visible').css('top');
-                $("#tick_label_warpper").css('top', tick_label_top);
-
-                var slide_label_top = $("#slide_label_warpper").parent().find('.slider-handle.min-slider-handle').css('top');
-                $("#slide_label_warpper").css('top', slide_label_top);
-
-                var slide_label_top2 = $("#slide_label_warpper2").parent().find('.slider-handle.min-slider-handle').css('top');
-                $("#slide_label_warpper2").css('top', slide_label_top2);
-
-                var tick_label_top3 = $("#tick_label_warpper3").parent().find('.slider-tick:visible').css('top');
-                $("#tick_label_warpper3").css('top', tick_label_top3);
-
-                var slide_label_top3 = $("#slide_label_warpper3").parent().find('.slider-handle.min-slider-handle').css('top');
-                $("#slide_label_warpper3").css('top', slide_label_top3);
-            }, 1000);
-        });
-
-    </script>
-
 </head>
 <body>
 <div class="piluku-preloader text-center">
@@ -118,6 +48,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <!--
                     <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
                         <li class="dropdown piluku-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
                             <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
@@ -126,6 +57,7 @@
                         </li>
                         <li></li>
                     </ul>
+                    -->
                     <ul class="nav navbar-nav navbar-right top-elements">
                         <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
                             <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
@@ -143,12 +75,200 @@
         <!-- /top-bar -->
 
         <div class="main-content blueprints">
+            <!--
             <div class="row">
                 <div id="projectName" class="col-lg-10 col-md-offset-1 rh-asset"><i class="ti-arrow-circle-left"></i><strong>project</strong> <span class="rh-bracket rh-bracket-left">[</span> plumbinghouston.com <span class="rh-bracket rh-bracket-left">]</span></div>
             </div>
-            <div class="row">
+            -->
+            <div class="row row-v-spacing">
                 <div class="col-lg-10 col-md-offset-1">
-                    <div class="info-logo-content rh-mission z-depth-1"> the <strong>mission</strong> <span class="rh-bracket rh-bracket-left">[</span> build <span class="rh-content-pieces" id="contentTarget">0</span> total pieces of content for
+
+                    <div class="info-logo-content rh-mission z-depth-1">
+                        <span class="rh-mission-info">Adjust your mission statement to filter</span>
+                        the <strong>mission</strong>
+                        <span class="rh-bracket rh-bracket-left">[</span>
+                        <span class="piluku-dropdown dropdown">
+                            Roger
+                            <!--
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="userSelectionText">Admin</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow user-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-all">
+                                        <label for="chk-user-all" class="rh-menu-checkbox">All Users</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-1">
+                                        <label for="chk-user-1" class="rh-menu-checkbox">Artist</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-2">
+                                        <label for="chk-user-2" class="rh-menu-checkbox">Director</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-3">
+                                        <label for="chk-user-3" class="rh-menu-checkbox">Content Poster</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-4" checked>
+                                        <label for="chk-user-4" class="rh-menu-checkbox">Admin</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-5">
+                                        <label for="chk-user-5" class="rh-menu-checkbox">Editor</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-6">
+                                        <label for="chk-user-6" class="rh-menu-checkbox">Writer</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-7">
+                                        <label for="chk-user-7" class="rh-menu-checkbox">Auditor</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-user-8">
+                                        <label for="chk-user-8" class="rh-menu-checkbox">Project Manager</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="userSelection" id="userSelection" value="1"/>
+                            -->
+                        </span>
+                        :
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="statusSelectionText">Publish</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow blueprints-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-status-all">
+                                        <label for="chk-status-all" class="rh-menu-checkbox">All Statuses</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-status-1">
+                                        <label for="chk-status-1" class="rh-menu-checkbox">Order</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-status-2">
+                                        <label for="chk-status-2" class="rh-menu-checkbox">Create</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-status-3">
+                                        <label for="chk-status-3" class="rh-menu-checkbox">Proof</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-status-4">
+                                        <label for="chk-status-4" class="rh-menu-checkbox">Audit</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-status-5" checked>
+                                        <label for="chk-status-5" class="rh-menu-checkbox">Publish</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
+                        </span>
+                        <span class="rh-content-pieces" id="contentTarget">3</span>
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="blueprintSelectionText">blueprints</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow blueprints-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-blueprint-all" checked>
+                                        <label for="chk-blueprint-all" class="rh-menu-checkbox">All Blueprints</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-blueprint-1" checked>
+                                        <label for="chk-blueprint-1" class="rh-menu-checkbox">houston plumbing</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-blueprint-2" checked>
+                                        <label for="chk-blueprint-2" class="rh-menu-checkbox">houston plumbing services</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-blueprint-3" checked>
+                                        <label for="chk-blueprint-3" class="rh-menu-checkbox">plumbing services</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-blueprint-4" checked>
+                                        <label for="chk-blueprint-4" class="rh-menu-checkbox">clogged drain</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
+                        </span>
+                        for
+                        <span class="rh-content-pieces" id="projectTarget">1</span>
+                        <span class="piluku-dropdown dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="projectSelectionText">project</a>
+                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow projects-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-project-all">
+                                        <label for="chk-project-all" class="rh-menu-checkbox">All Projects</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-project-myplumbingwebsite">
+                                        <label for="chk-project-myplumbingwebsite" class="rh-menu-checkbox">MyPlumbingWebsite.com</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-project-fairmarketing" checked>
+                                        <label for="chk-project-fairmarketing" class="rh-menu-checkbox">FairMarketing.com</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-project-fountains">
+                                        <label for="chk-project-fountains" class="rh-menu-checkbox">Fountains.com</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <input tabindex="5" type="checkbox" id="chk-project-certifiedbusinessvaluations">
+                                        <label for="chk-project-certifiedbusinessvaluations" class="rh-menu-checkbox">CertifiedBusinessValuations.com</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="projectSelection" id="projectSelection" value="1"/>
+                        </span>
+                        for
                         <span class="piluku-dropdown dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="weekSelectionText">All Weeks</a>
                             <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow weeks-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
@@ -305,22 +425,90 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5 col-md-offset-1 rh-blueprint-heading"><em>content marketing</em> <span class="rh-blue-highlight">blueprints</span></div>
-                <div class="col-lg-5 rh-actions-menu">
-                    <ul>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Order content for selected blueprints" data-original-title="" title="">Order</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Merge selected blueprints" data-original-title="" title="">Merge</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Refresh selected blueprints" data-original-title="" title="">Refresh</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Archive selected blueprints" data-original-title="" title="">Archive</a></li>
-                        <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Download selected blueprints" data-original-title="" title="">Download</a></li>
-                        <li>
-                            <button id="create-new-blueprint" class="btn btn-orange btn-round">
-                                <i class="icon-rh_add"></i>
-                                <span>Create New Blueprint</span>
-                            </button>
-                        </li>
-                        <li class="setting-block rh-hover-effect"><a href="#"><i class="icon-rh_settings"></i></a></li>
-                    </ul>
+                <div class="col-lg-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-lg-1 rh-views-menu">
+                            <sup>content:</sup>
+                            <span class="piluku-dropdown dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="contentSelectionText"><span class="rh-blue-highlight active">Offsite</span></a>
+                                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow marketing-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                    <li>
+                                        <a href="#">Onsite</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Offsite</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="contentSelection" id="contentSelection" value="1"/>
+                            </span>
+                        </div>
+                        <div class="col-lg-1 rh-views-menu">
+                            <sup>view:</sup>
+                            <span class="piluku-dropdown dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="viewsSelectionText"><span class="rh-blue-highlight active">Blueprint</span></a>
+                                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow marketing-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                    <li>
+                                        <a href="#">Project</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blueprint</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Content</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="viewsSelection" id="viewsSelection" value="1"/>
+                            </span>
+                            <!--
+                            <ul>
+                                <li>
+
+                                    <span class="piluku-dropdown dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="marketingSelectionText">Offsite</a>
+                                        <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow marketing-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                                            <li>
+                                                <a href="#">
+                                                    <input tabindex="5" type="checkbox" id="chk-marketing-onsite">
+                                                    <label for="chk-marketing-onsite" class="rh-menu-checkbox">Onsite</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <input tabindex="5" type="checkbox" id="chk-marketing-offsite" checked>
+                                                    <label for="chk-marketing-offsite" class="rh-menu-checkbox">Offsite</label>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <input type="hidden" name="projectSelection" id="projectSelection" value="1"/>
+                                    </span>
+
+                                    <em>view:</em>
+                                </li>
+
+                                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Project view" data-original-title="" title="">Projects</a></li>
+                                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Blueprint view" data-original-title="" title=""><span class="rh-blue-highlight active">Blueprints</span></a></li>
+                                <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Content view" data-original-title="" title="">Content</a></li>
+
+                            </ul>
+                             -->
+                        </div>
+                        <div class="col-lg-10 rh-actions-menu">
+                            <ul>
+                                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Order content for selected blueprints" data-original-title="" title="">Order</a></li>
+                                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Merge selected blueprints" data-original-title="" title="">Merge</a></li>
+                                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Refresh selected blueprints" data-original-title="" title="">Refresh</a></li>
+                                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Archive selected blueprints" data-original-title="" title="">Archive</a></li>
+                                <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Download selected blueprints" data-original-title="" title="">Download</a></li>
+                                <li>
+                                    <button id="create-new-blueprint" class="btn btn-orange btn-round">
+                                        <i class="icon-rh_add"></i>
+                                        <span>Create New Blueprint</span>
+                                    </button>
+                                </li>
+                                <li class="setting-block rh-hover-effect"><a href="#"><i class="icon-rh_settings"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
