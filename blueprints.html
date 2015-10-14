@@ -11,21 +11,21 @@
       <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
     <!-- Bootstrap CSS -->
 
-    <link rel='stylesheet' href='css/bootstrap.min.css'>
-    <link rel='stylesheet' href='css/materialize.css'>
-    <link rel='stylesheet' href='css/material.css'>
-    <link rel='stylesheet' href='css/style.css'>
-    <link rel='stylesheet' href='css/icon-stylemain.css'>
-    <link rel='stylesheet' href='css/animated-masonry-gallery.css'>
-    <link rel='stylesheet' href='css/rotated-gallery.css'>
-    <link rel='stylesheet' href='css/sweet-alerts/sweetalert.css'>
-    <link rel='stylesheet' href='css/jtree.css'>
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='assets/css/materialize.css'>
+    <link rel='stylesheet' href='assets/css/material.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <link rel='stylesheet' href='assets/css/icon-stylemain.css'>
+    <link rel='stylesheet' href='assets/css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='assets/css/rotated-gallery.css'>
+    <link rel='stylesheet' href='assets/css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='assets/css/jtree.css'>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
-    <script src="js/modernizr.custom.js"></script>
-    <script src='js/jquery.js'></script>
-    <script src='js/app.js'></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src='assets/js/jquery.js'></script>
+    <script src='assets/js/app.js'></script>
     <script>
         jQuery(window).load(function () {
             $('.piluku-preloader').addClass('hidden');
@@ -416,9 +416,48 @@
                         </span>
                         <span class="rh-bracket rh-bracket-left">]</span>
                         <span class="rh-cart info-logo primarybg-info show-link-box">
-                            <div class="rh-hover-effect">
-                                <i class="icon-rh_cartcontent"></i>
-                                <span class="badge info-number rh-bg-info">12</span>
+                            <div class="piluku-dropdown dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon-rh_cartcontent"></i> <span class="badge info-number rh-bg-info">12</span></a>
+
+                                <div class="dropdown-menu dropdown-piluku-menu animated fadeInUp cart-drop-box" data-wow-duration="1500ms" role="menu">
+                                    <div class="cart-box-head"><h1>328</h1>   <p>TOTAL CONTENT </br>PIECES IN CART</p> </div>
+
+                                    <div class="cart-item-outer">
+                                        <div class="cart-items">
+                                            <h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
+                                            <div class="project-info">
+                                                <span class="bp-number">3 BP</span>
+                                                <span class="pcs-number">128 PCS</span>
+                                                <span class="project-price">$1,504</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-items">
+                                            <h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
+                                            <div class="project-info">
+                                                <span class="bp-number">1 BP</span>
+                                                <span class="pcs-number">200 PCS</span>
+                                                <span class="project-price">$2,740</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-total-outer">
+                                        <span class="left-block">SUBTOTAL</span>
+                                        <span class="right-block">$4,244.00</span>
+                                    </div>
+
+                                    <div class="tax-outer">
+                                        <span class="left-block">TAXES/FEES</span>
+                                        <span class="right-block">$500</span>
+                                    </div>
+
+                                    <div class="grand-total-outer">
+                                        <span class="left-block">GRAND</br>TOTAL</span>
+                                        <span class="right-block">$4,744</span>
+                                    </div>
+
+                                    <a href="#" class="proceed-checkout-btn">PROCEED TO CHECKOUT </a>
+                                </div>
                             </div>
                         </span>
                     </div>
@@ -1179,7 +1218,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row row-v-spacing">
-                                                    <div class="ol-md-12 center-align">
+                                                    <div class="col-md-12 center-align">
                                                         <button class="btn btn-info">
                                                             Apply 'Guest Blogger' Content Filter Template
                                                         </button>
@@ -2729,33 +2768,33 @@
     </div>
 </div>
 
-<script src='js/jquery-ui-1.10.3.custom.min.js'></script>
-<script src='js/bootstrap.min.js'></script>
-<script src="js/tooltip-custom.js"></script>
+<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src="assets/js/tooltip-custom.js"></script>
 <!--For Point #3-->
-<script src='js/jquery.nicescroll.min.js'></script>
-<script src='js/wow.min.js'></script>
-<script src='js/jquery.loadmask.min.js'></script>
-<script src='js/jquery.accordion.js'></script>
-<script src='js/materialize.js'></script>
-<script src='js/bic_calendar.js'></script>
-<script src='js/build/d3.min.js'></script>
-<script src='js/nvd3/nv.d3.js'></script>
-<script src='js/sparkline.js'></script>
-<script src='js/widgets.js'></script>
-<script src='js/jquery.bootstrap.wizard.js'></script>
-<script src='js/prettify.js'></script>
-<script src='js/sweet-alert/sweetalert.min.js'></script>
-<script src='js/form-wizard.js'></script>
+<script src='assets/js/jquery.nicescroll.min.js'></script>
+<script src='assets/js/wow.min.js'></script>
+<script src='assets/js/jquery.loadmask.min.js'></script>
+<script src='assets/js/jquery.accordion.js'></script>
+<script src='assets/js/materialize.js'></script>
+<script src='assets/js/bic_calendar.js'></script>
+<script src='assets/js/build/d3.min.js'></script>
+<script src='assets/js/nvd3/nv.d3.js'></script>
+<script src='assets/js/sparkline.js'></script>
+<script src='assets/js/widgets.js'></script>
+<script src='assets/js/jquery.bootstrap.wizard.js'></script>
+<script src='assets/js/prettify.js'></script>
+<script src='assets/js/sweet-alert/sweetalert.min.js'></script>
+<script src='assets/js/form-wizard.js'></script>
 <!--
 <script src="js/jquery-ui-slider-pips.js"></script>
 
  -->
-<script src='js/classie.js'></script>
-<script src='js/fullscreen-overlay.js'></script>
+<script src='assets/js/classie.js'></script>
+<script src='assets/js/fullscreen-overlay.js'></script>
 
-<script src='js/core.js'></script>
-<script src="js/jquery.countTo.js"></script>
+<script src='assets/js/core.js'></script>
+<script src="assets/js/jquery.countTo.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
     google.load("visualization", "1", {packages: ["corechart"]});

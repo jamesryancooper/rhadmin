@@ -3,33 +3,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <!--320-->
-
     <title>RankHacker Admin</title>
 
-    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-      <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
-    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    -->
 
-    <link rel='stylesheet' href='css/bootstrap.min.css'>
-    <link rel='stylesheet' href='css/materialize.css'>
-    <link rel='stylesheet' href='css/material.css'>
-    <link rel='stylesheet' href='css/style.css'>
-    <link rel='stylesheet' href='css/icon-stylemain.css'>
-    <link rel='stylesheet' href='css/animated-masonry-gallery.css'>
-    <link rel='stylesheet' href='css/rotated-gallery.css'>
-    <link rel='stylesheet' href='css/sweet-alerts/sweetalert.css'>
-    <link rel='stylesheet' href='css/jtree.css'>
+    <!-- CSS -->
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='assets/css/materialize.css'>
+    <link rel='stylesheet' href='assets/css/material.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <link rel='stylesheet' href='assets/css/icon-stylemain.css'>
+    <link rel='stylesheet' href='assets/css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='assets/css/rotated-gallery.css'>
+    <link rel='stylesheet' href='assets/css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='assets/css/jtree.css'>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
-    <script src="js/modernizr.custom.js"></script>
-    <script src='js/jquery.js'></script>
-    <script src='js/app.js'></script>
+    <link rel="stylesheet" type="text/css" href=assets/material-design-icons/css/material-design-icons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/_rh/css/_rh.css" />
+
+    <!-- JS -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src='assets/js/jquery.js'></script>
+    <script src='assets/js/app.js'></script>
     <script>
         jQuery(window).load(function () {
             $('.piluku-preloader').addClass('hidden');
         });
     </script>
+
 </head>
 <body>
 <div class="piluku-preloader text-center">
@@ -73,283 +79,6 @@
 
         <div class="main-content projects">
             <div class="row row-v-spacing"></div>
-            <div class="row">
-                <div class="col-lg-10 col-md-offset-1">
-                    <div class="info-logo-content rh-mission z-depth-1">
-                        <span class="rh-bracket rh-bracket-left">[</span> complete <span class="rh-content-pieces" id="contentTarget">3</span>
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="blueprintSelectionText">blueprints</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow blueprints-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-all" checked>
-                                        <label for="chk-blueprint-all" class="rh-menu-checkbox">All Blueprints</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-1">
-                                        <label for="chk-blueprint-1" class="rh-menu-checkbox">houston plumbing</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-2">
-                                        <label for="chk-blueprint-2" class="rh-menu-checkbox">houston plumbing services</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-3" checked>
-                                        <label for="chk-blueprint-3" class="rh-menu-checkbox">plumbing services</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-4" checked>
-                                        <label for="chk-blueprint-4" class="rh-menu-checkbox">clogged drain</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
-                        </span>
-                        for
-                        <span class="rh-content-pieces" id="projectTarget">1</span>
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="projectSelectionText">project</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow projects-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-all">
-                                        <label for="chk-project-all" class="rh-menu-checkbox">All Projects</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-myplumbingwebsite" checked>
-                                        <label for="chk-project-myplumbingwebsite" class="rh-menu-checkbox">MyPlumbingWebsite.com</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-fairmarketing">
-                                        <label for="chk-project-fairmarketing" class="rh-menu-checkbox">FairMarketing.com</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-fountains">
-                                        <label for="chk-project-fountains" class="rh-menu-checkbox">Fountains.com</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-certifiedbusinessvaluations">
-                                        <label for="chk-project-certifiedbusinessvaluations" class="rh-menu-checkbox">CertifiedBusinessValuations.com</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="projectSelection" id="projectSelection" value="1"/>
-                        </span>
-                        in
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="weekSelectionText">All Weeks</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow weeks-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('All');">
-                                        <input tabindex="5" type="checkbox" id="chk-all-weeks" checked>
-                                        <label for="chk-all-weeks" class="rh-menu-checkbox">All Weeks</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('1');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-1">
-                                        <label for="chk-week-1" class="rh-menu-checkbox">Week 1</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('2');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-2">
-                                        <label for="chk-week-2" class="rh-menu-checkbox">Week 2</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('3');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-3">
-                                        <label for="chk-week-3" class="rh-menu-checkbox">Week 3</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('4');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-4">
-                                        <label for="chk-week-4" class="rh-menu-checkbox">Week 4</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="weekSelection" id="weekSelection" value="1"/>
-                        </span>
-                        of
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="monthSelectionText">August</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow months-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('All');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-all">
-                                        <label for="chk-month-all" class="rh-menu-checkbox">All Months</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('1');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-january">
-                                        <label for="chk-month-january" class="rh-menu-checkbox">January</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('2');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-february">
-                                        <label for="chk-month-february" class="rh-menu-checkbox">February</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('3');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-march">
-                                        <label for="chk-month-march" class="rh-menu-checkbox">March</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('4');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-april">
-                                        <label for="chk-month-april" class="rh-menu-checkbox">April</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('5');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-may">
-                                        <label for="chk-month-may" class="rh-menu-checkbox">May</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('6');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-june">
-                                        <label for="chk-month-june" class="rh-menu-checkbox">June</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('7');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-july">
-                                        <label for="chk-month-july" class="rh-menu-checkbox">July</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('8');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-august" checked>
-                                        <label for="chk-month-august" class="rh-menu-checkbox">August</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('9');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-september">
-                                        <label for="chk-month-september" class="rh-menu-checkbox">September</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('10');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-october">
-                                        <label for="chk-month-october" class="rh-menu-checkbox">October</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('11');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-november">
-                                        <label for="chk-month-november" class="rh-menu-checkbox">November</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('12');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-december">
-                                        <label for="chk-month-december" class="rh-menu-checkbox">December</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="monthSelection" id="monthSelection" value="1"/>
-                        </span>
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="yearSelectionText">2015</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow years-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#" onclick="updateYearSelection('1');">
-                                        <input tabindex="5" type="checkbox" id="chk-2014">
-                                        <label for="chk-2014" class="rh-menu-checkbox">2014</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateYearSelection('2');">
-                                        <input tabindex="5" type="checkbox" id="chk-2015" checked>
-                                        <label for="chk-2015" class="rh-menu-checkbox">2015</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateYearSelection('3');">
-                                        <input tabindex="5" type="checkbox" id="chk-2016">
-                                        <label for="chk-2016" class="rh-menu-checkbox">2016</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="yearSelection" id="yearSelection" value="1"/>
-                        </span>
-                        <span class="rh-bracket rh-bracket-left">]</span>
-                        <span class="rh-cart info-logo primarybg-info show-link-box">
-                            <div class="piluku-dropdown dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon-rh_cartcontent"></i> <span class="badge info-number rh-bg-info">12</span></a>    
-								
-								<div class="dropdown-menu dropdown-piluku-menu animated fadeInUp cart-drop-box" data-wow-duration="1500ms" role="menu">
-									<div class="cart-box-head"><h1>328</h1>   <p>TOTAL CONTENT </br>PIECES IN CART</p> </div>
-									
-									<div class="cart-item-outer">
-										<div class="cart-items">
-											<h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
-											<div class="project-info">
-											<span class="bp-number">3 BP</span>
-											<span class="pcs-number">128 PCS</span>
-											<span class="project-price">$1,504</span>
-											</div>
-										</div>								
-										<div class="cart-items">
-											<h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
-											<div class="project-info">
-											<span class="bp-number">1 BP</span>
-											<span class="pcs-number">200 PCS</span>
-											<span class="project-price">$2,740</span>
-											</div>
-										</div>
-									</div>
-									
-									<div class="sub-total-outer">
-									<span class="left-block">SUBTOTAL</span>   
-									<span class="right-block">$4,244.00</span>
-									</div>
-									
-									<div class="tax-outer">
-									<span class="left-block">TAXES/FEES</span>   
-									<span class="right-block">$500</span>
-									</div>
-									
-									<div class="grand-total-outer">
-									<span class="left-block">GRAND</br>TOTAL</span>   
-									<span class="right-block">$4,744</span>
-									</div>
-									
-									<a href="#" class="proceed-checkout-btn">PROCEED TO CHECKOUT </a>
-									
-									
-								</div>
-						
-                            </div>
-							
-                        </span>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-lg-5 col-md-offset-1 rh-project-heading"><em>your</em> <span class="rh-grey-highlight">projects</span></div>
                 <div class="col-lg-5 rh-actions-menu">
@@ -415,7 +144,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-12">
                                             <ul>
-                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                <li class="rh-blueprint-select rh-column width-5">
                                                     <div class="rh-hover-effect">
                                                         <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-myplumbingwebsite">
                                                         <label for="chk-myplumbingwebsite"></label>
@@ -474,7 +203,7 @@
 													</div>
                                                 </li>
 
-                                                <li class="rh-column rh-right-border width-10 status-info-outer vertical-middle-outer">
+                                                <li class="rh-column width-10 status-info-outer vertical-middle-outer">
                                                     <div class="vertical-middle">
 													    <a  href="#" class="status-btn">Active</a>
 													</div>
@@ -497,7 +226,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-12">
                                             <ul>
-                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                <li class="rh-blueprint-select rh-column width-5">
                                                     <div class="rh-hover-effect">
                                                         <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-fairmarketing">
                                                         <label for="chk-fairmarketing"></label>
@@ -556,7 +285,7 @@
 													</div>
                                                 </li>
 
-                                                <li class="rh-column rh-right-border width-10 status-info-outer vertical-middle-outer">
+                                                <li class="rh-column width-10 status-info-outer vertical-middle-outer">
                                                     <div class="vertical-middle">
 													    <a  href="#" class="status-btn">Active</a>
 													</div>
@@ -579,7 +308,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-12">
                                             <ul>
-                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                <li class="rh-blueprint-select rh-column width-5">
                                                     <div class="rh-hover-effect">
                                                         <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-fountains">
                                                         <label for="chk-fountains"></label>
@@ -638,7 +367,7 @@
 													</div>
                                                 </li>
 
-                                                <li class="rh-column rh-right-border width-10 status-info-outer vertical-middle-outer">
+                                                <li class="rh-column width-10 status-info-outer vertical-middle-outer">
                                                     <div class="vertical-middle">
 													    <a  href="#" class="status-btn">Active</a>
 													</div>
@@ -661,7 +390,7 @@
                                     <div class="row no-gutters inactive-process">
                                         <div class="col-lg-12">
                                             <ul>
-                                                <li class="rh-blueprint-select rh-right-border rh-column width-5 checkboxes-radio">
+                                                <li class="rh-blueprint-select rh-column width-5">
                                                     <div class="rh-hover-effect">
                                                         <input tabindex="5" type="checkbox" class="icheckbox_square-yellow" id="chk-certifiedbusinessvaluations">
                                                         <label for="chk-certifiedbusinessvaluations"></label>
@@ -720,7 +449,7 @@
 													</div>
                                                 </li>
 
-                                                <li class="rh-column rh-right-border width-10 status-info-outer vertical-middle-outer">
+                                                <li class="rh-column width-10 status-info-outer vertical-middle-outer">
                                                     <div class="vertical-middle">
 													    <a  href="#" class="status-btn">Inactive</a>
 													</div>
@@ -747,86 +476,111 @@
     <div id="create-new-project-overlay" class="settings-overlay settings-overlay-contentpush">
         <div class="content">
             <div class="page_header">
-                <div class="pull-left">
-                    <i class="icon fa fa-plus-circle page_header_icon"></i>
-                </div>
-                <div class="pull-left">
-                    <span class="main-text">Create New <strong>Project</strong></span>
-                    <p class="text">Projects are containers for containers for blueprints.</p>
-                </div>
-                <div class="right pull-right">
-                    <a class="settings-overlay-close">
-                        <i class="fa fa-times"></i>
-                    </a>
+                <div class="row grid">
+                    <div class=" col-md-8 col-md-offset-2">
+                        <div class="pull-left">
+                            <i class="icon fa fa-plus-circle page_header_icon"></i>
+                        </div>
+                        <div class="pull-left">
+                            <span class="main-text">Create New <strong>Project</strong></span>
+                            <p class="text">Projects are containers for containers for blueprints.</p>
+                        </div>
+                        <div class="right pull-right">
+                            <a class="settings-overlay-close">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div class="main-content">
+                <div class="row row-v-spacing"></div>
                 <div class="row grid">
-                    <!-- *** Basic Input Groups *** -->
                     <div class="col-md-8 col-md-offset-2">
-                        <!-- panel -->
                         <div class="panel panel-piluku">
                             <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    Basic Project Information
-                                </h3>
+                                <h2 class="panel-title">Project Information</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="input-field">
-                                            <input id="input_text" type="text" length="10">
-                                            <label for="input_text">Input text</label>
+                                        <div class="form-group">
+                                            <label class="control-label">Project Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter a name for this project">
                                         </div>
-
-                                        <div class="input-group demo-group">
-                                            <span class="input-group-addon addon-left">@</span>
-                                            <input type="text" class="form-control" placeholder="Username">
-                                        </div> <br>
-                                        <div class="input-group demo-group">
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon addon-right">.00</span>
-                                        </div> <br>
-                                        <div class="input-group demo-group">
-                                            <span class="input-group-addon addon-left">$</span>
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon addon-right">.00</span>
-                                        </div> <br>
+                                        <div class="form-group">
+                                            <label class="control-label">Domain</label>
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon addon-left">http://</span>
+                                                <input type="text" class="form-control" placeholder="Enter a domain for this project">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Default Vendor Template</label>
+                                            <select class="name_search form-control">
+                                                <option value="1"> Rank Hacker Template </option>
+                                                <option value="2"> Budget Template </option>
+                                                <option value="3"> Platinum Template </option>
+                                                <option value="4"> In-house Template </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Publication Dates</label>
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon addon-left">http://</span>
+                                                <input type="text" class="form-control" placeholder="Enter a domain for this project">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- /row -->
                             </div>
                         </div>
-                        <!-- /panel -->
                     </div>
-                    <!-- /col-md-6 -->
-
                 </div>
                 <div class="row grid">
-
-                    <!-- *** Sizing *** -->
                     <div class="col-md-8 col-md-offset-2">
-                        <!-- panel -->
                         <div class="panel panel-piluku">
                             <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    Branding
-                                </h3>
+                                <h2 class="panel-title">Contact Information</h3>
                             </div>
                             <div class="panel-body">
-                                <div class="row buttons-demo">
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <h1>coming soon</h1>
+                                        <div class="form-group">
+                                            <label class="control-label">Contact Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter a contact name for this project">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Email</label>
+                                            <input type="text" class="form-control" placeholder="Enter an email address">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Phone</label>
+                                            <div class="input-group date-block">
+                                                <input type="text" class="form-control" id="phone" placeholder="Phone format: (999) 999-9999">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Address:</label>
+                                            <textarea name="" class="form-control text-area" cols="30" rows="10" placeholder="Enter an address"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- /row -->
                             </div>
                         </div>
-                        <!-- /panel -->
                     </div>
-                    <!-- /col-md-6 -->
                 </div>
+                <div class="row">
+                    <div class="col-md-12 center-align">
+                        <button class="btn btn-orange">
+                            <span>Create New Project</span>
+                        </button>
+                        <button class="btn btn-gray">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+                <div class="row row-v-spacing"></div>
             </div>
         </div>
     </div>
@@ -1032,21 +786,28 @@
 </div>
 <!-- wrapper -->
 
-<script src='js/jquery-ui-1.10.3.custom.min.js'></script>
-<script src='js/bootstrap.min.js'></script>
-<script src="js/tooltip-custom.js"></script>
-<script src='js/jquery.nicescroll.min.js'></script>
-<script src='js/wow.min.js'></script>
-<script src='js/jquery.loadmask.min.js'></script>
-<script src='js/jquery.accordion.js'></script>
-<script src='js/materialize.js'></script>
-<script src='js/jquery.bootstrap.wizard.js'></script>
-<script src='js/prettify.js'></script>
-<script src='js/sweet-alert/sweetalert.min.js'></script>
-<script src='js/form-wizard.js'></script>
-<script src='js/classie.js'></script>
-<script src='js/projects.fullscreen-overlay.js'></script>
-<script src='js/core.js'></script>
-<script src="js/jquery.countTo.js"></script>
+<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src="assets/js/tooltip-custom.js"></script>
+<script src='assets/js/jquery.nicescroll.min.js'></script>
+<script src='assets/js/wow.min.js'></script>
+<script src='assets/js/jquery.loadmask.min.js'></script>
+<script src='assets/js/jquery.accordion.js'></script>
+<script src='assets/js/materialize.js'></script>
+<script src='assets/js/jquery.bootstrap.wizard.js'></script>
+<script src='assets/js/prettify.js'></script>
+<script src='assets/js/sweet-alert/sweetalert.min.js'></script>
+<script src='assets/js/form-wizard.js'></script>
+<script src='assets/js/classie.js'></script>
+<script src='assets/js/projects.fullscreen-overlay.js'></script>
+<script src='assets/js/core.js'></script>
+<script src="assets/js/jquery.countTo.js"></script>
+<script src='assets/js/select2.js'></script>
+<script src='assets/js/jquery.multi-select.js'></script>
+<script src='assets/js/bootstrap-filestyle.js'></script>
+<script src='assets/js/bootstrap-datepicker.js'></script>
+<script src='assets/js/bootstrap-colorpicker.js'></script>
+<script src='assets/js/jquery.maskedinput.js'></script>
+<script src='assets/js/form-elements.js'></script>
 </body>
 </html>

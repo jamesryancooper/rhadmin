@@ -2232,6 +2232,10 @@ body.boxed {
     width: 100%;
 }
 
+.page_header .row {
+    margin-bottom: 0;
+}
+
 .page_header .page_header_icon {
     font-size: 8em;
     display: inline-block;
@@ -2697,11 +2701,6 @@ span.badge.rh-bg-info {
 
 .rh-blueprint li {
     display: inline-block;
-}
-
-.rh-blueprint-select,
-.rh-blueprint-settings {
-    background-color: #F7F7F7;
 }
 
 .rh-blueprint-select  div {
@@ -4091,6 +4090,7 @@ html, body {
     transform: translateX(0%);
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    overflow-y: scroll;
 }
 
 @media screen and (max-height: 30.5em) {
@@ -4684,6 +4684,21 @@ background: #dadbdd none repeat scroll 0 0;
     height: 18px;
     border-right: 2px solid #1c75bc;
     border-bottom: 2px solid #1c75bc;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=date]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+textarea:focus.materialize-textarea {
+    border-bottom: 1px solid #1c75bc;
+    -webkit-box-shadow: 0 1px 0 0 #1c75bc;
+    -moz-box-shadow: 0 1px 0 0 #1c75bc;
+    box-shadow: 0 1px 0 0 #1c75bc;
 }
 
 /*********************************/
