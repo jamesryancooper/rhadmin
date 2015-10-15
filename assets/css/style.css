@@ -2585,6 +2585,7 @@ span.badge.rh-bg-info {
     color: #242021;
 }
 
+.rh-sort-menu,
 .rh-views-menu,
 .rh-actions-menu {
     padding: 1.2em 0 0;
@@ -2598,12 +2599,14 @@ span.badge.rh-bg-info {
     float: right;
 }
 
+.rh-sort-menu ul,
 .rh-views-menu ul,
 .rh-actions-menu ul {
     height: 1.6rem;
     margin-bottom: 0;
 }
 
+.rh-sort-menu ul li,
 .rh-views-menu ul li,
 .rh-actions-menu ul li {
     display: inline-block;
@@ -2611,17 +2614,21 @@ span.badge.rh-bg-info {
     padding: 0 10px;
 }
 
+.rh-sort-menu ul li a,
 .rh-views-menu ul li a,
 .rh-actions-menu ul li a {
     color: #bbb;
 }
 
+.rh-sort-menu ul li a,
 .rh-views-menu ul li a {
     text-transform: uppercase;
 }
 
+.rh-sort-menu ul li a .active,
 .rh-views-menu ul li a .active,
 .rh-actions-menu ul li a .active,
+.rh-sort-menu ul li a:hover,
 .rh-views-menu ul li a:hover,
 .rh-actions-menu ul li a:hover {
     color: #333;
