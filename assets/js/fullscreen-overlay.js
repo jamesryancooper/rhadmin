@@ -46,7 +46,9 @@
     var container = document.querySelector( 'div.content' ),
         triggerBttn = document.getElementById( 'create-new-project' ),
         overlay = document.querySelector( 'div#create-new-project-overlay' ),
-        closeBttn = overlay.querySelector( 'button.settings-overlay-close' );
+        closeBttn = overlay.querySelector( 'button.settings-overlay-close'),
+        closeAnch = overlay.querySelector( 'a.settings-overlay-close' );
+
     transEndEventNames = {
         'WebkitTransition': 'webkitTransitionEnd',
         'MozTransition': 'transitionend',
@@ -84,6 +86,7 @@
 
     triggerBttn.addEventListener( 'click', toggleOverlay );
     closeBttn.addEventListener( 'click', toggleOverlay );
+    closeAnch.addEventListener( 'click', toggleOverlay );
 })();
 
 

@@ -546,7 +546,7 @@ html {
 
 .top-bar {
     height: 70px;
-    background-color: #ffffff;
+    background-color: #000;
     min-height: 0;
     display: table;
     width: 100%;
@@ -601,7 +601,7 @@ html {
 
 .top-bar .navbar-default .navbar-nav > li > a:hover,
 .top-bar .navbar-default .navbar-nav > li > a:active {
-    background-color: #e3f2fd;
+    background-color: #000;
 }
 
 .top-bar nav {
@@ -611,7 +611,7 @@ html {
 }
 
 .top-bar .navbar-default .navbar-nav > li > a {
-    background-color: #FFFFFF;
+    background-color: #000;
     color: #707780;
     font-family: 'PT Sans', sans-serif;
 }
@@ -2225,9 +2225,8 @@ body.boxed {
 /* Presentation
 -------------------------------------------------------------------------------------------------------- */
 .page_header {
-    background-color: #cae6f2;
-    min-height: 150px;
-    padding: 20px 30px;
+    background-color: #fff;
+    padding: 10px 30px;
     display: table;
     width: 100%;
 }
@@ -2237,23 +2236,32 @@ body.boxed {
 }
 
 .page_header .page_header_icon {
-    font-size: 8em;
+    font-size: 2.3em;
     display: inline-block;
     position: relative;
     line-height: 1em;
     text-align: center;
-    color: #2196f3;
+    color: rgb(151, 151, 151);
+}
+
+.page_header a {
+    color: rgb(51, 51, 51);
+}
+
+.page_header a i {
+    font-size: 2em;
 }
 
 .page_header .main-text {
-    font-size: 3.2em;
-    color: rgb(51, 51, 51);
-    text-transform: lowercase;
+    font-size: 1.8em;
+    color: rgb(151, 151, 151);
+    font-weight: 900;
+    text-transform: capitalize;
 }
 
 .page_header p.text {
     clear: both;
-    font-size: 1.5em;
+    font-size: 1em;
     color: rgb(151, 151, 151);
     text-transform: lowercase;
 }
@@ -4368,7 +4376,7 @@ strong {
 }
 
 .btn {
-    padding: .6rem 1.4rem .75rem .1rem;
+    padding: .2rem 1.4rem;
     height: auto;
 }
 

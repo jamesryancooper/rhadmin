@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>RankHacker Admin - User Profile</title>
+
+    <!--
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    -->
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='assets/css/materialize.css'>
+    <link rel='stylesheet' href='assets/css/material.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <link rel='stylesheet' href='assets/css/icon-stylemain.css'>
+    <link rel='stylesheet' href='assets/css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='assets/css/rotated-gallery.css'>
+    <link rel='stylesheet' href='assets/css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='assets/css/jtree.css'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href=assets/material-design-icons/css/material-design-icons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/_rh/css/_rh.css" />
+
+    <!-- JS -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src='assets/js/jquery.js'></script>
+    <script src='assets/js/app.js'></script>
+    <script>
+        jQuery(window).load(function () {
+            $('.piluku-preloader').addClass('hidden');
+        });
+    </script>
+
+</head>
+<body>
+<div class="piluku-preloader text-center">
+    <!-- <div class="progress">
+        <div class="indeterminate"></div>
+    </div> -->
+    <div class="loader">Loading...</div>
+</div>
+<div class="wrapper hide-left-bar">
+    <div class="content" id="content">
+        <div class="overlay"></div>
+        <div class="top-bar">
+            <nav class="navbar navbar-default top-bar">
+                <div class="navbar-header"><a class="navbar-brand" href="blueprints.html">RankHacker</a></div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--
+                     <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
+                         <li class="dropdown piluku-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                             <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
+                             </ul>
+                             <input type="hidden" id="selectedProjectID" value="0"/>
+                         </li>
+                         <li></li>
+                     </ul>
+                     -->
+                    <ul class="nav navbar-nav navbar-right top-elements">
+                        <!--
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
+                            </ul>
+                        </li>
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-box-outline icon-notification"></i><span class="badge info-number bell" id="commentsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow message_drop neat_drop" data-wow-duration="1500ms" role="menu" id="commentsList">
+                            </ul>
+                        </li>
+                        -->
+                        <li class="dropdown piluku-dropdown settings_btn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="ti-settings"></i></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu neat_drop">
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="vendors.html">Vendors</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- /top-bar -->
+
+        <div class="user-profile">
+            <div class="content">
+                <div class="page_header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-left">
+                                <span class="main-text"><strong>User Profile</strong></span>
+                                <p class="text">View your user profile.</p>
+                            </div>
+                            <div class="pull-right">
+                                <i class="icon fa fa-user page_header_icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!---content -->
+
+</div>
+<!-- wrapper -->
+
+<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src="assets/js/tooltip-custom.js"></script>
+<script src='assets/js/jquery.nicescroll.min.js'></script>
+<script src='assets/js/wow.min.js'></script>
+<script src='assets/js/jquery.loadmask.min.js'></script>
+<script src='assets/js/jquery.accordion.js'></script>
+<script src='assets/js/materialize.js'></script>
+<script src='assets/js/jquery.bootstrap.wizard.js'></script>
+<script src='assets/js/prettify.js'></script>
+<script src='assets/js/sweet-alert/sweetalert.min.js'></script>
+<script src='assets/js/form-wizard.js'></script>
+<script src='assets/js/classie.js'></script>
+<script src='assets/js/projects.fullscreen-overlay.js'></script>
+<script src='assets/js/core.js'></script>
+<script src="assets/js/jquery.countTo.js"></script>
+<script src='assets/js/select2.js'></script>
+<script src='assets/js/jquery.multi-select.js'></script>
+<script src='assets/js/bootstrap-filestyle.js'></script>
+<script src='assets/js/bootstrap-datepicker.js'></script>
+<script src='assets/js/bootstrap-colorpicker.js'></script>
+<script src='assets/js/jquery.maskedinput.js'></script>
+<script src='assets/js/form-elements.js'></script>
+</body>
+</html>

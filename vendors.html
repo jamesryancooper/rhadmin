@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>RankHacker Admin - Vendors</title>
+
+    <!--
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    -->
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='assets/css/materialize.css'>
+    <link rel='stylesheet' href='assets/css/material.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <link rel='stylesheet' href='assets/css/icon-stylemain.css'>
+    <link rel='stylesheet' href='assets/css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='assets/css/rotated-gallery.css'>
+    <link rel='stylesheet' href='assets/css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='assets/css/jtree.css'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href=assets/material-design-icons/css/material-design-icons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/_rh/css/_rh.css" />
+
+    <!-- JS -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src='assets/js/jquery.js'></script>
+    <script src='assets/js/app.js'></script>
+    <script>
+        jQuery(window).load(function () {
+            $('.piluku-preloader').addClass('hidden');
+        });
+    </script>
+
+</head>
+<body>
+<div class="piluku-preloader text-center">
+    <!-- <div class="progress">
+        <div class="indeterminate"></div>
+    </div> -->
+    <div class="loader">Loading...</div>
+</div>
+<div class="wrapper hide-left-bar">
+    <div class="content" id="content">
+        <div class="overlay"></div>
+        <div class="top-bar">
+            <nav class="navbar navbar-default top-bar">
+                <div class="navbar-header"><a class="navbar-brand" href="blueprints.html">RankHacker</a></div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--
+                     <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
+                         <li class="dropdown piluku-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                             <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
+                             </ul>
+                             <input type="hidden" id="selectedProjectID" value="0"/>
+                         </li>
+                         <li></li>
+                     </ul>
+                     -->
+                    <ul class="nav navbar-nav navbar-right top-elements">
+                        <!--
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
+                            </ul>
+                        </li>
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-box-outline icon-notification"></i><span class="badge info-number bell" id="commentsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow message_drop neat_drop" data-wow-duration="1500ms" role="menu" id="commentsList">
+                            </ul>
+                        </li>
+                        -->
+                        <li class="dropdown piluku-dropdown settings_btn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="ti-settings"></i></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu neat_drop">
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="vendors.html">Vendors</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- /top-bar -->
+
+        <div class="users">
+            <div class="content">
+                <div class="page_header">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="pull-left">
+                                <i class="icon fa fa-cart-plus page_header_icon"></i>
+                            </div>
+                            <div class="pull-left">
+                                <span class="main-text"><strong>Vendors</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row row-v-spacing"></div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <!-- Users -->
+                            <div class="card">
+                                <!--
+                                <div class="title">
+                                    <h2 class="panel-title">Vendors</h2>
+
+                                    <div class="btn-group left">
+                                        <a href="profile.html" class="btn btn-small transparent z-depth-0"><i class="mdi mdi-editor-mode-edit"></i></a>
+                                        <a href="#" class="btn btn-small transparent z-depth-0"><i class="mdi mdi-action-delete"></i></a>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="content">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th class="wp-5">Select</th>
+                                                <th class="wp-10">Vendor</th>
+                                                <th class="wp-30">Content</th>
+                                                <th class="wp-5">Orders</th>
+                                                <th class="wp-5">??</th>
+                                                <th class="wp-5">??</th>
+                                                <th class="wp-5">Status</th>
+                                                <th class="wp-5">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="checkbox2" />
+                                                    <label for="checkbox2"></label>
+                                                </th>
+                                                <td>Rank Hacker</td>
+                                                <td>Guest Blogs, Press Releases, Social Posts, Directory Listings, Infographics</td>
+                                                <td>20</td>
+                                                <td>3</td>
+                                                <td></td>
+                                                <td class="green-text">Active</td>
+                                                <td>
+                                                    <a href="vendor.html"><i class="mdi mdi-editor-mode-edit"></i></a>
+                                                    <a href="#"><i class="mdi mdi-action-delete"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="checkbox4" />
+                                                    <label for="checkbox4"></label>
+                                                </th>
+                                                <td>Zery's</td>
+                                                <td>Guest Blogs, Press Releases</td>
+                                                <td>34</td>
+                                                <td>3</td>
+                                                <td></td>
+                                                <td class="green-text">Active</td>
+                                                <td>
+                                                    <a href="vendor.html"><i class="mdi mdi-editor-mode-edit"></i></a>
+                                                    <a href="#"><i class="mdi mdi-action-delete"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="checkbox5" />
+                                                    <label for="checkbox5"></label>
+                                                </th>
+                                                <td>Writer's Access</td>
+                                                <td>Guest Blogs, Press Releases</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td class="green-text">Active</td>
+                                                <td>
+                                                    <a href="vendor.html"><i class="mdi mdi-editor-mode-edit"></i></a>
+                                                    <a href="#"><i class="mdi mdi-action-delete"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="checkbox1" />
+                                                    <label for="checkbox1"></label>
+                                                </th>
+                                                <td>Guest Blog Team</td>
+                                                <td>Guest Blogs</td>
+                                                <td>12</td>
+                                                <td>5</td>
+                                                <td></td>
+                                                <td class="green-text">Active</td>
+                                                <td>
+                                                    <a href="vendor.html"><i class="mdi mdi-editor-mode-edit"></i></a>
+                                                    <a href="#"><i class="mdi mdi-action-delete"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="checkbox3" />
+                                                    <label for="checkbox3"></label>
+                                                </th>
+                                                <td>Social Motion</td>
+                                                <td>Social Posts</td>
+                                                <td>55</td>
+                                                <td>0</td>
+                                                <td></td>
+                                                <td class="blue-text">Pending</td>
+                                                <td>
+                                                    <a href="vendor.html"><i class="mdi mdi-editor-mode-edit"></i></a>
+                                                    <a href="#"><i class="mdi mdi-action-delete"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="checkbox3" />
+                                                    <label for="checkbox3"></label>
+                                                </th>
+                                                <td>Happy Content</td>
+                                                <td>Infographics</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td></td>
+                                                <td class="grey-text">Inactive</td>
+                                                <td>
+                                                    <a href="vendor.html"><i class="mdi mdi-editor-mode-edit"></i></a>
+                                                    <a href="#"><i class="mdi mdi-action-delete"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Users -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 right-align">
+                            <a href="vendor.html">
+                                <button id="create-new-project" class="btn btn-orange btn-round">
+                                    <i class="fa fa-cart-plus"></i>
+                                    <span>Add New Vendor</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row row-v-spacing"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---content -->
+
+</div>
+<!-- wrapper -->
+
+<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src="assets/js/tooltip-custom.js"></script>
+<script src='assets/js/jquery.nicescroll.min.js'></script>
+<script src='assets/js/wow.min.js'></script>
+<script src='assets/js/jquery.loadmask.min.js'></script>
+<script src='assets/js/jquery.accordion.js'></script>
+<script src='assets/js/materialize.js'></script>
+<script src='assets/js/jquery.bootstrap.wizard.js'></script>
+<script src='assets/js/prettify.js'></script>
+<script src='assets/js/sweet-alert/sweetalert.min.js'></script>
+<script src='assets/js/form-wizard.js'></script>
+<script src='assets/js/classie.js'></script>
+<script src='assets/js/projects.fullscreen-overlay.js'></script>
+<script src='assets/js/core.js'></script>
+<script src="assets/js/jquery.countTo.js"></script>
+<script src='assets/js/select2.js'></script>
+<script src='assets/js/jquery.multi-select.js'></script>
+<script src='assets/js/bootstrap-filestyle.js'></script>
+<script src='assets/js/bootstrap-datepicker.js'></script>
+<script src='assets/js/bootstrap-colorpicker.js'></script>
+<script src='assets/js/jquery.maskedinput.js'></script>
+<script src='assets/js/form-elements.js'></script>
+</body>
+</html>

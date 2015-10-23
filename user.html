@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>RankHacker Admin - Create User</title>
+
+    <!--
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    -->
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='assets/css/materialize.css'>
+    <link rel='stylesheet' href='assets/css/material.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <link rel='stylesheet' href='assets/css/icon-stylemain.css'>
+    <link rel='stylesheet' href='assets/css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='assets/css/rotated-gallery.css'>
+    <link rel='stylesheet' href='assets/css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='assets/css/jtree.css'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href=assets/material-design-icons/css/material-design-icons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/_rh/css/_rh.css" />
+
+    <!-- JS -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src='assets/js/jquery.js'></script>
+    <script src='assets/js/app.js'></script>
+    <script>
+        jQuery(window).load(function () {
+            $('.piluku-preloader').addClass('hidden');
+        });
+    </script>
+
+</head>
+<body>
+<div class="piluku-preloader text-center">
+    <!-- <div class="progress">
+        <div class="indeterminate"></div>
+    </div> -->
+    <div class="loader">Loading...</div>
+</div>
+<div class="wrapper hide-left-bar">
+    <div class="content" id="content">
+        <div class="overlay"></div>
+        <div class="top-bar">
+            <nav class="navbar navbar-default top-bar">
+                <div class="navbar-header"><a class="navbar-brand" href="blueprints.html">RankHacker</a></div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--
+                     <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
+                         <li class="dropdown piluku-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                             <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
+                             </ul>
+                             <input type="hidden" id="selectedProjectID" value="0"/>
+                         </li>
+                         <li></li>
+                     </ul>
+                     -->
+                    <ul class="nav navbar-nav navbar-right top-elements">
+                        <!--
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
+                            </ul>
+                        </li>
+                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-box-outline icon-notification"></i><span class="badge info-number bell" id="commentsCount"></span></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow message_drop neat_drop" data-wow-duration="1500ms" role="menu" id="commentsList">
+                            </ul>
+                        </li>
+                        -->
+                        <li class="dropdown piluku-dropdown settings_btn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="ti-settings"></i></a>
+                            <ul class="dropdown-menu dropdown-piluku-menu neat_drop">
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="vendors.html">Vendors</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- /top-bar -->
+
+        <div class="create-user">
+            <div class="content">
+                <div class="page_header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-left">
+                                <span class="main-text"><strong>Create New User</strong></span>
+                                <p class="text">Create new users</p>
+                            </div>
+                            <div class="pull-right">
+                                <i class="icon fa fa-user page_header_icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row row-v-spacing"></div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-piluku">
+                                <div class="panel-heading">
+                                    <h2 class="panel-title">User Information</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <div class="col-md-6 pl-0 input-field">
+                                                    <i class="fa fa-user prefix"></i>
+                                                    <input id="input_fname" class="form-control" type="text" name="first_name">
+                                                    <label for="input_fname">First Name</label>
+                                                </div>
+                                                <div class="col-md-6 pr-0 input-field">
+                                                    <i class="fa fa-user prefix"></i>
+                                                    <input id="input_lname" class="form-control" type="text" name="last_name">
+                                                    <label for="input_lname">Last Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="input-field">
+                                                    <i class="fa fa-envelope prefix"></i>
+                                                    <input id="input_email" class="form-control" type="email" name="email">
+                                                    <label for="input_email">Email</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="input-field">
+                                                    <i class="fa fa-phone prefix"></i>
+                                                    <input id="input_phone" class="form-control" type="tel" name="phone">
+                                                    <label for="input_phone">Phone</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <!-- Address -->
+                                                <div class="form-group row">
+                                                    <div class="input-field">
+                                                        <i class="fa fa-map-marker prefix"></i>
+                                                        <input id="input_address" type="text" name="address">
+                                                        <label for="input_address">Address</label>
+                                                    </div>
+                                                </div>
+                                                <!-- /Address -->
+                                                <!-- State -->
+                                                <div class="form-group row">
+                                                    <div class="col-md-4 pl-0">
+                                                        <label class="control-label">State</label>
+                                                        <select class="browser-default form-control" name="state">
+                                                            <option value="AL">Alabama</option>
+                                                            <option value="AK">Alaska</option>
+                                                            <option value="AZ">Arizona</option>
+                                                            <option value="AR">Arkansas</option>
+                                                            <option value="CA">California</option>
+                                                            <option value="CO">Colorado</option>
+                                                            <option value="CT">Connecticut</option>
+                                                            <option value="DE">Delaware</option>
+                                                            <option value="FL">Florida</option>
+                                                            <option value="GA">Georgia</option>
+                                                            <option value="HI">Hawaii</option>
+                                                            <option value="ID">Idaho</option>
+                                                            <option value="IL">Illinois</option>
+                                                            <option value="IN">Indiana</option>
+                                                            <option value="IA">Iowa</option>
+                                                            <option value="KS">Kansas</option>
+                                                            <option value="KY">Kentucky</option>
+                                                            <option value="LA">Louisiana</option>
+                                                            <option value="ME">Maine</option>
+                                                            <option value="MD">Maryland</option>
+                                                            <option value="MA">Massachusetts</option>
+                                                            <option value="MI">Michigan</option>
+                                                            <option value="MN">Minnesota</option>
+                                                            <option value="MS">Mississippi</option>
+                                                            <option value="MO">Missouri</option>
+                                                            <option value="MT">Montana</option>
+                                                            <option value="NE">Nebraska</option>
+                                                            <option value="NV">Nevada</option>
+                                                            <option value="NH">New Hampshire</option>
+                                                            <option value="NJ">New Jersey</option>
+                                                            <option value="NM">New Mexico</option>
+                                                            <option value="NY">New York</option>
+                                                            <option value="NC">North Carolina</option>
+                                                            <option value="ND">North Dakota</option>
+                                                            <option value="OH">Ohio</option>
+                                                            <option value="OK">Oklahoma</option>
+                                                            <option value="OR">Oregon</option>
+                                                            <option value="PA">Pennsylvania</option>
+                                                            <option value="RI">Rhode Island</option>
+                                                            <option value="SC">South Carolina</option>
+                                                            <option value="SD">South Dakota</option>
+                                                            <option value="TN">Tennessee</option>
+                                                            <option value="TX">Texas</option>
+                                                            <option value="UT">Utah</option>
+                                                            <option value="VT">Vermont</option>
+                                                            <option value="VA">Virginia</option>
+                                                            <option value="WA">Washington</option>
+                                                            <option value="WV">West Virginia</option>
+                                                            <option value="WI">Wisconsin</option>
+                                                            <option value="WY">Wyoming</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- /State -->
+                                                    <!-- City -->
+                                                    <div class="col-md-5 input-field">
+                                                        <i class="fa fa-map-marker prefix"></i>
+                                                        <input id="input_city" type="text" name="city">
+                                                        <label for="input_city">City</label>
+                                                    </div>
+                                                    <!-- /City -->
+                                                    <!-- Post Code -->
+                                                    <div class="col-md-3 pr-0 input-field">
+                                                        <i class="fa fa-map-marker prefix"></i>
+                                                        <input id="input_postcode" type="text" name="post_code">
+                                                        <label for="input_postcode">Postal Code</label>
+                                                    </div>
+                                                    <!-- /Post Code -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-piluku">
+                                <div class="panel-heading">
+                                    <h2 class="panel-title">Credentials</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form action="#!">
+                                                <div class="input-field">
+                                                    <i class="fa fa-user prefix"></i>
+                                                    <input id="username-input" type="text" name="username">
+                                                    <label for="username-input">Username</label>
+                                                </div>
+                                                <div class="input-field">
+                                                    <i class="fa fa-unlock-alt prefix"></i>
+                                                    <input id="password-input" type="password" name="password">
+                                                    <label for="password-input">Password</label>
+                                                </div>
+                                                <div class="right-align">
+                                                    <a href="page-forgot-password.html">Reset Password</a>
+                                                </div>
+                                                <div class="switch">
+                                                    <label>
+                                                        <input type="checkbox" name="keep" checked />
+                                                        <span class="lever"></span>
+                                                        Keep user logged in
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-piluku">
+                                <div class="panel-heading">
+                                    <h2 class="panel-title">Additional Information</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group row">
+                                        <label>User Role</label>
+                                        <div class="input-field"">
+                                        <select class="browser-default form-control" name="user_role">
+                                            <option value="admin">Admin</option>
+                                            <option value="artist">Artist</option>
+                                            <option value="director">Director</option>
+                                            <option value="poster">Content Poster</option>
+                                            <option value="editor">Editor</option>
+                                            <option value="writer">Writer</option>
+                                            <option value="auditor">Auditor</option>
+                                            <option value="project-manager">Project Manager</option>
+                                        </select>
+                                    </div>
+                                    <div class="row row-v-spacing"></div>
+                                    <div class="form-group row">
+                                        <label>User Status</label>
+                                        <div>
+                                            <div class="col-md-4 input-field">
+                                                <input class="with-gap" name="user-status-radio" type="radio" id="user-status-radio-2" />
+                                                <label for="user-status-radio-2">Pending</label>
+                                            </div>
+                                            <div class="col-md-4 input-field">
+                                                <input class="with-gap" name="user-status-radio" type="radio" id="user-status-radio-1" checked />
+                                                <label for="user-status-radio-1">Active</label>
+                                            </div>
+                                            <div class="col-md-4 input-field">
+                                                <input class="with-gap" name="user-status-radio" type="radio" id="user-status-radio-3" />
+                                                <label for="user-status-radio-3">Inactive</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 center-align">
+                        <button class="btn btn-blue">
+                            <span>Save Profile</span>
+                        </button>
+                        <button class="btn btn-gray">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+                <div class="row row-v-spacing"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!---content -->
+
+</div>
+<!-- wrapper -->
+
+<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src="assets/js/tooltip-custom.js"></script>
+<script src='assets/js/jquery.nicescroll.min.js'></script>
+<script src='assets/js/wow.min.js'></script>
+<script src='assets/js/jquery.loadmask.min.js'></script>
+<script src='assets/js/jquery.accordion.js'></script>
+<script src='assets/js/materialize.js'></script>
+<script src='assets/js/jquery.bootstrap.wizard.js'></script>
+<script src='assets/js/prettify.js'></script>
+<script src='assets/js/sweet-alert/sweetalert.min.js'></script>
+<script src='assets/js/form-wizard.js'></script>
+<script src='assets/js/classie.js'></script>
+<script src='assets/js/projects.fullscreen-overlay.js'></script>
+<script src='assets/js/core.js'></script>
+<script src="assets/js/jquery.countTo.js"></script>
+<script src='assets/js/select2.js'></script>
+<script src='assets/js/jquery.multi-select.js'></script>
+<script src='assets/js/bootstrap-filestyle.js'></script>
+<script src='assets/js/bootstrap-datepicker.js'></script>
+<script src='assets/js/bootstrap-colorpicker.js'></script>
+<script src='assets/js/jquery.maskedinput.js'></script>
+<script src='assets/js/form-elements.js'></script>
+</body>
+</html>
