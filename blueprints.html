@@ -543,7 +543,7 @@
             <div class="row">
                 <div class="col-lg-10 col-md-offset-1">
                     <div class="row">
-                        <div class="col-lg-1 rh-views-menu">
+                        <!--div class="col-lg-1 rh-views-menu">
                             <sup>content:</sup>
                             <span class="piluku-dropdown dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="contentSelectionText"><span class="rh-blue-highlight active">Offsite</span></a>
@@ -575,7 +575,6 @@
                                 </ul>
                                 <input type="hidden" name="viewsSelection" id="viewsSelection" value="1"/>
                             </span>
-                            <!--
                             <ul>
                                 <li>
 
@@ -605,10 +604,21 @@
                                 <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Blueprint view" data-original-title="" title=""><span class="rh-blue-highlight active">Blueprints</span></a></li>
                                 <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Content view" data-original-title="" title="">Content</a></li>
 
-                            </ul>
-                             -->
-                        </div>
-                        <div class="col-lg-10 rh-actions-menu">
+                            </ul>		
+                        </div-->
+						
+							<div class="col-lg-6 view-option-outer">
+								<ul>
+								   <li class="rh_blackEagle"></li>
+									<li><a href="">PROJECT VIEW</a></li>
+									<li><a href="">BLUEPRINT VIEW</a></li>
+									<li><a href="">LIST VIEW</a></li>
+									<li><a href="">SPREADSHEET VIEW</a></li>			  
+								</ul>
+
+							</div>
+						
+                        <div class="col-lg-6 rh-actions-menu pull-right">
                             <ul>
                                 <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Order content for selected blueprints" data-original-title="" title="">Order</a></li>
                                 <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Merge selected blueprints" data-original-title="" title="">Merge</a></li>
@@ -629,6 +639,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-10 col-md-offset-1">
+				<div class="project-heading-outer"><h2 class="project-name">FairMarketing.com <span class="project-count"> 174<span> </h2> </div>
                     <ul class="collection rh-blueprints">
                         <li class="collection-item">
                             <div class="panel">
@@ -652,18 +663,25 @@
                                                 </li>
                                                 -->
 
-                                                <li class="rh-right-border rh-column rh-blueprint-info width-25">
+                                                <li class="rh-right-border rh-column rh-blueprint-info width-35">
                                                     <a data-parent="#accordion-menus" aria-controls="menu-click10" aria-expanded="false" href="#menu-click10" data-toggle="collapse" class="rh-blueprint-name rh-hover-effect">Houston plumbing specialist</a>
                                                     <ul class="rh-blueprint-options">
-                                                        <li class="rh-hover-effect"><a data-toggle="collapse" href="#menu-click1" aria-expanded="false" aria-controls="menu-click1" data-parent="#accordion-menus" class="show-link-box rh-blueprint-budget"><i class="icon-rh_budget">1200</i></a></li>
-                                                        <li class="rh-hover-effect"><a data-toggle="collapse" href="#menu-click2" aria-expanded="false" aria-controls="menu-click2" data-parent="#accordion-menus" class="show-link-box rh-blueprint-location"><i class="icon-rh_location">Houston, Tx</i></a></li>
+													    <li class="rh-hover-effect"><a data-toggle="collapse" href="#menu-click1" aria-expanded="false" aria-controls="menu-click1" data-parent="#accordion-menus" class="show-link-box rh-blueprint-budget"><i class="eagle-icon"></i>
+																FEB 2014</a></li>
+																										
+                                                        <li class="rh-hover-effect"><a data-toggle="collapse" href="#menu-click1" aria-expanded="false" aria-controls="menu-click1" data-parent="#accordion-menus" class="show-link-box rh-blueprint-budget"><i class="icon-rh_budget"></i>1200</a></li>
+                                                        <li class="rh-hover-effect"><a data-toggle="collapse" href="#menu-click2" aria-expanded="false" aria-controls="menu-click2" data-parent="#accordion-menus" class="show-link-box rh-blueprint-location"><i class="icon-rh_location"></i>Houston, Tx</a></li>
+														
+														 <li class="rh-hover-effect pull-right status-label-outer "><a href="#">ACTIVE </a></li>
+														 <!--li class="rh-hover-effect pull-right status-label-outer paused-project"><a href="#">paused </a></li-->
+														 
                                                     </ul>
                                                 </li>
 
-                                                <li data-toggle="collapse" href="#menu-click12" aria-expanded="false" aria-controls="menu-click12" data-parent="#accordion-menus" class="rh-right-border rh-column rh-blueprint-goals width-20 show-link-box">
+                                                <li data-toggle="collapse" href="#menu-click12" aria-expanded="false" aria-controls="menu-click12" data-parent="#accordion-menus" class="rh-right-border rh-column rh-blueprint-goals width-10 show-link-box">
                                                     <div class="rh-hover-effect">
-                                                        <span class="rh-column-heading">Content Goal Status</span>
-                                                        <ul>
+                                                        <div class="rh-column-heading">Content <span class="blur-color">Goal</span> </div>
+                                                        <!--ul>
                                                             <li class="show-link-box rh-blueprint-complete rh-hover-effect">
                                                                 <p class="rh-blueprint-num" id="completeCount_">
                                                                     42
@@ -681,7 +699,21 @@
                                                                     <span class="rh-blueprint-status">unpublished</span>
                                                                 </p>
                                                             </li>
+                                                        </ul-->
+														
+														 <ul>
+                                                               
+                                                            <li class="rh-blueprint-goal rh-hover-effect">
+                                                                <span id="totalCount_">76</span>
+                                                            </li>
+                                                          
+                                                            <li class="rh-blueprint-incomplete rh-hover-effect">
+                                                                <p  class="incompleteCount-goal" id="incompleteCount_">
+                                                                    34
+                                                                </p>
+                                                            </li>
                                                         </ul>
+														<div class="rh-column-sub-heading">PER MONTH </div>
                                                     </div>
                                                     <!--<div class="cart-section"><span class="icon-rh_cart"></span></div>-->
                                                 </li>
@@ -696,7 +728,7 @@
                                                     <div class="rh-hover-effect">
                                                         <h2 class="rh-column-heading">PUBLISHED CONTENT</h2>
                                                         <div id="chart_div"></div>
-                                                        <span class="rh-column-sub-heading"><span class="rh-alt-color">You</span> vs. Them</span>
+                                                        <div class="rh-column-sub-heading"><span class="rh-alt-color">You</span> vs. <span>Them</span></div>
                                                     </div>
                                                 </li>
 
@@ -711,25 +743,22 @@
                                                                 <span class="rh-blueprint-num" id="comp-backlink-count">5000</span>
                                                             </li>
                                                         </ul>
-                                                        <span class="rh-column-sub-heading"><span class="rh-alt-color">You</span> vs. Them</span>
+                                                        <div class="rh-column-sub-heading"><span class="rh-alt-color">You</span> vs. <span>Them</span></div>
                                                     </div>
                                                 </li>
 
                                                 <li data-parent="#accordion-menus" aria-controls="menu-click8" aria-expanded="false" href="#menu-click8" data-toggle="collapse" class="rh-blueprint-rank rh-right-border rh-column width-15 show-link-box">
                                                     <div class="rh-hover-effect">
-                                                        <h2 class="rh-column-heading">SEARCH ENGINE RANK</h2>
+                                                        <h2 class="rh-column-heading">SEARCH ENGINE <span class="blur-color">RANK</span></h2>
                                                         <ul>
                                                             <li>
-                                                                <div class="icon-rh_google social-icon-count"><span class="path1"></span><span class="path2"></span></div>
-                                                                <span>15</span>
+                                                                <h2 class="rank-status-outer">15 <span>Google</span></h2>
                                                             </li>
                                                             <li>
-                                                                <div class="icon-rh_yahoo social-icon-count"><span class="path1"></span><span class="path2"></span></div>
-                                                                <span>17</span>
+																<h2 class="rank-status-outer">17 <span>Yahoo</span></h2>
                                                             </li>
                                                             <li>
-                                                                <div class="icon-rh_bing social-icon-count"><span class="path1"></span><span class="path2"></span></div>
-                                                                <span>24</span>
+																<h2 class="rank-status-outer">24 <span>Bing</span></h2>
                                                             </li>
                                                         </ul>
                                                     </div>
