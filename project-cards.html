@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>RankHacker Admin</title>
@@ -35,60 +35,59 @@
             $('.piluku-preloader').addClass('hidden');
         });
     </script>
-
-</head>
-<body>
-<div class="piluku-preloader text-center">
-    <!-- <div class="progress">
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+	
+	
+	
+    </head>
+    <body>
+<div class="piluku-preloader text-center"> 
+      <!-- <div class="progress">
         <div class="indeterminate"></div>
     </div> -->
-    <div class="loader">Loading...</div>
-</div>
+      <div class="loader">Loading...</div>
+    </div>
 <div class="wrapper hide-left-bar">
-    <div class="content" id="content">
-        <div class="overlay"></div>
-        <div class="top-bar">
-            <nav class="navbar navbar-default top-bar">
-                <div class="navbar-header"><a class="navbar-brand" href="blueprints.html">RankHacker</a></div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
-                        <li class="dropdown piluku-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
-                            <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
-                            </ul>
-                            <input type="hidden" id="selectedProjectID" value="0"/>
-                        </li>
-                        <li></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right top-elements">
-                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
-                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
-                            </ul>
-                        </li>
-                        <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-box-outline icon-notification"></i><span class="badge info-number bell" id="commentsCount"></span></a>
-                            <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow message_drop neat_drop" data-wow-duration="1500ms" role="menu" id="commentsList">
-                            </ul>
-                        </li>
-                        <li class="chat_btn"><a href="#" class="right-bar-toggle flatRed"> <i class="ti-settings"></i> </a></li>
-                    </ul>
-                </div>
-            </nav>
+      <div class="content" id="content">
+    <div class="overlay"></div>
+    <div class="top-bar">
+          <nav class="navbar navbar-default top-bar">
+        <div class="navbar-header"><a class="navbar-brand" href="blueprints.html">RankHacker</a></div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left top-elements top-collapse-nav">
+            <li class="dropdown piluku-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                  <ul id="projectsList" class="dropdown-menu dropdown-piluku-menu neat_drop">
+              </ul>
+                  <input type="hidden" id="selectedProjectID" value="0"/>
+                </li>
+            <li></li>
+          </ul>
+              <ul class="nav navbar-nav navbar-right top-elements">
+            <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-bell-outline icon-notification"></i><span class="badge info-number message" id="notificationsCount"></span></a>
+                  <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow notification-drop neat_drop" data-wow-duration="1500ms" role="menu" id="notificationsList">
+              </ul>
+                </li>
+            <li class="piluku-dropdown dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="ion-ios-box-outline icon-notification"></i><span class="badge info-number bell" id="commentsCount"></span></a>
+                  <ul class="dropdown-menu dropdown-piluku-menu piluku-right animated fadeInUp wow message_drop neat_drop" data-wow-duration="1500ms" role="menu" id="commentsList">
+              </ul>
+                </li>
+            <li class="chat_btn"><a href="#" class="right-bar-toggle flatRed"> <i class="ti-settings"></i> </a></li>
+          </ul>
+            </div>
+      </nav>
         </div>
-        <!-- /top-bar -->
-
-        <div class="main-content projects">
-            <div class="row row-v-spacing"></div>
-            <div class="row row-v-spacing">
-                <div class="col-lg-10 col-md-offset-1">
-
-                    <div class="info-logo-content rh-mission z-depth-1">
-                        <span class="rh-mission-info">Adjust your mission statement to filter</span>
-                        the <strong>mission</strong>
-                        <span class="rh-bracket rh-bracket-left">[</span>
-                        <span class="piluku-dropdown dropdown">
-                            Roger
-                            <!--
+    <!-- /top-bar -->
+    
+    <div class="main-content projects">
+          <div class="row row-v-spacing"></div>
+          <div class="row row-v-spacing">
+        <div class="col-lg-10 col-md-offset-1">
+              <div class="info-logo-content rh-mission z-depth-1"> <span class="rh-mission-info">Adjust your mission statement to filter</span> the <strong>mission</strong> <span class="rh-bracket rh-bracket-left">[</span> <span class="piluku-dropdown dropdown"> Roger 
+                <!--
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="userSelectionText">Admin</a>
                             <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow user-drop neat_drop" data-wow-duration="1500ms" role="menu">
                                 <li>
@@ -147,771 +146,865 @@
                                 </li>
                             </ul>
                             <input type="hidden" name="userSelection" id="userSelection" value="1"/>
-                            -->
-                        </span>
-                        :
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="statusSelectionText">Publish</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow blueprints-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-status-all">
-                                        <label for="chk-status-all" class="rh-menu-checkbox">All Statuses</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-status-1">
-                                        <label for="chk-status-1" class="rh-menu-checkbox">Order</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-status-2">
-                                        <label for="chk-status-2" class="rh-menu-checkbox">Create</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-status-3">
-                                        <label for="chk-status-3" class="rh-menu-checkbox">Proof</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-status-4">
-                                        <label for="chk-status-4" class="rh-menu-checkbox">Audit</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-status-5" checked>
-                                        <label for="chk-status-5" class="rh-menu-checkbox">Publish</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
-                        </span>
-                        <span class="rh-content-pieces" id="contentTarget">248</span>
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="contentSelectionText">pieces of content</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow content-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-all" checked>
-                                        <label for="chk-content-all" class="rh-menu-checkbox">All Content Types</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-1" checked>
-                                        <label for="chk-content-1" class="rh-menu-checkbox">Blog</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-2" checked>
-                                        <label for="chk-content-2" class="rh-menu-checkbox">News</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-3" checked>
-                                        <label for="chk-content-3" class="rh-menu-checkbox">Social</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-4" checked>
-                                        <label for="chk-content-4" class="rh-menu-checkbox">Press Release</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-5" checked>
-                                        <label for="chk-content-5" class="rh-menu-checkbox">Directory</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-6" checked>
-                                        <label for="chk-content-6" class="rh-menu-checkbox">Image</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-7" checked>
-                                        <label for="chk-content-7" class="rh-menu-checkbox">Article</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-8" checked>
-                                        <label for="chk-content-8" class="rh-menu-checkbox">Forum</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-9" checked>
-                                        <label for="chk-content-9" class="rh-menu-checkbox">Wiki</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-content-10" checked>
-                                        <label for="chk-content-10" class="rh-menu-checkbox">Product</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="contentSelection" id="contentSelection" value="1"/>
-                        </span>
-                        for
-                        <span class="rh-content-pieces" id="blueprintTarget">3</span>
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="blueprintSelectionText">blueprints</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow blueprints-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-all" checked>
-                                        <label for="chk-blueprint-all" class="rh-menu-checkbox">All Blueprints</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-1" checked>
-                                        <label for="chk-blueprint-1" class="rh-menu-checkbox">houston plumbing</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-2" checked>
-                                        <label for="chk-blueprint-2" class="rh-menu-checkbox">houston plumbing services</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-3" checked>
-                                        <label for="chk-blueprint-3" class="rh-menu-checkbox">plumbing services</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-blueprint-4" checked>
-                                        <label for="chk-blueprint-4" class="rh-menu-checkbox">clogged drain</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
-                        </span>
-                        in
-                        <span class="rh-content-pieces" id="projectTarget">1</span>
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="projectSelectionText">project</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow projects-drop neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-all">
-                                        <label for="chk-project-all" class="rh-menu-checkbox">All Projects</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-myplumbingwebsite">
-                                        <label for="chk-project-myplumbingwebsite" class="rh-menu-checkbox">MyPlumbingWebsite.com</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-fairmarketing" checked>
-                                        <label for="chk-project-fairmarketing" class="rh-menu-checkbox">FairMarketing.com</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-fountains">
-                                        <label for="chk-project-fountains" class="rh-menu-checkbox">Fountains.com</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <input tabindex="5" type="checkbox" id="chk-project-certifiedbusinessvaluations">
-                                        <label for="chk-project-certifiedbusinessvaluations" class="rh-menu-checkbox">CertifiedBusinessValuations.com</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="projectSelection" id="projectSelection" value="1"/>
-                        </span>
-                        for
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="weekSelectionText">All Weeks</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow weeks-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('All');">
-                                        <input tabindex="5" type="checkbox" id="chk-all-weeks" checked>
-                                        <label for="chk-all-weeks" class="rh-menu-checkbox">All Weeks</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('1');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-1">
-                                        <label for="chk-week-1" class="rh-menu-checkbox">Week 1</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('2');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-2">
-                                        <label for="chk-week-2" class="rh-menu-checkbox">Week 2</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('3');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-3">
-                                        <label for="chk-week-3" class="rh-menu-checkbox">Week 3</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateWeekSelection('4');">
-                                        <input tabindex="5" type="checkbox" id="chk-week-4">
-                                        <label for="chk-week-4" class="rh-menu-checkbox">Week 4</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="weekSelection" id="weekSelection" value="1"/>
-                        </span>
-                        of
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="monthSelectionText">August</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow months-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('All');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-all">
-                                        <label for="chk-month-all" class="rh-menu-checkbox">All Months</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('1');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-january">
-                                        <label for="chk-month-january" class="rh-menu-checkbox">January</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('2');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-february">
-                                        <label for="chk-month-february" class="rh-menu-checkbox">February</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('3');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-march">
-                                        <label for="chk-month-march" class="rh-menu-checkbox">March</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('4');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-april">
-                                        <label for="chk-month-april" class="rh-menu-checkbox">April</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('5');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-may">
-                                        <label for="chk-month-may" class="rh-menu-checkbox">May</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('6');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-june">
-                                        <label for="chk-month-june" class="rh-menu-checkbox">June</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('7');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-july">
-                                        <label for="chk-month-july" class="rh-menu-checkbox">July</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('8');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-august" checked>
-                                        <label for="chk-month-august" class="rh-menu-checkbox">August</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('9');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-september">
-                                        <label for="chk-month-september" class="rh-menu-checkbox">September</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('10');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-october">
-                                        <label for="chk-month-october" class="rh-menu-checkbox">October</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('11');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-november">
-                                        <label for="chk-month-november" class="rh-menu-checkbox">November</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateMonthSelection('12');">
-                                        <input tabindex="5" type="checkbox" id="chk-month-december">
-                                        <label for="chk-month-december" class="rh-menu-checkbox">December</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="monthSelection" id="monthSelection" value="1"/>
-                        </span>
-                        <span class="piluku-dropdown dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="yearSelectionText">2015</a>
-                            <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow years-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
-                                <li>
-                                    <a href="#" onclick="updateYearSelection('1');">
-                                        <input tabindex="5" type="checkbox" id="chk-2014">
-                                        <label for="chk-2014" class="rh-menu-checkbox">2014</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateYearSelection('2');">
-                                        <input tabindex="5" type="checkbox" id="chk-2015" checked>
-                                        <label for="chk-2015" class="rh-menu-checkbox">2015</label>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onclick="updateYearSelection('3');">
-                                        <input tabindex="5" type="checkbox" id="chk-2016">
-                                        <label for="chk-2016" class="rh-menu-checkbox">2016</label>
-                                    </a>
-                                </li>
-                            </ul>
-                            <input type="hidden" name="yearSelection" id="yearSelection" value="1"/>
-                        </span>
-                        <span class="rh-bracket rh-bracket-left">]</span>
-                        <span class="rh-cart info-logo primarybg-info show-link-box">
-                            <div class="piluku-dropdown dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon-rh_cartcontent"></i> <span class="badge info-number rh-bg-info">12</span></a>
-
-                                <div class="dropdown-menu dropdown-piluku-menu animated fadeInUp cart-drop-box" data-wow-duration="1500ms" role="menu">
-                                    <div class="cart-box-head"><h1>328</h1>   <p>TOTAL CONTENT </br>PIECES IN CART</p> </div>
-
-                                    <div class="cart-item-outer">
-                                        <div class="cart-items">
-                                            <h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
-                                            <div class="project-info">
-                                                <span class="bp-number">3 BP</span>
-                                                <span class="pcs-number">128 PCS</span>
-                                                <span class="project-price">$1,504</span>
-                                            </div>
-                                        </div>
-                                        <div class="cart-items">
-                                            <h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
-                                            <div class="project-info">
-                                                <span class="bp-number">1 BP</span>
-                                                <span class="pcs-number">200 PCS</span>
-                                                <span class="project-price">$2,740</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="sub-total-outer">
-                                        <span class="left-block">SUBTOTAL</span>
-                                        <span class="right-block">$4,244.00</span>
-                                    </div>
-
-                                    <div class="tax-outer">
-                                        <span class="left-block">TAXES/FEES</span>
-                                        <span class="right-block">$500</span>
-                                    </div>
-
-                                    <div class="grand-total-outer">
-                                        <span class="left-block">GRAND</br>TOTAL</span>
-                                        <span class="right-block">$4,744</span>
-                                    </div>
-
-                                    <a href="#" class="proceed-checkout-btn">PROCEED TO CHECKOUT </a>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-5 col-md-offset-1 rh-project-heading"><em>project view</em></div>
-                <div class="col-lg-5 rh-actions-menu">
-                    <ul>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Order content for selected projects" data-original-title="" title="">Order</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Merge selected projects" data-original-title="" title="">Merge</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Refresh selected projects" data-original-title="" title="">Refresh</a></li>
-                        <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Archive selected projects" data-original-title="" title="">Archive</a></li>
-                        <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Download selected projects" data-original-title="" title="">Download</a></li>
-                        <li>
-                            <button id="create-new-project" class="btn btn-orange btn-round">
-                                <i class="icon-rh_add"></i>
-                                <span>Create New Project</span>
-                            </button>
-                        </li>
-                        <li class="setting-block rh-hover-effect"><a href="#"><i class="icon-rh_settings"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 col-md-offset-1">
-                    <div class="rh-sort-menu row-v-spacing">
-                        <ul>
-                            <li>Sort by:</li>
-                            <li class="rh-right-border"><a href=""><strong>Project Name</strong></a></li>
-                            <li class="rh-right-border"><a href="">Domain</a></li>
-                            <li class="rh-right-border"><a href="">Publish Date</a></li>
-                            <li class="rh-right-border"><a href="">Goal</a></li>
-                            <li><a href="">Status</a></li>
-                        </ul>
-                    </div>
-                    <div class="row-v-spacing">
-                        !!!PROJECT CARDS GO HERE!!!!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---content -->
-
-    <!-- start create project -->
-    <div id="create-new-project-overlay" class="settings-overlay settings-overlay-contentpush">
-        <div class="content">
-            <div class="page_header">
-                <div class="row grid">
-                    <div class=" col-md-8 col-md-offset-2">
-                        <div class="pull-left">
-                            <i class="icon fa fa-plus-circle page_header_icon"></i>
-                        </div>
-                        <div class="pull-left">
-                            <span class="main-text">Create New <strong>Project</strong></span>
-                            <p class="text">Projects are containers for containers for blueprints.</p>
-                        </div>
-                        <div class="right pull-right">
-                            <a class="settings-overlay-close">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-content">
-                <div class="row row-v-spacing"></div>
-                <div class="row grid">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="panel panel-piluku">
-                            <div class="panel-heading">
-                                <h2 class="panel-title">Project Information</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="control-label">Project Name</label>
-                                            <input type="text" class="form-control" placeholder="Enter a name for this project">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Domain</label>
-                                            <div class="input-group form-group">
-                                                <span class="input-group-addon addon-left">http://</span>
-                                                <input type="text" class="form-control" placeholder="Enter a domain for this project">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Default Vendor Template</label>
-                                            <select class="name_search form-control">
-                                                <option value="1"> Rank Hacker Template </option>
-                                                <option value="2"> Budget Template </option>
-                                                <option value="3"> Platinum Template </option>
-                                                <option value="4"> In-house Template </option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Publication Dates</label>
-                                            <div class="input-group form-group">
-                                                <span class="input-group-addon addon-left">http://</span>
-                                                <input type="text" class="form-control" placeholder="Enter a domain for this project">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row grid">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="panel panel-piluku">
-                            <div class="panel-heading">
-                                <h2 class="panel-title">Contact Information</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="control-label">Contact Name</label>
-                                            <input type="text" class="form-control" placeholder="Enter a contact name for this project">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Email</label>
-                                            <input type="text" class="form-control" placeholder="Enter an email address">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Phone</label>
-                                            <div class="input-group date-block">
-                                                <input type="text" class="form-control" id="phone" placeholder="Phone format: (999) 999-9999">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Address:</label>
-                                            <textarea name="" class="form-control text-area" cols="30" rows="10" placeholder="Enter an address"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 center-align">
-                        <button class="btn btn-orange">
-                            <span>Create New Project</span>
-                        </button>
-                        <button class="btn btn-gray">
-                            Cancel
-                        </button>
-                    </div>
-                </div>
-                <div class="row row-v-spacing"></div>
-            </div>
-        </div>
-    </div>
-    <!-- end create project -->
-
-    <!-- start sidebar -->
-    <div class="side-bar right-bar">
-        <div class="contacts">
-            <div class="col col-md-12">
-                <ul class="tabs">
-                    <li class="tab col-md-3"><a href="#test1" class="active">Settings</a></li>
-                    <li class="tab col-md-3"><a href="#test2">Budgets</a></li>
-                    <li class="tab col-md-3"><a href="#test3">Filters</a></li>
+                            --> 
+                </span> : <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="statusSelectionText">Publish</a>
+                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow blueprints-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-status-all">
+                    <label for="chk-status-all" class="rh-menu-checkbox">All Statuses</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-status-1">
+                    <label for="chk-status-1" class="rh-menu-checkbox">Order</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-status-2">
+                    <label for="chk-status-2" class="rh-menu-checkbox">Create</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-status-3">
+                    <label for="chk-status-3" class="rh-menu-checkbox">Proof</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-status-4">
+                    <label for="chk-status-4" class="rh-menu-checkbox">Audit</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-status-5" checked>
+                    <label for="chk-status-5" class="rh-menu-checkbox">Publish</label>
+                    </a> </li>
                 </ul>
+                <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
+                </span> <span class="rh-content-pieces" id="contentTarget">248</span> <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="contentSelectionText">pieces of content</a>
+                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow content-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-all" checked>
+                    <label for="chk-content-all" class="rh-menu-checkbox">All Content Types</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-1" checked>
+                    <label for="chk-content-1" class="rh-menu-checkbox">Blog</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-2" checked>
+                    <label for="chk-content-2" class="rh-menu-checkbox">News</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-3" checked>
+                    <label for="chk-content-3" class="rh-menu-checkbox">Social</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-4" checked>
+                    <label for="chk-content-4" class="rh-menu-checkbox">Press Release</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-5" checked>
+                    <label for="chk-content-5" class="rh-menu-checkbox">Directory</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-6" checked>
+                    <label for="chk-content-6" class="rh-menu-checkbox">Image</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-7" checked>
+                    <label for="chk-content-7" class="rh-menu-checkbox">Article</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-8" checked>
+                    <label for="chk-content-8" class="rh-menu-checkbox">Forum</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-9" checked>
+                    <label for="chk-content-9" class="rh-menu-checkbox">Wiki</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-content-10" checked>
+                    <label for="chk-content-10" class="rh-menu-checkbox">Product</label>
+                    </a> </li>
+                </ul>
+                <input type="hidden" name="contentSelection" id="contentSelection" value="1"/>
+                </span> for <span class="rh-content-pieces" id="blueprintTarget">3</span> <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="blueprintSelectionText">blueprints</a>
+                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow blueprints-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-blueprint-all" checked>
+                    <label for="chk-blueprint-all" class="rh-menu-checkbox">All Blueprints</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-blueprint-1" checked>
+                    <label for="chk-blueprint-1" class="rh-menu-checkbox">houston plumbing</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-blueprint-2" checked>
+                    <label for="chk-blueprint-2" class="rh-menu-checkbox">houston plumbing services</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-blueprint-3" checked>
+                    <label for="chk-blueprint-3" class="rh-menu-checkbox">plumbing services</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-blueprint-4" checked>
+                    <label for="chk-blueprint-4" class="rh-menu-checkbox">clogged drain</label>
+                    </a> </li>
+                </ul>
+                <input type="hidden" name="blueprintSelection" id="blueprintSelection" value="1"/>
+                </span> in <span class="rh-content-pieces" id="projectTarget">1</span> <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="projectSelectionText">project</a>
+                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow projects-drop neat_drop" data-wow-duration="1500ms" role="menu">
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-project-all">
+                    <label for="chk-project-all" class="rh-menu-checkbox">All Projects</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-project-myplumbingwebsite">
+                    <label for="chk-project-myplumbingwebsite" class="rh-menu-checkbox">MyPlumbingWebsite.com</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-project-fairmarketing" checked>
+                    <label for="chk-project-fairmarketing" class="rh-menu-checkbox">FairMarketing.com</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-project-fountains">
+                    <label for="chk-project-fountains" class="rh-menu-checkbox">Fountains.com</label>
+                    </a> </li>
+                  <li> <a href="#">
+                    <input tabindex="5" type="checkbox" id="chk-project-certifiedbusinessvaluations">
+                    <label for="chk-project-certifiedbusinessvaluations" class="rh-menu-checkbox">CertifiedBusinessValuations.com</label>
+                    </a> </li>
+                </ul>
+                <input type="hidden" name="projectSelection" id="projectSelection" value="1"/>
+                </span> for <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="weekSelectionText">All Weeks</a>
+                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow weeks-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
+                  <li> <a href="#" onclick="updateWeekSelection('All');">
+                    <input tabindex="5" type="checkbox" id="chk-all-weeks" checked>
+                    <label for="chk-all-weeks" class="rh-menu-checkbox">All Weeks</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateWeekSelection('1');">
+                    <input tabindex="5" type="checkbox" id="chk-week-1">
+                    <label for="chk-week-1" class="rh-menu-checkbox">Week 1</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateWeekSelection('2');">
+                    <input tabindex="5" type="checkbox" id="chk-week-2">
+                    <label for="chk-week-2" class="rh-menu-checkbox">Week 2</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateWeekSelection('3');">
+                    <input tabindex="5" type="checkbox" id="chk-week-3">
+                    <label for="chk-week-3" class="rh-menu-checkbox">Week 3</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateWeekSelection('4');">
+                    <input tabindex="5" type="checkbox" id="chk-week-4">
+                    <label for="chk-week-4" class="rh-menu-checkbox">Week 4</label>
+                    </a> </li>
+                </ul>
+                <input type="hidden" name="weekSelection" id="weekSelection" value="1"/>
+                </span> of <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="monthSelectionText">August</a>
+                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow months-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
+                  <li> <a href="#" onclick="updateMonthSelection('All');">
+                    <input tabindex="5" type="checkbox" id="chk-month-all">
+                    <label for="chk-month-all" class="rh-menu-checkbox">All Months</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('1');">
+                    <input tabindex="5" type="checkbox" id="chk-month-january">
+                    <label for="chk-month-january" class="rh-menu-checkbox">January</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('2');">
+                    <input tabindex="5" type="checkbox" id="chk-month-february">
+                    <label for="chk-month-february" class="rh-menu-checkbox">February</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('3');">
+                    <input tabindex="5" type="checkbox" id="chk-month-march">
+                    <label for="chk-month-march" class="rh-menu-checkbox">March</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('4');">
+                    <input tabindex="5" type="checkbox" id="chk-month-april">
+                    <label for="chk-month-april" class="rh-menu-checkbox">April</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('5');">
+                    <input tabindex="5" type="checkbox" id="chk-month-may">
+                    <label for="chk-month-may" class="rh-menu-checkbox">May</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('6');">
+                    <input tabindex="5" type="checkbox" id="chk-month-june">
+                    <label for="chk-month-june" class="rh-menu-checkbox">June</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('7');">
+                    <input tabindex="5" type="checkbox" id="chk-month-july">
+                    <label for="chk-month-july" class="rh-menu-checkbox">July</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('8');">
+                    <input tabindex="5" type="checkbox" id="chk-month-august" checked>
+                    <label for="chk-month-august" class="rh-menu-checkbox">August</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('9');">
+                    <input tabindex="5" type="checkbox" id="chk-month-september">
+                    <label for="chk-month-september" class="rh-menu-checkbox">September</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('10');">
+                    <input tabindex="5" type="checkbox" id="chk-month-october">
+                    <label for="chk-month-october" class="rh-menu-checkbox">October</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('11');">
+                    <input tabindex="5" type="checkbox" id="chk-month-november">
+                    <label for="chk-month-november" class="rh-menu-checkbox">November</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateMonthSelection('12');">
+                    <input tabindex="5" type="checkbox" id="chk-month-december">
+                    <label for="chk-month-december" class="rh-menu-checkbox">December</label>
+                    </a> </li>
+                </ul>
+                <input type="hidden" name="monthSelection" id="monthSelection" value="1"/>
+                </span> <span class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="yearSelectionText">2015</a>
+                <ul class="dropdown-menu dropdown-piluku-menu animated fadeInUp wow years-dropdown neat_drop" data-wow-duration="1500ms" role="menu">
+                  <li> <a href="#" onclick="updateYearSelection('1');">
+                    <input tabindex="5" type="checkbox" id="chk-2014">
+                    <label for="chk-2014" class="rh-menu-checkbox">2014</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateYearSelection('2');">
+                    <input tabindex="5" type="checkbox" id="chk-2015" checked>
+                    <label for="chk-2015" class="rh-menu-checkbox">2015</label>
+                    </a> </li>
+                  <li> <a href="#" onclick="updateYearSelection('3');">
+                    <input tabindex="5" type="checkbox" id="chk-2016">
+                    <label for="chk-2016" class="rh-menu-checkbox">2016</label>
+                    </a> </li>
+                </ul>
+                <input type="hidden" name="yearSelection" id="yearSelection" value="1"/>
+                </span> <span class="rh-bracket rh-bracket-left">]</span> <span class="rh-cart info-logo primarybg-info show-link-box">
+                <div class="piluku-dropdown dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon-rh_cartcontent"></i> <span class="badge info-number rh-bg-info">12</span></a>
+                  <div class="dropdown-menu dropdown-piluku-menu animated fadeInUp cart-drop-box" data-wow-duration="1500ms" role="menu">
+                    <div class="cart-box-head">
+                      <h1>328</h1>
+                      <p>TOTAL CONTENT </br>
+                        PIECES IN CART</p>
+                    </div>
+                    <div class="cart-item-outer">
+                      <div class="cart-items">
+                        <h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
+                        <div class="project-info"> <span class="bp-number">3 BP</span> <span class="pcs-number">128 PCS</span> <span class="project-price">$1,504</span> </div>
+                      </div>
+                      <div class="cart-items">
+                        <h2 class="project-name-cart">MyPlumbingWebsite.com</h2>
+                        <div class="project-info"> <span class="bp-number">1 BP</span> <span class="pcs-number">200 PCS</span> <span class="project-price">$2,740</span> </div>
+                      </div>
+                    </div>
+                    <div class="sub-total-outer"> <span class="left-block">SUBTOTAL</span> <span class="right-block">$4,244.00</span> </div>
+                    <div class="tax-outer"> <span class="left-block">TAXES/FEES</span> <span class="right-block">$500</span> </div>
+                    <div class="grand-total-outer"> <span class="left-block">GRAND</br>
+                      TOTAL</span> <span class="right-block">$4,744</span> </div>
+                    <a href="#" class="proceed-checkout-btn">PROCEED TO CHECKOUT </a> </div>
+                </div>
+                </span> </div>
             </div>
-            <div class="content-holder">
-                <div id="test1" class="col-md-12 no_padding"><br>
-
-                    <div class="form-group">
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Reminders</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Auto Refresh</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch1"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Rank Tracking</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch2"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Filters</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch3"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Notifications</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch4"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      </div>
+          <div class="row">
+        <div class="col-lg-10 col-md-offset-1">
+              <div class="row">
+            <div class="col-lg-6 view-option-outer">
+                  <ul>
+                <li class="rh_blackEagle"></li>
+                <li><a href="">PROJECT VIEW</a></li>
+              </ul>
                 </div>
-                <div id="test2" class="col-md-12 no_padding"><br>
-
-                    <div class="form-group">
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Enable</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch1"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch2"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch3"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch4"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-6 rh-actions-menu pull-right">
+                  <ul>
+                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Order content for selected projects" data-original-title="" title="">Order</a></li>
+                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Merge selected projects" data-original-title="" title="">Merge</a></li>
+                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Refresh selected projects" data-original-title="" title="">Refresh</a></li>
+                <li class="rh-right-border"><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Archive selected projects" data-original-title="" title="">Archive</a></li>
+                <li><a href="" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Download selected projects" data-original-title="" title="">Download</a></li>
+                <li>
+                      <button id="create-new-project" class="btn btn-orange btn-round"> <i class="icon-rh_add"></i> <span>Create New Project</span> </button>
+                    </li>
+                <li class="setting-block rh-hover-effect"><a href="#"><i class="icon-rh_settings"></i></a></li>
+              </ul>
                 </div>
-                <div id="test3" class="col-md-12 no_padding"><br>
-
-                    <div class="form-group">
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Enable</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch1"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch2"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch3"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="toggle-switch">
-                            <label class="col-sm-8 control-label">Option</label>
-
-                            <div class="col-sm-4">
-                                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
-
-                                <div class="toggle">
-                                    <label for="toggle-switch4"><i></i> </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
             </div>
-            <!-- content_holder -->
+      </div>
+          <div class="row">
+        <div class="col-lg-10 col-md-offset-1">
+              <div class="rh-sort-menu rh-sort-menu-project-card ">
+            <ul>
+                  <li>Sort by:</li>
+                  <li class="rh-right-border"><a href=""><strong>Project Name</strong></a></li>
+                  <li class="rh-right-border"><a href="">Domain</a></li>
+                  <li class="rh-right-border"><a href="">Publish Date</a></li>
+                  <li class="rh-right-border"><a href="">Goal</a></li>
+                  <li><a href="">Status</a></li>
+                </ul>
+          </div>
+              <div class="row-v-spacing project-cards-outer">
+            <ul class="row">
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox1" class="icheckbox_square-yellow" tabindex="1">
+                    <label for="card-header-checkbox1"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                        <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox2" class="icheckbox_square-yellow" tabindex="2">
+                    <label for="card-header-checkbox2"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+         <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card paused"> PAUSED </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox3" class="icheckbox_square-yellow" tabindex="3">
+                    <label for="card-header-checkbox3"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card paused"> PAUSED </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox4" class="icheckbox_square-yellow" tabindex="5">
+                    <label for="card-header-checkbox4"></label>
+                    <h1>Fair Marketing <span class="project-count green-circle">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox5" class="icheckbox_square-yellow" tabindex="5">
+                    <label for="card-header-checkbox5"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card paused"> PAUSED </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox6" class="icheckbox_square-yellow" tabindex="5">
+                    <label for="card-header-checkbox6"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox7" class="icheckbox_square-yellow" tabindex="5">
+                    <label for="card-header-checkbox7"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                         <a href="#" class="project-status-card paused"> PAUSED </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox8" class="icheckbox_square-yellow" tabindex="5">
+                    <label for="card-header-checkbox8"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
+                  </div>
+                    </div>
+              </li>
+                  <li class="col-lg-4">
+                <div class="project-cart-box">
+                      <div class="card-header">
+                    <input type="checkbox"  value="" id="card-header-checkbox9" class="icheckbox_square-yellow" tabindex="5">
+                    <label for="card-header-checkbox9"></label>
+                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
+                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                      <div class="card-box-detail-outer">
+                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
+                    <div class="row">
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                      </div>
+                          <div class="col-lg-6">
+                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
+                      </div>
+                        </div>
+                    <div class="cart-contact-section">
+                          <div class="cart-small-headding"> CONTACT</div>
+                          <div class="row">
+                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                      </div>
+                        </div>
+                    <div class="card-box-bottom">
+                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
+                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
+                  </div>
+                    </div>
+              </li>
+                </ul>
+          </div>
+            </div>
+      </div>
         </div>
+  </div>
+      <!---content --> 
+      
+      <!-- start create project -->
+      <div id="create-new-project-overlay" class="settings-overlay settings-overlay-contentpush">
+    <div class="content">
+          <div class="page_header">
+        <div class="row grid">
+              <div class=" col-md-8 col-md-offset-2">
+            <div class="pull-left"> <i class="icon fa fa-plus-circle page_header_icon"></i> </div>
+            <div class="pull-left"> <span class="main-text">Create New <strong>Project</strong></span>
+                  <p class="text">Projects are containers for containers for blueprints.</p>
+                </div>
+            <div class="right pull-right"> <a class="settings-overlay-close"> <i class="fa fa-times"></i> </a> </div>
+          </div>
+            </div>
+      </div>
+          <div class="main-content">
+        <div class="row row-v-spacing"></div>
+        <div class="row grid">
+              <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-piluku">
+                  <div class="panel-heading">
+                <h2 class="panel-title">
+                Project Information
+                </h3>
+              </div>
+                  <div class="panel-body">
+                <div class="row">
+                      <div class="col-md-12">
+                    <div class="form-group">
+                          <label class="control-label">Project Name</label>
+                          <input type="text" class="form-control" placeholder="Enter a name for this project">
+                        </div>
+                    <div class="form-group">
+                          <label class="control-label">Domain</label>
+                          <div class="input-group form-group"> <span class="input-group-addon addon-left">http://</span>
+                        <input type="text" class="form-control" placeholder="Enter a domain for this project">
+                      </div>
+                        </div>
+                    <div class="form-group">
+                          <label class="control-label">Default Vendor Template</label>
+                          <select class="name_search form-control">
+                        <option value="1"> Rank Hacker Template </option>
+                        <option value="2"> Budget Template </option>
+                        <option value="3"> Platinum Template </option>
+                        <option value="4"> In-house Template </option>
+                      </select>
+                        </div>
+                    <div class="form-group">
+                          <label class="control-label">Publication Dates</label>
+                          <div class="input-group form-group"> <span class="input-group-addon addon-left">http://</span>
+                        <input type="text" class="form-control" placeholder="Enter a domain for this project">
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+        <div class="row grid">
+              <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-piluku">
+                  <div class="panel-heading">
+                <h2 class="panel-title">
+                Contact Information
+                </h3>
+              </div>
+                  <div class="panel-body">
+                <div class="row">
+                      <div class="col-md-12">
+                    <div class="form-group">
+                          <label class="control-label">Contact Name</label>
+                          <input type="text" class="form-control" placeholder="Enter a contact name for this project">
+                        </div>
+                    <div class="form-group">
+                          <label class="control-label">Email</label>
+                          <input type="text" class="form-control" placeholder="Enter an email address">
+                        </div>
+                    <div class="form-group">
+                          <label class="control-label">Phone</label>
+                          <div class="input-group date-block">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone format: (999) 999-9999">
+                      </div>
+                        </div>
+                    <div class="form-group">
+                          <label class="control-label">Address:</label>
+                          <textarea name="" class="form-control text-area" cols="30" rows="10" placeholder="Enter an address"></textarea>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+        <div class="row">
+              <div class="col-md-12 center-align">
+            <button class="btn btn-orange"> <span>Create New Project</span> </button>
+            <button class="btn btn-gray"> Cancel </button>
+          </div>
+            </div>
+        <div class="row row-v-spacing"></div>
+      </div>
+        </div>
+  </div>
+      <!-- end create project --> 
+      
+      <!-- start sidebar -->
+      <div class="side-bar right-bar">
+    <div class="contacts">
+          <div class="col col-md-12">
+        <ul class="tabs">
+              <li class="tab col-md-3"><a href="#test1" class="active">Settings</a></li>
+              <li class="tab col-md-3"><a href="#test2">Budgets</a></li>
+              <li class="tab col-md-3"><a href="#test3">Filters</a></li>
+            </ul>
+      </div>
+          <div class="content-holder">
+        <div id="test1" class="col-md-12 no_padding"><br>
+              <div class="form-group">
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Reminders</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Auto Refresh</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch1"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Rank Tracking</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch2"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Filters</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch3"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Notifications</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch4"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+        <div id="test2" class="col-md-12 no_padding"><br>
+              <div class="form-group">
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Enable</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch1"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch2"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch3"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch4"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+        <div id="test3" class="col-md-12 no_padding"><br>
+              <div class="form-group">
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Enable</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch1" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch1"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch2" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch2"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch3" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch3"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+            <div class="toggle-switch">
+                  <label class="col-sm-8 control-label">Option</label>
+                  <div class="col-sm-4">
+                <input type="checkbox" class="mark-complete" id="toggle-switch4" name="" value="" checked="">
+                <div class="toggle">
+                      <label for="toggle-switch4"><i></i> </label>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+          <!-- content_holder --> 
+        </div>
+  </div>
+      <!-- end sidebar --> 
+      
     </div>
-    <!-- end sidebar -->
+<!-- wrapper --> 
 
-</div>
-<!-- wrapper -->
-
-<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script>
-<script src='assets/js/bootstrap.min.js'></script>
-<script src="assets/js/tooltip-custom.js"></script>
-<script src='assets/js/jquery.nicescroll.min.js'></script>
-<script src='assets/js/wow.min.js'></script>
-<script src='assets/js/jquery.loadmask.min.js'></script>
-<script src='assets/js/jquery.accordion.js'></script>
-<script src='assets/js/materialize.js'></script>
-<script src='assets/js/jquery.bootstrap.wizard.js'></script>
-<script src='assets/js/prettify.js'></script>
-<script src='assets/js/sweet-alert/sweetalert.min.js'></script>
-<script src='assets/js/form-wizard.js'></script>
-<script src='assets/js/classie.js'></script>
-<script src='assets/js/projects.fullscreen-overlay.js'></script>
-<script src='assets/js/core.js'></script>
-<script src="assets/js/jquery.countTo.js"></script>
-<script src='assets/js/select2.js'></script>
-<script src='assets/js/jquery.multi-select.js'></script>
-<script src='assets/js/bootstrap-filestyle.js'></script>
-<script src='assets/js/bootstrap-datepicker.js'></script>
-<script src='assets/js/bootstrap-colorpicker.js'></script>
-<script src='assets/js/jquery.maskedinput.js'></script>
+<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script> 
+<script src='assets/js/bootstrap.min.js'></script> 
+<script src="assets/js/tooltip-custom.js"></script> 
+<script src='assets/js/jquery.nicescroll.min.js'></script> 
+<script src='assets/js/wow.min.js'></script> 
+<script src='assets/js/jquery.loadmask.min.js'></script> 
+<script src='assets/js/jquery.accordion.js'></script> 
+<script src='assets/js/materialize.js'></script> 
+<script src='assets/js/jquery.bootstrap.wizard.js'></script> 
+<script src='assets/js/prettify.js'></script> 
+<script src='assets/js/sweet-alert/sweetalert.min.js'></script> 
+<script src='assets/js/form-wizard.js'></script> 
+<script src='assets/js/classie.js'></script> 
+<script src='assets/js/projects.fullscreen-overlay.js'></script> 
+<script src='assets/js/core.js'></script> 
+<script src="assets/js/jquery.countTo.js"></script> 
+<script src='assets/js/select2.js'></script> 
+<script src='assets/js/jquery.multi-select.js'></script> 
+<script src='assets/js/bootstrap-filestyle.js'></script> 
+<script src='assets/js/bootstrap-datepicker.js'></script> 
+<script src='assets/js/bootstrap-colorpicker.js'></script> 
+<script src='assets/js/jquery.maskedinput.js'></script> 
 <script src='assets/js/form-elements.js'></script>
 </body>
 </html>

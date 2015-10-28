@@ -4842,7 +4842,7 @@ a.project-sort-btn  {font-weight:600;}
 
 /*custom css (26-10-2015)*/
 
-.eagle-icon {background-image: url("../images/eggle-icon.png");background-position: center 4px;background-repeat: no-repeat;background-size: 100% auto;height: 25px;margin-right: 8px !important;width: 25px;}
+.eagle-icon {background-image: url("../images/eggle-icon.png");background-position: center 4px;background-repeat: no-repeat;background-size: 100% auto;height: 25px;margin-right: 8px !important;width: 25px;float:left;}
 
 .rh-column-sub-heading span {margin: 0 15px;}
 
@@ -4883,4 +4883,54 @@ a.project-sort-btn  {font-weight:600;}
 .view-option-outer ul li a:hover {color: #222;text-decoration: none;}
 
 .rh_blackEagle, .view-option-outer ul li.rh_blackEagle {background-image: url("../images/view-option-icon.png");background-position: center 4px;background-repeat: no-repeat;background-size: 100% auto;border: medium none;height: 50px;margin-right: 5px !important;margin-top: -18px;padding: 0;position: relative;width: 45px;}
+
+.rh-sort-menu-project-card {padding: 0;}
+
+.rh-sort-menu-project-card ul li:first-child {padding-left: 0;}
+
+.project-cards-outer .row {margin-bottom: 0;margin-left: -15px;margin-right: -15px;clear:both;}
+
+.project-cart-box {background: #fff none repeat scroll 0 0;float: left;margin: 0;padding: 20px 0 ;width: 100%;}
+
+.card-header, .cart-small-headding {color: #000;float: left;font-size: 13px;margin: 0 0 15px;padding: 0;width: 100%;}
+
+.card-header {border-bottom: 1px solid #eff1f0;padding: 0 25px 15px;}
+
+.card-header label {float: left;top: 2px;}
+
+.card-header h1 {color: #2b6f93;float: left;font-size: 20px;font-weight: 600;line-height: normal;margin: 0;padding: 0;}
+
+.card-header .project-count {background-color: #e3272a;border-radius: 100%;color: #fff;display: inline-block;font-size: 12px;font-weight: 600;height: 28px;line-height: 28px;margin: 0 0 0 2px;position: relative;text-align: center;top: -1px;width: 28px;}
+
+.cart-info {color: #44708e;float: left;font-size: 18px;margin: 0;padding: 0;width: 100%;}
+
+.card-contact-info , .card-contact-info-right {float: left;font-size: 13px;font-weight: normal;line-height: normal;margin: 0 0 5px;padding: 0;width: 100%;}
+
+.card-contact-info-right {color: #b2b2b2;}
+
+.cart-contact-section {color: #000;float: left;font-size: 13px;margin: 0 0 15px;padding: 0;width: 100%;}
+
+.cart-contact-section .cart-small-headding {margin-bottom: 5px;padding: 0;}
+
+.card-contact-input {border: medium none;float: left;font-size: 13px;line-height: normal;margin: 0 0 5px;padding: 0;width: 100%;}
+
+.card-box-detail-outer {float: left;margin: 0;padding: 0 25px;width: 100%;}
+
+.card-box-bottom {float: left;margin: 10px 0 0;padding: 0;width: 100%;}
+
+.project-date-card {color: rgb(128, 128, 131);float: left;font-size: 14px;font-weight: 600;line-height: 20px;width: auto;}
+
+.project-status-card {background-color: rgba(33, 150, 243, 0.4);color: #000;float: right;margin: 0;padding: 1px 10px;text-transform: uppercase;width: auto;color: #000;font-size: 13px;font-weight: 600;letter-spacing: 2px;text-decoration:none;border-radius:3px;}
+
+.project-status-card.paused {background-color: #d1d2d3;}
+
+.project-status-card:hover {text-decoration:none;}
+
+.card-box-menus {color: #a5a5a5;float: right;font-size: 28px;margin: -5px 0;padding: 0;width: auto;}
+
+.project-cards-outer ul li {margin-bottom: 30px;}
+
+.green-circle {background-color:#188f48 !important;}
+
+
 
