@@ -70,12 +70,18 @@ var $grid = $('.grid').isotope({
     number: '.number parseInt',
 	project_status_sort: '.project_status_sort',
 	//date: '.date',
-	date: function (itemElem) {
+	date_sort: function (itemElem) {
 	
         //var dateStr = $(itemElem).find(".date").attr("data-id"),
 		//var dateStr = $(this).html(dateStr1),
-		var dateStr1 = $(itemElem).find(".date").text();
-		var dateStr = Date.parse(dateStr1);
+		var dateStr_new = $(itemElem).find(".date_sort").text();
+		var dateStrnew = dateStr_new.split(' ');
+		var dateStrnew1 = dateStrnew[0]+ " 1 , " +dateStrnew[1];
+		//alert(dateStrnew1);
+		//var dateStr = Date.parse(dateStr_new);
+		var dateStr = Date.parse(dateStrnew1);
+		//alert(dateStr);
+		
 		/*dateStr = Date.parse(dateStr1),
               dateArray = dateStr.split('/'),
             year = dateArray[2],
@@ -498,7 +504,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                       <button class="sort-btns" data-sort-by="domain_name_sort">Domain</button>
                     </li>
                 <li class="rh-right-border">
-                      <button class="sort-btns" data-sort-by="date">Publish Date</button>
+                      <button class="sort-btns" data-sort-by="date_sort">Publish Date</button>
                     </li>
                 <li class="rh-right-border">
                       <button class="sort-btns" data-sort-by="goal_sort">Goal</button>
@@ -535,7 +541,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>December 2012 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>December 2012 </div>
                         <a href="#" class="project-status-card  project_status_sort "> ACTIVE </a> </div>
                         </div>
                   </div>
@@ -565,7 +571,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>May 2012 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>May 2013 </div>
                         <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
                   </div>
@@ -595,7 +601,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>March 2012 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>March 2012 </div>
                         <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
                   </div>
@@ -625,7 +631,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>March 2014 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>March 2014 </div>
                         <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
                   </div>
@@ -655,7 +661,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>April 2014 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>April 2014 </div>
                         <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
                   </div>
@@ -685,7 +691,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>Feb 2012 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>May 2012 </div>
                         <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
                   </div>
@@ -715,7 +721,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>July 2012 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>July 2012 </div>
                         <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
                   </div>
@@ -745,7 +751,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>Jan 2012 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>June 2012 </div>
                         <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
                   </div>
@@ -775,7 +781,7 @@ $('.sort-by-button-group').on( 'click', 'button', function() {
                             </div>
                       </div>
                           <div class="card-box-bottom">
-                        <div class="project-date-card date"><i class="eagle-icon"></i>July 2013 </div>
+                        <div class="project-date-card date_sort"><i class="eagle-icon"></i>July 2013 </div>
                         <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
                   </div>
