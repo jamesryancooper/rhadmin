@@ -4932,5 +4932,13 @@ a.project-sort-btn  {font-weight:600;}
 
 .green-circle {background-color:#188f48 !important;}
 
+.sort-btns {background: rgba(0, 0, 0, 0) none repeat scroll 0 0;border: medium none;color: #bbb;float: left;font-size: 14px;line-height: 25px;margin: 0;padding: 0;text-transform: uppercase;}
 
+button.sort-btns:focus {
+  background-color: transparent;
+  outline: medium none;
+}
 
+span.date-attribute {
+    display: none;
+}

@@ -33,14 +33,80 @@
     <script>
         jQuery(window).load(function () {
             $('.piluku-preloader').addClass('hidden');
-        });
+		});
+
+
+ jQuery(document).ready(function() {
+// init Isotope
+/*var $grid = $('.grid').isotope({
+  getSortData: {
+    name: '.name', // text from querySelector
+	symbol:'.symbol',
+	date: function (itemElem) {
+        var dateStr = $( itemElem ).find('.date').text(),
+            dateArray = dateStr.split(' '),
+            year = dateArray[1],
+            month = dateArray[0],
+            //day = dateArray[1];
+        return new Date(month,year);
+    },
+    category: '[data-category]', // value of attribute
+    weight: function( itemElem ) { // function
+      var weight = $( itemElem ).find('.weight').text();
+      return parseFloat( weight.replace( /[\(\)]/g, '') );
+    },
+	
+  }
+});
+
+*/
+
+
+
+var $grid = $('.grid').isotope({
+  getSortData: {
+    project_name_sort: '.project_name_sort',
+    domain_name_sort: '.domain_name_sort',
+    number: '.number parseInt',
+	project_status_sort: '.project_status_sort',
+	//date: '.date',
+	date: function (itemElem) {
+	
+        //var dateStr = $(itemElem).find(".date").attr("data-id"),
+		//var dateStr = $(this).html(dateStr1),
+		var dateStr1 = $(itemElem).find(".date").text();
+		var dateStr = Date.parse(dateStr1);
+		/*dateStr = Date.parse(dateStr1),
+              dateArray = dateStr.split('/'),
+            year = dateArray[2],
+            month = dateArray[0],
+            day = dateArray[1];
+			alert(dateArray);*/
+			//alert(dateStr1);
+			//alert(dateStr);
+		return dateStr ;
+    },
+    category: '[data-category]',
+    goal_sort: function( itemElem ) {
+      var goal_sort = $( itemElem ).find('.goal_sort').text();
+      return parseFloat( goal_sort.replace( /[\(\)]/g, '') );
+    }
+  }
+});
+
+// sort items on button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+
+  var sortByValue = $(this).attr('data-sort-by');
+  $grid.isotope({ sortBy: sortByValue });
+});
+
+});
+
+
+			
     </script>
-	
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-	
-	
-	
+    <script src="assets/js/isotope.pkgd.min.js"></script>
     </head>
     <body>
 <div class="piluku-preloader text-center"> 
@@ -421,289 +487,411 @@
       </div>
           <div class="row">
         <div class="col-lg-10 col-md-offset-1">
-              <div class="rh-sort-menu rh-sort-menu-project-card ">
-            <ul>
-                  <li>Sort by:</li>
-                  <li class="rh-right-border"><a href=""><strong>Project Name</strong></a></li>
-                  <li class="rh-right-border"><a href="">Domain</a></li>
-                  <li class="rh-right-border"><a href="">Publish Date</a></li>
-                  <li class="rh-right-border"><a href="">Goal</a></li>
-                  <li><a href="">Status</a></li>
-                </ul>
-          </div>
-              <div class="row-v-spacing project-cards-outer">
-            <ul class="row">
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox1" class="icheckbox_square-yellow" tabindex="1">
-                    <label for="card-header-checkbox1"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+              <div class="big-demo go-wide" data-js-module="sorting-demo">
+            <div class="rh-sort-menu rh-sort-menu-project-card button-group sort-by-button-group  card-sort-menu">
+                  <ul class="">
+                <li>Sort by:</li>
+                <li class="rh-right-border">
+                      <button class="sort-btns" data-sort-by="project_name_sort">Project Name</button>
+                    </li>
+                <li class="rh-right-border">
+                      <button class="sort-btns" data-sort-by="domain_name_sort">Domain</button>
+                    </li>
+                <li class="rh-right-border">
+                      <button class="sort-btns" data-sort-by="date">Publish Date</button>
+                    </li>
+                <li class="rh-right-border">
+                      <button class="sort-btns" data-sort-by="goal_sort">Goal</button>
+                    </li>
+                <li>
+                      <button class="sort-btns" data-sort-by="project_status_sort">Status</button>
+                    </li>
+              </ul>
+                </div>
+            <div class="row-v-spacing project-cards-outer">
+                  <ul class="row grid">
+                <li class="col-lg-4 element-item">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox1" class="icheckbox_square-yellow" tabindex="1">
+                          <label for="card-header-checkbox1"></label>
+                          <h1 class="project_name_sort">AA Fair Marketing <span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">AA FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                        <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">10/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>December 2012 </div>
+                        <a href="#" class="project-status-card  project_status_sort "> ACTIVE </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox2" class="icheckbox_square-yellow" tabindex="2">
-                    <label for="card-header-checkbox2"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox2" class="icheckbox_square-yellow" tabindex="2">
+                          <label for="card-header-checkbox2"></label>
+                          <h1  class="project_name_sort">BB Fair Marketing<span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">DD FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-         <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">20/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>May 2012 </div>
+                        <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card paused"> PAUSED </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox3" class="icheckbox_square-yellow" tabindex="3">
-                    <label for="card-header-checkbox3"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item ">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox3" class="icheckbox_square-yellow" tabindex="3">
+                          <label for="card-header-checkbox3"></label>
+                          <h1  class="project_name_sort">CC Fair Marketing 3<span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">MM FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">9/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>March 2012 </div>
+                        <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card paused"> PAUSED </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox4" class="icheckbox_square-yellow" tabindex="5">
-                    <label for="card-header-checkbox4"></label>
-                    <h1>Fair Marketing <span class="project-count green-circle">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item ">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox4" class="icheckbox_square-yellow" tabindex="5">
+                          <label for="card-header-checkbox4"></label>
+                          <h1 class="project_name_sort">DD Fair Marketing <span class="project-count green-circle">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">AA FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">7/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>March 2014 </div>
+                        <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox5" class="icheckbox_square-yellow" tabindex="5">
-                    <label for="card-header-checkbox5"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox5" class="icheckbox_square-yellow" tabindex="5">
+                          <label for="card-header-checkbox5"></label>
+                          <h1  class="project_name_sort">AA Fair Marketing 2 <span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">CC FairMarketing 3.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">9.5/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>April 2014 </div>
+                        <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card paused"> PAUSED </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox6" class="icheckbox_square-yellow" tabindex="5">
-                    <label for="card-header-checkbox6"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox6" class="icheckbox_square-yellow" tabindex="5">
+                          <label for="card-header-checkbox6"></label>
+                          <h1  class="project_name_sort">BB Fair Marketing <span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort ">FF FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">75/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>Feb 2012 </div>
+                        <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox7" class="icheckbox_square-yellow" tabindex="5">
-                    <label for="card-header-checkbox7"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox7" class="icheckbox_square-yellow" tabindex="5">
+                          <label for="card-header-checkbox7"></label>
+                          <h1  class="project_name_sort">DD Fair Marketing <span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">GG FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">44/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>July 2012 </div>
+                        <a href="#" class="project-status-card  project_status_sort paused"> PAUSED </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                         <a href="#" class="project-status-card paused"> PAUSED </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox8" class="icheckbox_square-yellow" tabindex="5">
-                    <label for="card-header-checkbox8"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox8" class="icheckbox_square-yellow" tabindex="5">
+                          <label for="card-header-checkbox8"></label>
+                          <h1  class="project_name_sort">MM Fair Marketing <span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">JJ FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">33/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>Jan 2012 </div>
+                        <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
                   </div>
-                    </div>
-              </li>
-                  <li class="col-lg-4">
-                <div class="project-cart-box">
-                      <div class="card-header">
-                    <input type="checkbox"  value="" id="card-header-checkbox9" class="icheckbox_square-yellow" tabindex="5">
-                    <label for="card-header-checkbox9"></label>
-                    <h1>Fair Marketing <span class="project-count">12</span> </h1>
-                    <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
-                      <div class="card-box-detail-outer">
-                    <div class="cart-small-headding"> DOMAIN<span class="cart-info"> FairMarketing.com</span> </div>
-                    <div class="row">
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
-                      </div>
-                          <div class="col-lg-6">
-                        <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info"> 60/mo.</span> </div>
-                      </div>
-                        </div>
-                    <div class="cart-contact-section">
-                          <div class="cart-small-headding"> CONTACT</div>
+                    </li>
+                <li class="col-lg-4 element-item">
+                      <div class="project-cart-box">
+                    <div class="card-header">
+                          <input type="checkbox"  value="" id="card-header-checkbox9" class="icheckbox_square-yellow" tabindex="5">
+                          <label for="card-header-checkbox9"></label>
+                          <h1  class="project_name_sort">FF Fair Marketing <span class="project-count">12</span> </h1>
+                          <a class="card-box-menus" href="javascript:void(0)"><i class="ion ion-android-menu"></i></a></div>
+                    <div class="card-box-detail-outer">
+                          <div class="cart-small-headding"> DOMAIN<span class="cart-info domain_name_sort">KK FairMarketing.com</span> </div>
                           <div class="row">
-                        <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
-                       <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding"> PROJECT BUDGET<span class="cart-info">$10,000/mo.</span> </div>
+                            </div>
+                        <div class="col-lg-6">
+                              <div class="cart-small-headding text-right"> CONTENT GOAL<span class="cart-info goal_sort">25/mo.</span> </div>
+                            </div>
                       </div>
+                          <div class="cart-contact-section">
+                        <div class="cart-small-headding"> CONTACT</div>
+                        <div class="row">
+                              <div class="col-lg-6"> <span class="card-contact-info">Cameron Fenno </span> <span class="card-contact-info"> Cfenno@fairmarketing.com</span> </div>
+                              <div class="col-lg-6"><span class="card-contact-info-right">TITLE</span><span class="card-contact-info-right">PHONE </span></div>
+                            </div>
+                      </div>
+                          <div class="card-box-bottom">
+                        <div class="project-date-card date"><i class="eagle-icon"></i>July 2013 </div>
+                        <a href="#" class="project-status-card  project_status_sort"> ACTIVE </a> </div>
                         </div>
-                    <div class="card-box-bottom">
-                          <div class="project-date-card"><i class="eagle-icon"></i>FEB 2014 </div>
-                          <a href="#" class="project-status-card"> ACTIVE </a> </div>
                   </div>
-                    </div>
-              </li>
-                </ul>
+                    </li>
+              </ul>
+                </div>
+            <!--div class="grid">
+      <div class="element-item transition metal " data-category="transition">
+        <h5 class="name">Mercury</h5>
+        <p class="symbol">Hg</p>
+        <p class="number">80</p>
+        <p class="weight">200.59</p>
+      </div>
+      <div class="element-item metalloid " data-category="metalloid">
+        <h5 class="name">Tellurium</h5>
+        <p class="symbol">Te</p>
+        <p class="number">52</p>
+        <p class="weight">127.6</p>
+      </div>
+      <div class="element-item post-transition metal " data-category="post-transition">
+        <h5 class="name">Bismuth</h5>
+        <p class="symbol">Bi</p>
+        <p class="number">83</p>
+        <p class="weight">208.980</p>
+      </div>
+      <div class="element-item post-transition metal " data-category="post-transition">
+        <h5 class="name">Lead</h5>
+        <p class="symbol">Pb</p>
+        <p class="number">82</p>
+        <p class="weight">207.2</p>
+      </div>
+      <div class="element-item transition metal " data-category="transition">
+        <h5 class="name">Gold</h5>
+        <p class="symbol">Au</p>
+        <p class="number">79</p>
+        <p class="weight">196.967</p>
+      </div>
+      <div class="element-item alkali metal " data-category="alkali">
+        <h5 class="name">Potassium</h5>
+        <p class="symbol">K</p>
+        <p class="number">19</p>
+        <p class="weight">39.0983</p>
+      </div>
+      <div class="element-item alkali metal " data-category="alkali">
+        <h5 class="name">Sodium</h5>
+        <p class="symbol">Na</p>
+        <p class="number">11</p>
+        <p class="weight">22.99</p>
+      </div>
+      <div class="element-item transition metal " data-category="transition">
+        <h5 class="name">Cadmium</h5>
+        <p class="symbol">Cd</p>
+        <p class="number">48</p>
+        <p class="weight">112.411</p>
+      </div>
+      <div class="element-item alkaline-earth metal " data-category="alkaline-earth">
+        <h5 class="name">Calcium</h5>
+        <p class="symbol">Ca</p>
+        <p class="number">20</p>
+        <p class="weight">40.078</p>
+      </div>
+      <div class="element-item transition metal " data-category="transition">
+        <h5 class="name">Rhenium</h5>
+        <p class="symbol">Re</p>
+        <p class="number">75</p>
+        <p class="weight">186.207</p>
+      </div>
+      <div class="element-item post-transition metal " data-category="post-transition">
+        <h5 class="name">Thallium</h5>
+        <p class="symbol">Tl</p>
+        <p class="number">81</p>
+        <p class="weight">204.383</p>
+      </div>
+      <div class="element-item metalloid " data-category="metalloid">
+        <h5 class="name">Antimony</h5>
+        <p class="symbol">Sb</p>
+        <p class="number">51</p>
+        <p class="weight">121.76</p>
+      </div>
+      <div class="element-item transition metal " data-category="transition">
+        <h5 class="name">Cobalt</h5>
+        <p class="symbol">Co</p>
+        <p class="number">27</p>
+        <p class="weight">58.933</p>
+      </div>
+      <div class="element-item lanthanoid metal inner-transition " data-category="lanthanoid">
+        <h5 class="name">Ytterbium</h5>
+        <p class="symbol">Yb</p>
+        <p class="number">70</p>
+        <p class="weight">173.054</p>
+      </div>
+      <div class="element-item noble-gas nonmetal " data-category="noble-gas">
+        <h5 class="name">Argon</h5>
+        <p class="symbol">Ar</p>
+        <p class="number">18</p>
+        <p class="weight">39.948</p> 
+      </div>
+      <div class="element-item diatomic nonmetal " data-category="diatomic">
+        <h5 class="name">Nitrogen</h5>
+        <p class="symbol">N</p>
+        <p class="number">7</p>
+        <p class="weight">14.007</p>
+      </div>
+      <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+        <h5 class="name">Uranium</h5>
+        <p class="symbol">U</p>
+        <p class="number">92</p>
+        <p class="weight">238.029</p>
+      </div>
+      <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+        <h5 class="name">Plutonium</h5>
+        <p class="symbol">Pu</p>
+        <p class="number">94</p>
+        <p class="weight">(244)</p>
+      </div>
+  </div--> 
           </div>
             </div>
       </div>
