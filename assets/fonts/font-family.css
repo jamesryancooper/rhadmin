@@ -1,0 +1,29 @@
+@font-face {
+font-family: 'Conv_ufonts.com_american-typewriter-condensed-light';
+src: url('ufonts.com_american-typewriter-condensed-light.eot');
+src: url('ufonts.com_american-typewriter-condensed-light.woff') format('woff'), 
+url('ufonts.com_american-typewriter-condensed-light.ttf') format('truetype'), 
+url('ufonts.com_american-typewriter-condensed-light.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Conv_ufonts.com_avantgardelt-extralight-opentype';
+src: url('ufonts.com_avantgardelt-extralight-opentype.eot');
+src: url('ufonts.com_avantgardelt-extralight-opentype.woff') format('woff'), 
+url('ufonts.com_avantgardelt-extralight-opentype.ttf') format('truetype'), 
+url('ufonts.com_avantgardelt-extralight-opentype.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Conv_Helvetica-Bold';
+src: url('Helvetica-Bold.eot');
+src: url('Helvetica-Bold.woff') format('woff'), 
+url('Helvetica-Bold.ttf') format('truetype'), 
+url('Helvetica-Bold.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}

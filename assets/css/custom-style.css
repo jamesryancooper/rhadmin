@@ -1,0 +1,371 @@
+@charset "utf-8";
+/* CSS Document */
+
+.interface-outer {
+background-image: url("../images/interface_bg.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: auto 100%;
+display: table;
+float: left;
+height: 1200px;
+margin: 0;
+padding: 0;
+vertical-align: middle;
+width: 100%;
+}
+
+.vertical-middle {
+display: table-cell;
+float: none;
+height: 100%;
+vertical-align: middle;
+}
+
+
+/*---------------------- header css ------------------------*/
+
+.account-links-outer {
+margin: 16px 0 0;
+padding-right: 15px;
+}
+
+.logo-outer {
+float: left;
+margin: 0;
+padding: 0;
+width: auto;
+}
+
+#rank-header-outer {
+height: auto;
+padding: 10px 15px;
+}
+
+.account-links-outer ul {margin:0; padding:0;}
+
+.account-links-outer ul li {
+border-right: 1px solid #fff;
+display: inline-block;
+font-size: 14px;
+line-height: 14px;
+margin: 0;
+padding: 0 10px;
+}
+
+.account-links-outer ul li:last-child {
+border-right: 1px solid transparent;
+}
+
+
+.account-links-outer ul li a{
+color:#fff;
+}
+
+
+.get-rankhacker-form {
+background-color: #1a1b1d;
+box-sizing: border-box;
+margin: 0 40px 0 0;
+padding: 8px 20px 5px;
+}
+
+.rank-form-left, .rank-form-right {
+float: left;
+margin: 0;
+padding: 0;
+}
+
+.rank-form-left h2 {
+background-color: #fff;
+color: #333;
+display: block;
+float: none;
+font-size: 16px;
+font-weight: bold;
+letter-spacing: 5px;
+line-height: normal;
+margin: 0;
+padding: 0 15px;
+text-align: center;
+text-transform: uppercase;
+width: 100%;
+font-family: 'Conv_ufonts.com_american-typewriter-condensed-light';
+}
+
+.rank-form-left .check-box-outer {
+color: #fff;
+float: left;
+font-size: 14px;
+margin: 0;
+padding: 0;
+width: 50%;
+}
+
+.rank-form-left .check-box-outer {
+color: #fff;
+float: left;
+font-size: 14px;
+margin: 0;
+padding: 0;
+text-align: center;
+width: 100%;
+}
+
+.check-box-outer ul {
+float: left;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+.header-right-side {
+  margin-top: 5px;
+}
+
+.check-box-outer ul li input[type="checkbox"] {
+display: inline-block !important;
+float: left;
+margin-right: 6px;
+position: static !important;
+}
+
+.check-box-outer ul li {
+display: inline-block;
+margin: 0;
+min-width: 70px;
+padding: 0;
+text-align: left;
+}
+
+
+.rank-form-input {
+background-color: #808080;
+border: medium none;
+color: #000;
+display: inline-block;
+font-size: 14px;
+height: 35px;
+margin: 0;
+padding: 0 10px;
+width: 200px;
+}
+
+
+.rank-form-btn {
+background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+color: #fff;
+font-size: 18px;
+height: 28px;
+letter-spacing: 2px;
+margin: 0 0 0 10px;
+padding: 0 10px;
+position: relative;
+text-transform: uppercase;
+top: 1px;
+border:none;
+border-left:1px solid #fff;
+border-right:1px solid #fff;
+font-family: 'Conv_ufonts.com_american-typewriter-condensed-light';
+}
+
+
+.rank-form-left {
+padding-right: 15px;
+padding-top: 1px;
+}
+
+
+.rank-form-input:focus {border:none !important;}
+
+.rank-form-btn:hover , .rank-form-btn:focus {
+background-color: #fff;
+color: #333;
+}
+
+/*---------------------- content css ------------------------*/
+
+.feed-headding {
+background-color: #231f20;
+color: #fff;
+float: left;
+font-family: "Conv_ufonts.com_american-typewriter-condensed-light";
+font-size: 6em;
+letter-spacing: 20px;
+line-height: normal;
+margin: 50px 0 0;
+padding: 15px 0;
+text-align: center;
+text-transform: uppercase;
+width: 100%;
+}
+
+.competitor-url-input-outer {
+border: 1px solid #000;
+border-radius: 8px;
+clear: both;
+display: inline-block;
+height: 75px;
+margin: 46px auto 0;
+position: relative;
+width: 60%;
+}
+
+.competitor-url-input-outer input {
+background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+border: medium none;
+float: left;
+font-family: "Conv_ufonts.com_american-typewriter-condensed-light";
+font-size: 34px;
+height: 100%;
+margin: 0;
+padding: 0 0 0 110px;
+width: 100%;
+}
+
+.submit-url-btn {
+background-color: rgba(255, 255, 255, 0.3);
+border: 1px solid #242021;
+clear: both;
+color: #242021;
+display: table;
+float: none;
+font-size: 40px;
+font-weight: normal;
+height: 65px;
+line-height: 65px;
+margin: 40px auto 0;
+padding: 0 25px;
+text-align: center;
+width: auto;
+}
+
+.competitor-url-input-outer input:focus {
+border-bottom: medium none;
+box-shadow: 0 1px 0 0 transparent;
+}
+
+.competitor-url-input-outer label {
+background-color: #000;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+float: left;
+height: 100%;
+left: 0;
+margin: 0;
+padding: 0;
+position: absolute;
+text-align: center;
+top: 0;
+vertical-align: middle;
+width: 80px;
+z-index: 99;
+}
+
+.competitor-url-input-outer label i {
+color: #808185;
+font-size: 45px;
+line-height: 70px;
+}
+
+
+.submit-url-btn:hover, .submit-url-btn:focus {
+background-color: #ec1c24;
+color: #fff;
+border-color: #ec1c24;
+}
+
+.competitor-url-input-outer.focus-effect label i , .competitor-url-input-outer.focus-effect input{ color: #ec1c24;}
+
+.competitor-url-input-outer.focus-effect input::-webkit-input-placeholder {
+color: transparent;
+}
+
+.competitor-url-input-outer.focus-effect input:-moz-placeholder { /* Firefox 18- */
+color: transparent;  
+}
+
+.competitor-url-input-outer.focus-effect input::-moz-placeholder {  /* Firefox 19+ */
+color: transparent;  
+}
+
+.competitor-url-input-outer.focus-effect input:-ms-input-placeholder {  
+color: transparent;  
+}
+
+
+
+/*---------------------- footer css ------------------------*/
+
+#interface-footer {
+background-color: #3d3d3d;
+float: left;
+margin: 0;
+padding: 25px 0;
+width: 100%;
+}
+
+#interface-footer .row {
+margin: 0 -15px;
+}
+
+.footer-link ul li {
+border-right: 1px solid #b2b2b2;
+color: #bcbdbf;
+display: inline-block;
+float: left;
+font-size: 18px;
+line-height: 18px;
+margin: 0;
+padding: 0 10px;
+font-family: 'Conv_ufonts.com_american-typewriter-condensed-light';
+}
+
+.footer-link ul li  a , .footer-socail-icon ul li   a{
+color: #bcbdbf;
+
+
+}
+
+
+.footer-link li:first-child {
+padding-left: 0;
+}
+
+.footer-link ul li:last-child {
+padding-right: 0;
+border:none;
+}
+
+.footer-link a {
+position: relative;
+top: -1px;
+}
+
+
+.footer-socail-icon ul , .footer-link ul  {margin:0;padding:0;}
+
+.footer-socail-icon ul li {
+display: inline-block;
+font-size: 18px;
+line-height: 18px;
+margin: 0;
+padding: 0;
+}
+
+.footer-socail-icon ul li i {
+margin: 0;
+padding: 0 15px;
+text-align: center;
+}
+
+
+.copy-right-section {
+color: #bcbdbf;
+float: right;
+font-family: "Conv_Helvetica-Bold";
+font-size: 18px;
+line-height: 18px;
+margin: 0;
+padding: 0 0;
+}
