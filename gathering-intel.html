@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>RankHacker Interface</title>
+
+    <!--
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    -->
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='assets/css/materialize.css'>
+    <link rel='stylesheet' href='assets/css/material.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <link rel='stylesheet' href='assets/css/custom-style.css'>
+    <link rel='stylesheet' href='assets/css/icon-stylemain.css'>
+    <link rel='stylesheet' href='assets/css/animated-masonry-gallery.css'>
+    <link rel='stylesheet' href='assets/css/rotated-gallery.css'>
+    <link rel='stylesheet' href='assets/css/sweet-alerts/sweetalert.css'>
+    <link rel='stylesheet' href='assets/css/jtree.css'>
+    <link rel='stylesheet' href='assets/fonts/font-family.css'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/material-design-icons/css/material-design-icons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/_rh/css/_rh.css" />
+
+    <!-- JS -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src='assets/js/jquery.js'></script>
+    <script src='assets/js/app.js'></script>
+    <script>
+        jQuery(window).load(function () {
+            $('.piluku-preloader').addClass('hidden');
+		});
+
+
+ jQuery(document).ready(function() {
+// init Isotope
+/*var $grid = $('.grid').isotope({
+  getSortData: {
+    name: '.name', // text from querySelector
+	symbol:'.symbol',
+	date: function (itemElem) {
+        var dateStr = $( itemElem ).find('.date').text(),
+            dateArray = dateStr.split(' '),
+            year = dateArray[1],
+            month = dateArray[0],
+            //day = dateArray[1];
+        return new Date(month,year);
+    },
+    category: '[data-category]', // value of attribute
+    weight: function( itemElem ) { // function
+      var weight = $( itemElem ).find('.weight').text();
+      return parseFloat( weight.replace( /[\(\)]/g, '') );
+    },
+	
+  }
+});
+
+*/
+
+
+
+var $grid = $('.grid').isotope({
+  getSortData: {
+    project_name_sort: '.project_name_sort',
+    domain_name_sort: '.domain_name_sort',
+    number: '.number parseInt',
+	project_status_sort: '.project_status_sort',
+	//date: '.date',
+	date_sort: function (itemElem) {
+	
+        //var dateStr = $(itemElem).find(".date").attr("data-id"),
+		//var dateStr = $(this).html(dateStr1),
+		var dateStr_new = $(itemElem).find(".date_sort").text();
+		var dateStrnew = dateStr_new.split(' ');
+		var dateStrnew1 = dateStrnew[0]+ " 1 , " +dateStrnew[1];
+		//alert(dateStrnew1);
+		//var dateStr = Date.parse(dateStr_new);
+		var dateStr = Date.parse(dateStrnew1);
+		//alert(dateStr);
+		
+		/*dateStr = Date.parse(dateStr1),
+              dateArray = dateStr.split('/'),
+            year = dateArray[2],
+            month = dateArray[0],
+            day = dateArray[1];
+			alert(dateArray);*/
+			//alert(dateStr1);
+			//alert(dateStr);
+		return dateStr ;
+    },
+    category: '[data-category]',
+    goal_sort: function( itemElem ) {
+      var goal_sort = $( itemElem ).find('.goal_sort').text();
+      return parseFloat( goal_sort.replace( /[\(\)]/g, '') );
+    }
+  }
+});
+
+// sort items on button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+
+  var sortByValue = $(this).attr('data-sort-by');
+  $grid.isotope({ sortBy: sortByValue });
+});
+
+});
+
+
+			
+    </script>
+	
+<script>
+
+jQuery(document).ready(function() {
+	$('.competitor-url-input-outer input').focus(function () {
+			$(this).parent().addClass('focus-effect');
+			}).blur(function () {
+			
+			
+			var  inputval = $(".competitor-url-input-outer input").val();
+			//alert(inputval);
+			if(inputval == ""){
+					$(this).parent().removeClass('focus-effect');
+			}else{
+				//alert(inputval);
+				$(this).parent().addClass('focus-effect');
+			}
+			
+		
+	});
+	
+	
+	
+});
+
+</script>
+	
+	
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    </head>
+    <body>
+<div class="piluku-preloader text-center"> 
+      <!-- <div class="progress">
+        <div class="indeterminate"></div>
+    </div> -->
+      <div class="loader">Loading...</div>
+    </div>
+<div class="wrapper hide-left-bar">
+      <div class="content" id="content">
+    <div class="overlay"></div>
+    <!--top header start here-->
+    <div class="top-bar" id="rank-header-outer">
+	   <!--site logo--> 
+          <div class="logo-outer"><a class="" href="blueprints.html"><img src="assets/images/logo-main.png" alt="site-logo"> </a> </div>
+		  
+		 <!-- header_right side start here -->
+          <div class="pull-right header-right-side">
+        <div class="get-rankhacker-form pull-left ">
+              <div class="rank-form-left">
+            <h2>Get the Rank Hack </h2>
+            <div class="check-box-outer">
+					<ul>
+						<li><input type="checkbox" name="" value="">DAILY </li>
+						<li><input type="checkbox" name="" value="">WEEKLY </li>
+					</ul>
+            </div>
+          </div>
+              <div class="rank-form-right">
+            <input type="text" value="" placeholder="ENTER YOUR EMAIL" title="" class=" rank-form-input" name="" >
+            <button type="button" class="rank-form-btn" > ACTIVATE</button>
+          </div>
+            </div>
+        <div class="account-links-outer pull-right ">
+              <ul>
+            <li> <a href=""> Register </a></li>
+            <li> <a href=""> Log in </a></li>
+          </ul>
+            </div>
+      </div>
+	  <!--logo right side close here -->
+        </div>
+    <!-- /top-bar -->
+    
+    <div class="interface-outer">
+		  
+		  <div class="text-center vertical-middle">
+		  <h1 class="storefront-steps-headding">Our Spies Are Gathering Intel</h1>
+		  <div class="storefront-steps-outer col-lg-8 col-lg-offset-2">
+		  <ul class="row"> 
+		  <li class="col-lg-4"><div class="st-outer"><div class="step-icon"><i class="fa fa-check check-icon"></i></div><span>Hacking Content</span></div></li>
+		  <li class="col-lg-4"><div class="st-outer"><div class="step-icon"><div class="spin"></div></div><span>Analyzing Content</span></div></li>
+		  <li class="col-lg-4"><div class="st-outer"><div class="step-icon"><div class="spin"></div></div><span>Revealing Inventory</span> </div></li>
+		  </ul>		  
+		  </div>
+		  
+		 <div class="loadding-bar"><div class="two"> </div></div>
+		  
+		 
+		  
+		  </div>
+
+	</div>  
+		  
+		  
+		  
+		  
+		  
+		  <!-- Footer start here -->
+          <footer id="interface-footer">
+        <div class="col-lg-10 col-lg-offset-1">
+              <div class="row">
+		 <!--Footer left section start here-->
+            <div class="footer-link col-lg-4">
+                  <ul class="text-left">
+                <li> <a href="#">Terms of Service</a></li>
+                <li> <a href="#"> Privancy Policy</a></li>
+                <li> <a href="#">agent@rankhacker.com </a></li>
+              </ul>
+                </div>
+		<!--footer left section close here-->
+		<!--footer center socail icon section start here-->
+            <div class="footer-socail-icon col-lg-4 ">
+                  <ul class="text-center">
+                <li> <a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                <li> <a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                <li> <a href="#"> <i class="fa fa-google-plus"></i> </a></li>
+                <li> <a href="#"> <i class="fa fa-vimeo-square"></i> </a></li>
+                <li> <a href="#"> <i class="fa fa-youtube-play"></i> </a></li>
+                <li> <a href="#"> <i class="fa fa-instagram"></i> </a></li>
+              </ul>
+                </div>
+		<!--footer center socail icon section close here-->
+		<!--copyright section start here-->		
+            <div class="copy-right-section col-lg-4 text-right"> &copy; 2015 All Rights Reserved </div>
+			<!--copyright section close here-->
+          </div>
+            </div>
+      </footer>
+	  <!--Footer close here-->
+	  
+	  
+	  
+      
+  </div>
+      <!---content --> 
+      
+    </div>
+<!-- wrapper --> 
+
+<script src='assets/js/jquery-ui-1.10.3.custom.min.js'></script> 
+<script src='assets/js/bootstrap.min.js'></script> 
+<script src="assets/js/tooltip-custom.js"></script> 
+<script src='assets/js/jquery.nicescroll.min.js'></script> 
+<script src='assets/js/wow.min.js'></script> 
+<script src='assets/js/jquery.loadmask.min.js'></script> 
+<script src='assets/js/jquery.accordion.js'></script> 
+<script src='assets/js/materialize.js'></script> 
+<script src='assets/js/jquery.bootstrap.wizard.js'></script> 
+<script src='assets/js/prettify.js'></script> 
+<script src='assets/js/sweet-alert/sweetalert.min.js'></script> 
+<script src='assets/js/form-wizard.js'></script> 
+<script src='assets/js/classie.js'></script> 
+<script src='assets/js/projects.fullscreen-overlay.js'></script> 
+<script src='assets/js/core.js'></script> 
+<script src="assets/js/jquery.countTo.js"></script> 
+<script src='assets/js/select2.js'></script> 
+<script src='assets/js/jquery.multi-select.js'></script> 
+<script src='assets/js/bootstrap-filestyle.js'></script> 
+<script src='assets/js/bootstrap-datepicker.js'></script> 
+<script src='assets/js/bootstrap-colorpicker.js'></script> 
+<script src='assets/js/jquery.maskedinput.js'></script> 
+<script src='assets/js/form-elements.js'></script>
+</body>
+</html>
